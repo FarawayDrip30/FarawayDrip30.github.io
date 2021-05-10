@@ -1,18 +1,44 @@
 <!DOCTYPE html>
 <head>
     <title>FarawayDrip30</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
     <style>
-        .backgroundstuff{
-            position: absolute;
-            right: 0;
-            width: 50%;
+        body {
+            font-family: Arial;
+            margin: 0;
         }
+
+        a {
+            color: inherit; 
+            text-decoration: inherit; 
+        }
+
+        .header{
+            padding: 50px;
+            text-align: center;
+            color: white;
+            background: blue;
+            font-size: 30px;
+        }
+
+        .showcase{
+            text-align: center;
+            background: darkgray;
+            padding: 20px;
+            width: fit-content;
+            margin: auto;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
     </style>
-    <div style="margin: auto; text-align: center; background-color: dodgerblue;" class="backgroundstuff">
-        <div style="background-color: blue;" class="overlay">
+    <div style="text-align: center;">
+        <div class="header">
             <h1>FarawayDrip30</h1>
             <a href="https://www.youtube.com/channel/UCQHx127o2j3G7kTpBMD5aYw"><img src="Assets/Images/YouTube.png" alt="YouTube" width="32" style="margin-right: 5px; margin-left: 5px;"></a>
             <a href="https://twitter.com/FDrip30"><img src="Assets/Images/Twitter.png" alt="Twitter" width="32" style="margin-right: 5px; margin-left: 5px;"></a>
@@ -21,10 +47,22 @@
         </div>
         <h2>"I make stuff, I think."</h2>
         <h3>My Games</h3>
-        <a href="InfoPages/Games/HarvestSeason.html">HarvestSeason</a>
-        <a href="InfoPages/Games/CaveGrave.html">Cave Grave</a>
-        <a href="InfoPages/Games/Brek.html">Brek</a>
-        <p></p>
-        <a href="InfoPages/Games/Birdpals.html">Birdpals</a>
+        <div>
+            <div class="showcase">
+                <a href="InfoPages/Games/HarvestSeason.html"><img src="Assets/Images/Harvest Season.png" height="106px"><p>Harvest Season</p></a>
+            </div>
+            <div class="showcase">
+                <a href="InfoPages/Games/CaveGrave.html"><img src="Assets/Images/cavegrave.png" height="106px"><p>Cave Grave</p></a>
+            </div>
+            <div class="showcase">
+                <a href="InfoPages/Games/Dentopia/index.html"><img src="Assets/Images/Dentopia.PNG" height="106px"><p>Dentopia</p></a>
+            </div>
+            <div class="showcase">
+                <p>Sneaky Melons</p>
+            </div>
+            <div class="showcase">
+                <a href="InfoPages/Games/Brek.html"><img src="Assets/Images/brek.PNG" height="106px"><p>Brek</p></a>
+            </div>
+        </div>
     </div>
 </body>
