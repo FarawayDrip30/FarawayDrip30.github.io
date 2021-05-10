@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head onload="StartCarrotDash">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <body style="background-color:#a4854f">
+	
+	<style>
+.vertical-center {
+margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+body{
+	background-image: url('Background.png');
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	</style>
+	
+	<title> Dentopia </title>
+	
+	<img src="DentopiaLogo.png" alt="Dentopia" width="250" height="150">
+	<hr>
+	
+	<a href="https://twitter.com/ProjectTopia">Twitter</a> <a href="https://t.co/BEKT7CCXb4?amp=1">Discord</a>
+	<hr>
+	
+	<p style="font-size:30px;text-align:center;"> <b> Welcome to the wonderful world of Dentopia! </b> </p>
+	
+	<style>
+
+	canvas {
+		border:1px solid #d3d3d3;
+		background-color: #f1f1f1;
+	}
+
+	</style>
+
+	<script>
+
+	var Player;
+	var Obstacles = [];
+	var CarrotsLeft;
+
+	function StartCarrotDash(){
+		Player = new component(30, 30, "red", 10, 120)
+
+		CarrotDashArea.start();
+	}
+
+	var CarrotDashArea = {
+		canvas : document.createElement("canvas"),
+		start : function() {
+			this.canvas.width = 480;
+			this.canvas.height = 270;
+			this.context = this.canvas.getContext("2d");
+			document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+			this.frameNo = 0;
+			this.interval = setInterval(updateGameArea, 20);
+			},
+		clear : function() {
+			this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		}
+	}
+
+	</script>
+	<br>
+	
+	<div class="vertical-center">
+		<button style="text-align:center;" type="button" onclick="ShowNews()" id="ShowNewsButton">Show News</button>
+		<br>
+	</div>	
+	
+	<p style="font-size:20px;text-align:center;" id="NewsSwitch"> </p>
+
+	<script>
+	function ShowNews(){
+		GetAirtable();
+		document.getElementById("NewsSwitch").innerHTML = "This is where the news would be on the website. It got info from airtable to make it easy to update, but it never really got finished.";
+		document.getElementById("ShowNewsButton").innerHTML = "Hide News";
+		document.getElementById( "ShowNewsButton").setAttribute( "onClick", "javascript: HideNews();" );
+	}
+	function HideNews(){
+		document.getElementById("NewsSwitch").innerHTML = " ";
+		document.getElementById("ShowNewsButton").innerHTML = "Show News";
+		document.getElementById( "ShowNewsButton").setAttribute( "onClick", "javascript: ShowNews();" );
+	}
+	</script>
+	
+	<script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
+
+
+	<script>
+	var Airtable = require('airtable');
+	var base = new Airtable({apiKey: 'loooooooool'}).base('looooooooooool');
+
+	function GetAirtable(){
+		/*
+		base('Table 1').select({
+		// Selecting the first 3 records in Grid view:
+			maxRecords: 3,
+			view: "Grid view"
+		}).eachPage(function page(records, fetchNextPage) {
+		// This function (`page`) will get called for each page of records.
+	
+		records.forEach(function(record) {
+		   console.log('Retrieved', record.get('Title'));
+		   console.log('Retrieved', record.get('Date'));
+		   console.log('Retrieved', record.get('Text'));
+		   console.log('Retrieved', record.get('Image'));
+
+		   var photo = record.get('Image')
+
+		   document.getElementById("NewsSwitch").innerHTML = ("News <br>" + record.get('Title') + "<br>" + record.get('Date') + "<br>" + record.get('Text') + "<br>" + photo);
+
+
+		});
+
+		// To fetch the next page of records, call `fetchNextPage`.
+		// If there are more records, `page` will get called again.
+		// If there are no more records, `done` will get called.
+		fetchNextPage();
+
+		}, function done(err) {
+		if (err) { console.error(err); return; }
+		});
+		*/
+	}
+	</script>
+
+	<hr>
+	<p>This is what we made for the Dentopia website. It was never hosted, but the files were there, developed by me and another bloke called Kinju. (This part obviously wasn't on the original website.) This was actually the first HTML website I ever coded, so there's that.</p>
+	<p>Anyway, I suppose I should tell you what Dentopia was. Dentopia was more or less the original Birdpals. It came before Birdpals and was shortly cancelled. It was also renamed to Project Topia as a placeholder name just before we cancelled it, because there already was a Dentopia, a dentist company, so you can tell why Penguin Giraffe (The Team Leader) wanted to change it.</p>
+	<p>There were a few notable things that happened during the development of Dentopia. Actually, there was only really one. While Dentopia was originally a 2D game, it switched to 3D midway through development, with it's inspiration being Club Penguin Island. This is because I only knew Unity at the time, so we might as well make it 3D. Actually, that's a lie. I have no idea why Penguin made the game 3D. You're gonna have to ask him if you wanna know more. It was switched back to 2D just before the cancellation.</p>
+	<p>I actually have a lot to thank Dentopia for. The most obvious one is that the same team works on Birdpals now, and speaking of the team, the people I've met are amazing. It introduced me to Box Critters, due to Penguin having a BC YouTube Channel, which has given me loads of opportunities. It helped me find Urso Island, which I actually composed music for. It made me learn Javascript for reasons I can't remember, which snowballed into learning loads of new coding languages! I have to say, most of my game dev career has been thanks to this game, more or less, and for that, I am so thankful.</p>
+	<p>If you want more Dentopia goodness, you can click the twitter link at the top of the page (which was on the original website) and check out all that good stuff! You can also join the discord, but somehow I doubt that that would be very active.</p>
+	<a href="../../../index.html">back</a>
+
+	</body>
+  </head>
+</html>
