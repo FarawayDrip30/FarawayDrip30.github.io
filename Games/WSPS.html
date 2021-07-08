@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>I have sinned</title>
+    <meta charset="UTF-8">
+       <script src="../Assets/Ruffle/ruffle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        .header{
+            padding: 50px;
+            text-align: center;
+            color: white;
+            background: blue;
+            font-size: 30px;
+        }
+    </style>
+    <div style="text-align: center;">
+        <div>
+            <iframe src="../Assets/Banner.html" width="100%" height="290px" frameBorder="0"></iframe>
+        </div>
+
+        <div id="container1"></div>
+        <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                const container = document.getElementById("container1");
+                container.appendChild(player);
+                player.load("../Assets/Games/peesim.swf");
+            });
+        </script>
+
+        <p>yeah</p>
+    </div>
+</body>
+</html>
