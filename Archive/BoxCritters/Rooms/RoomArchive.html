@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <Title>Box Critters Time Machine</Title>
+</head>
+<body>
+    <style>
+        @font-face {
+            font-family: "Luckiest Guy";
+            src: url(../../../Assets/Fonts/LuckiestGuy-Regular.ttf) format("truetype");
+        }
+        h1,h2 { 
+            font-family: "Luckiest Guy", sans-serif 
+        }
+        a{
+            text-decoration: none;
+            color: blue;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <script src="../../../Assets/JQuery/jquery-3.6.0.min.js"></script>
+    <a href="../../../index.html">Back to FarawayDrip30.github.io</a>
+    <div class="container">
+        <img src="../../../Assets/Images/Portal.png" width="200">
+        <h1>Box Critters Time Machine</h1>
+    </div>
+    <div style="text-align: center;">
+        <h2>(Room Archive)</h2>
+        <br>
+        <h3>How To Use</h3>
+        <p>Press the Button Below to Copy some Code to your Clipboard (Scroll down to see all the Code), then Paste the Code into the Console in <a href="BoxCritters.com">Box Critters</a>.</p>
+        <button onclick="copyCode()">Copy Code to Clipboard</button>
+        <p>You can Usually Open your Browser's Console by Pressing F12 or Going to More Tools - Developer Tools</p>
+        <p>Once you have Done that, type "timeTravel(year,event,part)" into the Console, but Replace year, event, and part with info from the List Below, Making Sure they are all in Quotation Marks.</p>
+        <p>For Example, to go to the Second Part of the Halloween 2021 Event you would type: timeTravel("2021","Halloween","Part2")</p>
+        <br>
+        <li>"2021", "Halloween", "Part2"</li>
+        <br>
+        <h3>Code</h3>
+        <iframe src="RoomTimeMachine.txt" width="75%" height="750px"></iframe>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            console.log("Ready!");
+        });
+        async function copyCode(){
+            var codeText
+            $.get( "RoomTimeMachine.txt", function( data ) {
+                codeText = data;
+                console.log(data);
+                navigator.clipboard.writeText(codeText);
+            });
+        }
+    </script>
+</body>
