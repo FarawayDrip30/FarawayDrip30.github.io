@@ -54,7 +54,7 @@ class PlayState extends State{
         this.mouseDown = false;
         this.mouseRight = true;
 
-        this.speed = 10;
+        this.speed = 15;
 
         let pwidth = 115.2;
         let pheight = 86.6;

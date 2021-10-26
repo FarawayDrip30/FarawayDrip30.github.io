@@ -4,6 +4,8 @@ var ctx = canvas.getContext("2d");
 canvas.addEventListener("click", onClick);
 canvas.addEventListener("mousedown", onMouseDown)
 canvas.addEventListener("mouseup", onMouseUp)
+canvas.addEventListener("touchstart", onMouseDown);
+canvas.addEventListener("touchend", onMouseUp);
 
 var currentState = new MenuState();
 
