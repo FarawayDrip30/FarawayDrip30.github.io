@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="Website Assets/style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"/>
+ <link rel="shortcut icon" type="image/png" href="Website Assets\Logo.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Super Secret Birdpals Beta</title>
+</head>
+<body>
+<center>
+<h1>Birdpals</h1>
+
+<p>Create Account!</p>
+<img src="Website Assets\menu_image.png" alt="Menu Image" width="500" height="375">
+<form id="e-mail" onSubmit="logIn(); return false">
+        <input class="submit_on_enter" id="input-e" type="text" maxlength="50" autocomplete="off" placeholder="E-mail"/>
+</form> 
+<form id="username" onSubmit="logIn(); return false">
+        <input class="submit_on_enter" id="input-u" type="text" maxlength="50" autocomplete="off" placeholder="Username"/>
+</form> 
+<form id="password" onSubmit="logIn(); return false">
+        <input class="submit_on_enter" id="input-p" type="password" maxlength="50" autocomplete="off" placeholder="Password" required minlength="6"/>
+</form> 
+<form id="confirmpassword" onSubmit="logIn(); return false"> 
+        <input class="submit_on_enter" id="input-cp" type="password" maxlength="50" autocomplete="off" placeholder="Confirm Password"/> 
+</form>
+<br>
+<br>
+<button id="createAccount" class="button">Create Account</button>
+</center>
+<script src="Website Assets/jquery.min.js"></script>
+<script src="Website Assets/createAccount.js"></script>
+
+</body>
+</html>
