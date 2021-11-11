@@ -1,0 +1,35 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background-image: url("Assets/Textures/cobblestone.png");
+}
+
+a {
+    color: inherit; 
+    text-decoration: inherit; 
+}
+
+.header{
+    padding: 50px;
+    text-align: center;
+    color: white;
+    background: blue;
+    font-size: 30px;
+}
+
+.showcase{
+    text-align: center;
+    background: darkgray;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    background-image: url("Assets/Textures/cobble_stone.png");
+}
+
+.showcaseText{
+    color: aliceblue;
+    font-weight: bold;
+}
