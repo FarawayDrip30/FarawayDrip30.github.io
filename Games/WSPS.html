@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,4 +29,36 @@
         <p>yeah</p>
     </div>
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>I have sinned</title>
+    <meta charset="UTF-8">
+       <script src="../Assets/Ruffle/ruffle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <link rel="stylesheet" href="../style.css">
+    <div style="text-align: center;">
+        <div>
+            <iframe src="../Assets/Banner.html" width="100%" height="290px" frameBorder="0"></iframe>
+        </div>
+
+        <div id="container1"></div>
+        <script>
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                const player = ruffle.createPlayer();
+                const container = document.getElementById("container1");
+                container.appendChild(player);
+                player.load("../Assets/Games/peesim.swf");
+            });
+        </script>
+
+        <p>yeah</p>
+    </div>
+</body>
+>>>>>>> 7b96d98ccd584fc709ff7443c9498a9c5b3090d4
 </html>
