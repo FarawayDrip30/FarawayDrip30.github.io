@@ -4,11 +4,6 @@ body {
     background-image: url("Assets/Textures/cobblestone.png");
 }
 
-a {
-    color: inherit; 
-    text-decoration: inherit; 
-}
-
 .header{
     padding: 50px;
     text-align: center;
@@ -32,6 +27,7 @@ a {
 .showcaseText{
     color: aliceblue;
     font-weight: bold;
+    text-decoration: inherit; 
 }
 
 .backTo{
