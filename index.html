@@ -8,14 +8,17 @@
 
 <body>
     <link rel="stylesheet" href="style.css">
-    <div id="ball" width="50px" height="50px"></div>
     <div style="text-align: center;">
         <div>
             <iframe src="Assets/Banner.html" width="100%" height="290px" frameBorder="0"></iframe>
         </div>
-        
+        <div hidden id="ball" onclick="lowerBall()" style="background-image:url('Assets/Ball/sprite.png');background-size:cover;height:100px;width:100px;position: absolute;z-index: 2;top: 0px;left: 0px;"></div>
+        <!--<script src="Assets/Ball/ball.js"></script>-->
+
         <h2>"I make stuff, I think."</h2>
-        <h3>My Games</h3>
+        <h3 onclick="toggleH()">My Games</h3>
+        <h4 hidden id="technicality">Okay technically they're not all Games, Software would be a better term but calling this section "My Software" would be lame</h4>
+        <script>let h = document.getElementById("technicality"); function toggleH(){if(h.hidden == true){h.hidden = false;}else{h.hidden=true;}}</script>
         <div style="margin-left: 5%; margin-right: 5%;">
             <div class="showcase">
                 <a href="Games/HarvestSeason.html"><img src="Assets/Images/Harvest Season.png" height="106px"><p class="showcaseText">Harvest Season</p></a>
@@ -70,10 +73,7 @@
         <div class="showcase">
             <a href="Music/UrsoIsland.html"><img src="Assets/Images/ursobear.PNG" height="106px"><p class="showcaseText">Urso Island</p></a>
         </div>
-        <h3>What the Hell I'm Doing</h3>
-        <div>
-            <a class="twitter-timeline" data-width="400" data-height="600" href="https://twitter.com/FarawayDrip30?ref_src=twsrc%5Etfw">Twitter</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-        <p>Hey Social Medias add a way to embed your profile, cowards</p>
+        <p>FarawayDrip30 is Copyrighted by FarawayDrip30. Not Trademarked because I don't have the money so please don't trademark it.</p>
+        <p>©FarawayDrip30 2021-2022</p>
     </div>
 </body>
