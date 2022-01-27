@@ -23,6 +23,12 @@ class State{
     onMouseUp(evt){
 
     }
+    onKeyDown(evt){
+
+    }
+    onKeyUp(evt){
+
+    }
     end(){
 
     }
@@ -50,9 +56,6 @@ class MenuState extends State{
 class PlayState extends State{
     constructor(){
         super();
-        
-        this.mouseDown = false;
-        this.mouseRight = true;
 
         this.speed = 15;
 
@@ -63,22 +66,36 @@ class PlayState extends State{
         this.items = [];
         this.itemToRemove = null;
         this.itemspeed = 5;
-        this.itemSpawnTime = 1000;
-        this.spawnTimer = setTimeout(function(){currentState.spawnItem()}, this.itemSpawnTime);
+        this.timeToSpawn = 50;
+        this.spawnTimer = 0
 
         this.score = 0;
+        this.scoreText = new Text("Score: 0",10,30,30,"Arial","black");
+
+        this.lives = 3;
+        this.livesText = new Text("Lives: 3",10,60,30,"Arial","black");
+
+        this.rightPressed = false;
+        this.leftPressed = false;
     }
     main(){
-        if(this.mouseDown){
-            if(this.mouseRight){
-                if(this.player.x + this.player.width > canvas.width == false)
-                    this.player.x += this.speed * timeScale;
-            }
-            else{
-                if(this.player.x < 0 == false)
-                    this.player.x -= this.speed * timeScale;
-            }
+        if(this.rightPressed){
+            if(this.player.x + this.player.width > canvas.width == false)
+                this.player.x += this.speed * timeScale;
         }
+        else if(this.leftPressed){
+            if(this.player.x < 0 == false)
+                this.player.x -= this.speed * timeScale;
+        }
+
+        if(this.spawnTimer > this.timeToSpawn){
+            this.spawnTimer = 0;
+            this.spawnItem();
+        }
+        else{
+            this.spawnTimer += timeScale;
+        }
+
 
         let itemsToRemove = []
 
@@ -87,11 +104,19 @@ class PlayState extends State{
             if(this.items[i].y > this.player.y-10){
                 if(this.items[i].y > canvas.height){
                     itemsToRemove.push(i);
+                    if(this.items[i].points > 0){
+                        if(this.lives > 0){
+                            this.lives -= 1;
+                            this.livesText.text = "Lives: " + this.lives.toString();
+                        }
+                        else{
+                            changeState(new MenuState());
+                        }
+                    }
                 }
-                let middle = this.items[i].x + this.items[i].width/2
-                if(middle < this.player.x + this.player.width && middle > this.player.x){
-                    this.score += 10;
-                    console.log("Score: " + this.score);
+                if(this.items[i].x < this.player.x + this.player.width && this.items[i].x > this.player.x - this.items[i].width){
+                    this.score += this.items[i].points;
+                    this.scoreText.text = "Score: " + this.score.toString();
                     itemsToRemove.push(i);
                 }
             }
@@ -105,21 +130,56 @@ class PlayState extends State{
         clearScreen();
         this.player.draw();
         this.items.forEach(function(item){item.draw()});
+        this.scoreText.draw();
+        this.livesText.draw();
     }
     onMouseDown(evt){
         this.mouseDown = true;
         if(getMousePos(canvas,evt).x > canvas.width / 2){
-            this.mouseRight = true;
+            this.rightPressed = true;
         }
         else{
-            this.mouseRight = false;
+            this.leftPressed = true;
         }
     }
     onMouseUp(evt){
-        this.mouseDown = false;
+        this.rightPressed = false;
+        this.leftPressed = false;
+    }
+    onKeyDown(evt){
+        if(evt.keyCode == 37){
+            this.leftPressed = true;
+        }
+        else if(evt.keyCode == 39){
+            this.rightPressed = true;
+        }
+    }
+    onKeyUp(evt){
+        if(evt.keyCode == 37){
+            this.leftPressed = false;
+        }
+        else if(evt.keyCode == 39){
+            this.rightPressed = false;
+        }
     }
     spawnItem(){
-        this.spawnTimer = setTimeout(function(){currentState.spawnItem()}, this.itemSpawnTime);
-        this.items.push(new Shape(Math.random()*(canvas.width-50),-50,50,50,"red"));
+        if(this.timeToSpawn > 25){this.timeToSpawn -= 0.1;}
+        let rand = Math.random() * 159;
+        if(rand < 50){
+            this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"yellow",2,false));
+            return;
+        }
+        else{
+            rand -= 50;
+        }
+
+        if(rand < 33){this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"brown",3,false)); return;}else{rand -= 33}
+        if(rand < 33){this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"black",-5,false)); return;}else{rand -= 33}
+        if(rand < 20){this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"orange",5,false)); return;}else{rand -= 20}
+        if(rand < 13){this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"green",6,false)); return;}else{rand -= 13}
+        if(rand < 10){this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"blue",10,false)); return;}else{rand -= 10}
+
+        this.items.push(new Fruit(Math.random()*(canvas.width-50),-50,"yellow",2,false)); return;
+        
     }
 }
