@@ -34,3 +34,30 @@ class Sprite{
         ctx.drawImage(this.img,this.sx,this.sy,this.swidth,this.sheight,this.x + this.originX,this.y + this.originY,this.width,this.height)
     }
 }
+
+class Text{
+    constructor(text,x,y,size,font,colour){
+        this.text = text;
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.font = font;
+        this.colour = colour;
+    }
+
+    draw(){
+        ctx.fillStyle = this.colour;
+        ctx.font = this.size.toString()+"px "+this.font;
+        ctx.fillText(this.text, this.x, this.y);
+    }
+}
+
+
+class Fruit extends Shape{
+    constructor(x,y,colour,points,dangerous){
+        super(x,y,50,50,colour);
+        
+        this.points = points;
+        this.dangerous = dangerous;
+    }
+}

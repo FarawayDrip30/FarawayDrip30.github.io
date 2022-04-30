@@ -6,6 +6,8 @@ canvas.addEventListener("mousedown", onMouseDown)
 canvas.addEventListener("mouseup", onMouseUp)
 canvas.addEventListener("touchstart", onMouseDown);
 canvas.addEventListener("touchend", onMouseUp);
+document.addEventListener("keydown", onKeyDown);
+document.addEventListener("keyup", onKeyUp);
 
 var currentState = new MenuState();
 
@@ -27,6 +29,12 @@ function onMouseDown(evt){
 }
 function onMouseUp(evt){
     currentState.onMouseUp(evt);
+}
+function onKeyDown(evt){
+    currentState.onKeyDown(evt);
+}
+function onKeyUp(evt){
+    currentState.onKeyUp(evt);
 }
 
 main()
