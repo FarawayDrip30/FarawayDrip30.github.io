@@ -7,13 +7,30 @@
             margin: 0;
         }
 
+        @keyframes rainbow {
+            0% {color: red;}
+            16% {color: orange;}
+            32% {color: yellow;}
+            48% {color: green;}
+            64% {color: blue;}
+            80% {color: indigo;}
+            100% {color: red;}
+        }
+
         .header{
             padding: 50px;
             text-align: center;
-            color: white;
             background: blue;
             font-size: 30px;
             background-image: url("Textures/Water.png");
+        }
+
+        .header h1{
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: white;
+            animation-name: rainbow;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
         }
     </style>
 
