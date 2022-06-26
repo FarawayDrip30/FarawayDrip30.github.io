@@ -26,9 +26,9 @@ class PlayState extends State{
     constructor(){
         super();
         
-        this.body = new Sprite(createImage("Assets/Sprites/microfigures/default.png"),0,0,577,432,0,0,577,432,0,0);
-        this.eyelashes = new Sprite(createImage("Assets/Sprites/eyelashes.png"),0,0,577,432,0,0,577,432,0,0)
-        this.hat = new Sprite(createImage("Assets/Sprites/hats/alien.png"),0,0,577,432,0,0,577,432,0,0);
+        this.body = new Sprite(createImage("../Assets/Sprites/microfigures/default.png"),0,0,577,432,0,0,577,432,0,0);
+        this.eyelashes = new Sprite(createImage("../Assets/Sprites/eyelashes.png"),0,0,577,432,0,0,577,432,0,0)
+        this.hat = new Sprite(createImage("../Assets/Sprites/hats/alien.png"),0,0,577,432,0,0,577,432,0,0);
     }
     render(){
         clearScreen();

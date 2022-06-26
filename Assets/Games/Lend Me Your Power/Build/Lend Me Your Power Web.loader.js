@@ -9,7 +9,7 @@ function createUnityInstance(canvas, config, onProgress) {
     cacheControl: function (url) {
       return url == Module.dataUrl ? "must-revalidate" : "no-store";
     },
-    streamingAssetsUrl: "StreamingAssets",
+    streaming../AssetsUrl: "Streaming../Assets",
     downloadProgress: {},
     deinitializers: [],
     intervals: {},
@@ -45,7 +45,7 @@ function createUnityInstance(canvas, config, onProgress) {
   for (var parameter in config)
     Module[parameter] = config[parameter];
 
-  Module.streamingAssetsUrl = new URL(Module.streamingAssetsUrl, document.URL).href;
+  Module.streaming../AssetsUrl = new URL(Module.streaming../AssetsUrl, document.URL).href;
 
   Module.disabledCanvasEvents.forEach(function (disabledCanvasEvent) {
     canvas.addEventListener(disabledCanvasEvent, function (e) { e.preventDefault(); });

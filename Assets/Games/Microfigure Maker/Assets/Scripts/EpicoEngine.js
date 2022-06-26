@@ -12,20 +12,20 @@ checkbox.addEventListener("click",function(){
     if(eyelashesAvailable){
         if(eyelashesOn){
             eyelashesOn = false;
-            checkbox.src="Assets/Sprites/unchecked.png"
+            checkbox.src="../Assets/Sprites/unchecked.png"
         }
         else{
             eyelashesOn = true;
-            checkbox.src="Assets/Sprites/checkmark.png"
+            checkbox.src="../Assets/Sprites/checkmark.png"
         }
     }
 });
 
 function changeMicrofigure(srcname){
-    currentState.body.img.src = "Assets/Sprites/microfigures/"+srcname+".png";
+    currentState.body.img.src = "../Assets/Sprites/microfigures/"+srcname+".png";
     if(srcname == "fashion box worker" ||  srcname == "barman"){
         eyelashesOn = false;
-        checkbox.src="Assets/Sprites/unchecked.png"
+        checkbox.src="../Assets/Sprites/unchecked.png"
         eyelashesAvailable = false;
     }
     else{
@@ -37,7 +37,7 @@ function removeHat(){
     wearingHat = false;
 }
 function changeHat(srcname){
-    currentState.hat.img.src = "Assets/Sprites/hats/"+srcname+".png";
+    currentState.hat.img.src = "../Assets/Sprites/hats/"+srcname+".png";
     wearingHat = true;
 }
 
