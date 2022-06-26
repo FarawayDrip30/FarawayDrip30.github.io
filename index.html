@@ -29,15 +29,13 @@
             font-size: larger;
         }
 
-        #gamesDiv{
-            background-color:gold;
-            max-width: 80%;
-            position: absolute;
-            top: 300px;
+        #gamesDiv {
             left: 50%;
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-        }
+			width: fit-content;
+			background-color: gold;
+			overflow: hidden;
+            text-align: center;
+		}
         .showcaseImg{
             height: 106px;
         }
@@ -63,10 +61,31 @@
     <a class="titleLink" href="https://farawaydrip30.newgrounds.com/">Newgrounds</a>
     <hr>
 
-    <div id="gamesDiv">
-        <a class="showcase">
-            <img class="showcaseImg" src="Assets/Images/wsps2.png">
-            <p class="showcaseText">Watching Someone Pee Simulator 2</p>
-        </a>
-    </div>
+    <center>
+        <div id="gamesDiv">
+            <a class="showcase" onclick="changeGame('Watching Someone Pee Simulator 2','i have sinned')">
+                <img class="showcaseImg" src="Assets/Images/wsps2.png">
+                <p class="showcaseText">Watching Someone Pee Simulator 2</p>
+            </a>
+        </div>
+    </center>
+
+    <h1 id="gameTitle"></h1>
+    <p id="gameDescription"></p>
+
+    <script>
+        var gameTitle = document.getElementById("gameTitle");
+        var gameDesc = document.getElementById("gameDescription");
+
+        function changeGame(name,desc){
+            if(gameTitle.innerHTML != name){
+                gameTitle.innerHTML = name;
+                gameDesc.innerHTML = desc;
+            }
+            else{
+                gameTitle.innerHTML = "";
+                gameDesc.innerHTML = "";
+            }
+        }
+    </script>
 </body>
