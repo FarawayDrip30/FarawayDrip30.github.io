@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <head>
     <title>FarawayDrip30</title>
-</head>
-<body>
     <style>
         body{
             background-color: royalblue;
             text-align: center;
             background: rgb(108,205,255);
             background: radial-gradient(circle, rgba(108,205,255,1) 0%, rgba(0,14,255,1) 100%);
-            overflow: hidden;
+            overflow-x: hidden;
         }
         body::after{
             content:"";
@@ -31,7 +29,8 @@
 
         .showcaseDiv {
             left: 50%;
-			width: fit-content;
+            width: fit-content;
+            max-width: 80%;
 			overflow: hidden;
             text-align: center;
             margin-bottom: 15px;
@@ -57,7 +56,8 @@
             background-color: mediumaquamarine;
         }
     </style>
-
+</head>
+<body>
     <div style="text-align: left;">
         <a href="Old/index.html" >Old Website</a>
     </div>
@@ -93,12 +93,16 @@
                 <p class="showcaseText">Flappy Circle</p>
             </a>
             <a class="showcase" onclick="changeGame('Watching Someone Pee Simulator','yeah')">
-                <img class="showcaseImg" src="Assets/Images/wsps.png">
+                <img class="showcaseImg" src="Assets/Images/wsps.PNG">
                 <p class="showcaseText">Watching Someone Pee Simulator</p>
             </a>
             <a class="showcase" onclick="changeGame('Mugson Clicker','A Flash Game I Made for a friends Discord Servers Website of one of the Mascots (Which I also Drew). The Website has Now been Taken Down and the Server is now called Kisp-e Squid.')">
                 <img class="showcaseImg" src="Assets/Images/GetMuggedSon.png">
                 <p class="showcaseText">Mugson Clicker</p>
+            </a>
+            <a class="showcase" onclick="changeGame('Picos Factory','A Game I Made in Haxeflixel for Newgrounds Pico Day 2021')">
+                <img class="showcaseImg" src="Assets/Images/factory.png">
+                <p class="showcaseText">Pico's Factory</p>
             </a>
         </div>
         <div id="toolsDiv" class="showcaseDiv">
@@ -116,6 +120,9 @@
 
     <h1 id="gameTitle"></h1>
     <p id="gameDescription"></p>
+
+    <script src="Assets/JQuery/jquery-3.6.0.min.js"></script>
+    <script src="Assets/Scripts/loadGamesFromJSON.js"></script>
 
     <script>
         var gameTitle = document.getElementById("gameTitle");
