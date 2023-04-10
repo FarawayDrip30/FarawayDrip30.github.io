@@ -9,7 +9,23 @@
             background: radial-gradient(circle, rgba(108,205,255,1) 0%, rgba(0,14,255,1) 100%);
             overflow-x: hidden;
         }
-        body::after{
+        /* width */
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: #5f6fff;
+        }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgb(29, 38, 163);
+        }
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: rgb(20, 0, 134);
+        }
+        /*body::after{
             content:"";
             position: absolute;
             width:200vw;
@@ -18,7 +34,7 @@
             top: -50%;
             background-image: url(noise.webp);
             pointer-events: none
-        }
+        }*/
         #TitleB{
             font-size: 60px;
             background-color: white;
@@ -55,6 +71,12 @@
         .showcase:hover{
             background-color: mediumaquamarine;
         }
+        #gameDescription{
+            max-width: 80%;
+        }
+        #spaceFiller{
+            height: 100vh;
+        }
     </style>
 </head>
 <body>
@@ -72,40 +94,8 @@
     <center>
         <div id="gamesDiv" class="showcaseDiv">
             <h2>Games I've Made</h2>
-            <a class="showcase" onclick="changeGame('Game & Watch: Toyventure','A Toyventure fangame I made in the style of a Game & Watch, in a way to learn the Playdate SDK (I also ported to Javascript).')">
-                <img class="showcaseImg" src="Assets/Images/ToventureGW.png">
-                <p class="showcaseText">Game & Watch: Toyventure</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Watching Someone Pee Simulator 2','i have sinned')">
-                <img class="showcaseImg" src="Assets/Images/wsps2.png">
-                <p class="showcaseText">Watching Someone Pee Simulator 2</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Experimental Penguins Open Source','A port of Experimental Penguins to Javascript, which is also Open Source.')">
-                <img class="showcaseImg" src="Assets/Images/ExPeOS.PNG">
-                <p class="showcaseText">Experimental Penguins Open Source</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Spooky Speed','A Flash Game made for Newgrounds for Halloween')">
-                <img class="showcaseImg" src="Assets/Images/SpookySpeed.png">
-                <p class="showcaseText">Spooky Speed</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Flappy Circle','The First Flash Game I Made, in School. I Started it Before WSPS and Mugson Clicker but Finished it After.')">
-                <img class="showcaseImg" src="Assets/Images/FlappyCircle.PNG">
-                <p class="showcaseText">Flappy Circle</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Watching Someone Pee Simulator','yeah')">
-                <img class="showcaseImg" src="Assets/Images/wsps.PNG">
-                <p class="showcaseText">Watching Someone Pee Simulator</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Mugson Clicker','A Flash Game I Made for a friends Discord Servers Website of one of the Mascots (Which I also Drew). The Website has Now been Taken Down and the Server is now called Kisp-e Squid.')">
-                <img class="showcaseImg" src="Assets/Images/GetMuggedSon.png">
-                <p class="showcaseText">Mugson Clicker</p>
-            </a>
-            <a class="showcase" onclick="changeGame('Picos Factory','A Game I Made in Haxeflixel for Newgrounds Pico Day 2021')">
-                <img class="showcaseImg" src="Assets/Images/factory.png">
-                <p class="showcaseText">Pico's Factory</p>
-            </a>
         </div>
-        <div id="toolsDiv" class="showcaseDiv">
+        <div hidden id="toolsDiv" class="showcaseDiv">
             <h2>Tools I've Made</h2>
             <a class="showcase" onclick="changeGame('Microfigure Maker','A tool to create the Toyventure Microfigure of your Dreams! \n I will probably never finish this.')">
                 <img class="showcaseImg" src="Assets/Images/MicrofigureMaker.PNG">
@@ -116,10 +106,38 @@
                 <p class="showcaseText">Friday Night Forgin'</p>
             </a>
         </div>
-    </center>
 
-    <h1 id="gameTitle"></h1>
-    <p id="gameDescription"></p>
+        <h1 id="gameTitle"></h1>
+        <p id="gameDescription"></p>
+        <iframe id="gameFrame" frameborder="0" src="" hidden></iframe>
+        <div hidden id="container" style="text-align: center; margin:0 auto;"></div>
+        <script src="./Assets/Ruffle/ruffle.js"></script>
+        <script>
+            var player;
+            window.RufflePlayer = window.RufflePlayer || {};
+            window.RufflePlayer.config = {
+                "letterbox": "on",
+            }
+            window.addEventListener("load", (event) => {
+                const ruffle = window.RufflePlayer.newest();
+                player = ruffle.createPlayer();
+                const container = document.getElementById("container");
+                container.appendChild(player);
+            });
+        </script>
+        <br>
+        <button id="toggleGameFrameButton" onclick="toggleGameFrame()" hidden>Toggle Game in Website</button>
+
+        <div hidden id="funnyPasswordDiv">
+            <input id="funnyPassword" type="password">
+            <button onclick="enterPassword()">Open Sesame</button>
+        </div>
+        <p></p>
+        <br>
+        <div id="itchWidget"></div>
+
+        <div id="spaceFiller"></div>
+    </center>
 
     <script src="Assets/JQuery/jquery-3.6.0.min.js"></script>
     <script src="Assets/Scripts/loadGamesFromJSON.js"></script>
@@ -127,18 +145,98 @@
     <script>
         var gameTitle = document.getElementById("gameTitle");
         var gameDesc = document.getElementById("gameDescription");
+        var gameFrame = document.getElementById("gameFrame");
+        var ruffleFrame = document.getElementById("container");
+        var funnyPasswordDiv = document.getElementById("funnyPasswordDiv")
+        var toggleGameFrameButton = document.getElementById("toggleGameFrameButton");
+        var itchWidget = document.getElementById("itchWidget");
         var currentTitle = ""
 
-        function changeGame(name,desc){
-            if(currentTitle != name){
-                gameTitle.innerHTML = name;
-                gameDesc.innerHTML = desc;
-                currentTitle = name;
+        var usesGameFrame = true
+        var gameIndex = 0
+
+        function changeGame(i){
+            disableAllInfo()
+            if(currentTitle != gamesJSON[i].name){
+                gameFrame.hidden = true
+                gameIndex = i
+                gameTitle.scrollIntoView({behavior: "smooth"})
+                gameTitle.innerHTML = gamesJSON[i].name;
+                gameDesc.innerHTML = gamesJSON[i].description;
+                currentTitle = gamesJSON[i].name;
+
+                if(gamesJSON[i].itchWidget){itchWidget.innerHTML = gamesJSON[i].itchWidget}else{itchWidget.innerHTML = ""}
+
+                if(gamesJSON[i].gameFrame){
+                    if(gamesJSON[i].gameFrame.type == "iframe"){
+                        usesGameFrame = true
+                        toggleGameFrameButton.hidden = false
+                        //gameFrame.src = gamesJSON[i].gameFrame.src;
+                        gameFrame.width = gamesJSON[i].gameFrame.width;
+                        gameFrame.height = gamesJSON[i].gameFrame.height;
+                        player.pause()
+                        ruffleFrame.hidden = true
+                    }
+                    else if(gamesJSON[i].gameFrame.type == "flash"){
+                        usesGameFrame = false
+                        ruffleFrame.hidden = true
+                        toggleGameFrameButton.hidden = false
+                        //player.load(gamesJSON[i].gameFrame.src);
+                    }
+                    else if(gamesJSON[i].gameFrame.type == "password"){
+                        funnyPasswordDiv.hidden = false
+                    }
+                }else{
+                    gameFrame.hidden = true
+                    gameFrame.src = ""
+                    toggleGameFrameButton.hidden = true
+                }
             }
             else{
-                gameTitle.innerHTML = "";
-                gameDesc.innerHTML = "";
                 currentTitle = "";
+            }
+        }
+
+        function disableAllInfo(){
+            player.pause()
+            ruffleFrame.hidden = true
+            gameFrame.hidden = true
+            gameTitle.innerHTML = "";
+            gameDesc.innerHTML = "";
+            gameFrame.src = "";
+            itchWidget.innerHTML = "";
+            toggleGameFrameButton.hidden = true
+            usesGameFrame = false
+            funnyPasswordDiv.hidden = true
+        }
+
+        function enterPassword(){
+            if(document.getElementById("funnyPassword").value.toLowerCase() == "bloxwich"){
+                gameFrame.src = "Assets/Games/ButtonFactory/index.html"
+                gameFrame.width = 1300
+                gameFrame.height = 750
+                gameFrame.hidden = false
+            }
+        }
+
+        function toggleGameFrame(){
+            if(usesGameFrame){
+                gameFrame.hidden = !gameFrame.hidden
+                if(!gameFrame.hidden){
+                    gameFrame.src = gamesJSON[gameIndex].gameFrame.src
+                }
+                else{
+                    gameFrame.src = ""
+                }
+            }
+            else{
+                container.hidden = !container.hidden
+                if(!container.hidden){
+                    player.load(gamesJSON[gameIndex].gameFrame.src);
+                }
+                else{
+                    player.pause()
+                }
             }
         }
     </script>

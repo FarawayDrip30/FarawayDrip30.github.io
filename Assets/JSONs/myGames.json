@@ -3,7 +3,145 @@
         {
             "name": "Cave Grave",
             "thumbnail": "cavegrave.png",
-            "description": "Gave Grave is a Game I Made in Unity for Brackey's Game Jam 2020, with the Theme of 'Holes'. I Ended up Not Submitting on Time as I thought the Game Jam Ended a Day Later, Which it Didn't. I Ended Up Creating a New Jam (https://itch.io/jam/unofficial-brackeys-afterjam) to Submit to. \n Although I made Games in tools like Scratch and Hopscotch and WARIOWARE DIY!!!!!!!!! Before Making this one, I Consider this to be my 'First Game'. It's also the first Game I made a Devlog on. (https://www.youtube.com/watch?v=jbaKCqFnftE) (don't watch it)"
+            "description": "Gave Grave is a Game I Made in Unity for Brackey's Game Jam 2020, with the Theme of 'Holes'. I Ended up Not Submitting on Time as I thought the Game Jam Ended a Day Later, Which it Didn't. I Ended Up Creating a <a href=https://itch.io/jam/unofficial-brackeys-afterjam>New Jam</a> to Submit to. <br><br> Although I made Games in tools like Scratch and Hopscotch and WARIOWARE DIY!!!!!!!!! Before Making this one, I Consider this to be my 'First Game'. It's also the first and only Game I made a <a href=https://www.youtube.com/watch?v=jbaKCqFnftE>Devlog</a> on. (don't watch it)",
+            "gameFrame": {"type":"iframe","src":"https://v6p9d9t4.ssl.hwcdn.net/html/2246833/index.html?v=1591301722","width":1060,"height":700},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/574666?linkback=true' width='552' height='167'><a href='https://farawaydrip30.itch.io/cave-grave'>Cave Grave by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Dentopia",
+            "thumbnail": "Dentopia.PNG",
+            "description": "Dentopia is the Predecessor to Birdpals - A Virtual World of which the Staff included Penguin Giraffe, Gase, and Flines, who are also on Birdpals. I was a Programmer, of course, and the Game Started being thought of as 2D like Birdpals, but Eventually Became 3D like Club Penguin Island, Before Getting Cancelled as Penguin thought we Weren't Ready Yet. A Minigame for Dentopia, Sneaky Melons, Was Planned and Barely Finished, but you can Play it on this Site!",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/6881083/index.html","width":1060,"height":700},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1805003' width='552' height='167'><a href='https://farawaydrip30.itch.io/dentopia'>Dentopia by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Sneaky Melons",
+            "thumbnail": "SneakyMelons.png",
+            "description": "Sneaky Melons is the Minigame Previously Mentioned in the Dentopia Description - a Minigame for an Cancelled Virtual World (a game in the same genre as Club Penguin and similar) that, after Cancelling, we Decided to Resume Making it and Make it a Mobile Game. This was also Cancelled.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/6532631/index.html","width":1060,"height":700},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1712935' width='552' height='167'><a href='https://farawaydrip30.itch.io/sneaky-melons'>Sneaky Melons by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Brek",
+            "thumbnail": "brek.PNG",
+            "description": "Brek is a Game I Made in Javascript in Order to Learn the Language, Following <a href='https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript'>this Tutorial</a>",
+            "gameFrame":{"type":"iframe","src": "Assets/Games/brek.html","width":1060,"height":700},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/732583' width='552' height='167'><a href='https://farawaydrip30.itch.io/brek'>brek by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Birdpals",
+            "thumbnail": "Birdpals.png",
+            "description": "Birdpals is a Virtual World (same genre as Club Penguin) that I'm a Developer of, and the Successor to Dentopia.",
+            "gameFrame":{"type":"iframe","src": "https://birdpals.com/","width":1280,"height":720}
+        },
+        {
+            "name": "Flickershmush",
+            "thumbnail": "Smush.png",
+            "description": "Flickershmush was a Game I Made for the Third Blackthornprod Game Jam, with the Theme of 'Less is More'.\n Use your mouse to flick your Shmush to victory! Break crates and destroy enemies! Save the race from extinction and also get money...\n The less Health you have, the more Shmushes you have to take care of... \n\nSorry about the ear-piercing flick sound, it's a lot better in the Desktop version.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/3277211/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/899905' width='552' height='167'><a href='https://farawaydrip30.itch.io/flickershmush'>Flickershmush by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Lend Me Your Power",
+            "thumbnail": "lendmeyourpower.png",
+            "description": "You are Rabbit. Beat the Game.\n Lend Me Your Power is a Puzzle Platformer made for Brackeys Game Jam 2021.1, where you have to get close to mages to gain power and destroy the evil Rabbots!\n Everything in this game was created by me, except the Game Engine (Unity) and the Tripfive font by Pixelmush on the unity asset store.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/3384001/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/927440' width='552' height='167'><a href='https://farawaydrip30.itch.io/lend-me-your-power'>Lend Me Your Power by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Phil Ippers: Double Agent",
+            "thumbnail": "philippers.png",
+            "description": "How To Play: \nDeflect the Bullets from the penguins back towards the cannons & place a cannon before your suspicion metre runs out, or your enemies will find out that you're a double agent.\n Story:\n You are secret agent Phil Ippers, a penguin employed as a double agent to allow penguins to infiltrate a base successfully. \n\nThis is my first 72 hours jam, as you may be able to tell. I don't think the game is well designed and isn't too fun, and I didn't get to playtest it. You won't enjoy this.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/3428762/Phil Ippers WEBGL/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/939478' width='552' height='167'><a href='https://farawaydrip30.itch.io/phil-ippers-double-agent'>Phil Ippers: Double Agent by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Pico's Factory",
+            "thumbnail": "factory.png",
+            "description": "Oh no! A factory has made EVIL CLONES of Pico's friends... and enemies. \nA mix of shooting (sorta) and platforming (sorta). Includes Characters from Pico's School, Tankmen, and Henry Stickmin. Based on Pico Vs. Bear a little. \nI made this game in a month for Pico Day. It only has 3 levels, which is a shame, but it also has brought perhaps the worst sprites ever to be found in a newgrounds game.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/7664219/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/998651' width='552' height='167'><a href='https://farawaydrip30.itch.io/picos-factory'>Pico's Factory by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Mugson Clicker",
+            "thumbnail": "GetMuggedSon.png",
+            "description": "A Clicker Game I Made to Test Out Flash for my Friend's Discord Server, Called the Chill Cafe, Based on an Emote I Made for it. The Server Rebranded to a Splatoon Server and the Website no longer Exists, so there is No Reward for Completing the Game.",
+            "gameFrame":{"type":"flash","src": "Assets/Games/mugsonclicker.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Watching Someone Pee Simulator",
+            "thumbnail": "wsps.png",
+            "description": "oh no. made in one day based off a jackbox joke.",
+            "gameFrame":{"type":"flash","src": "Assets/Games/peesim.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Chikin X Tamago",
+            "thumbnail": "chikinxtamago.png",
+            "description": "I Game I Made for the Newgrounds July Jam 2021! I Decided to try out Godot, and When I Made This, I did NOT like the Engine (Which is no Longer the Case) and Left a Bug where the Enemies from a Past Game would be in the New Game but Invisible, and Fixed it MUCH Later.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/6074498/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1598902' width='552' height='167'><a href='https://farawaydrip30.itch.io/chikin-x-tamago'>Chikin X Tamago by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Flappy Circle",
+            "thumbnail": "FlappyCircle.PNG",
+            "description": "This is just a game I made at school in Flash. I started it before Watching Someone Pee Simulator, but I finished it afterwards. If you care, you can Play V1 <a href = 'Assets/Games/flappycirclev1.html'>here.</a>",
+            "gameFrame":{"type":"flash","src": "Assets/Games/Flappy Circle v2.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Spooky Speed",
+            "thumbnail": "SpookySpeed.png",
+            "description": "A Game I Made for Newgrounds for Halloween Because I Felt Like it. I Used Pump and Skid from Sr. Pelo's Spooky Month Series as the Characters. I Also Tried to Add Newgrounds Medals to the Game but They Don't Work. I Still Think It's Pretty Alright!",
+            "gameFrame":{"type":"flash","src": "Assets/Games/SpookySpeed.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Experimental Penguins Open Source",
+            "thumbnail": "ExPeOS.PNG",
+            "description": "I Really Love Early 2000s Flash Games and I Also Really Like Club Penguin, so I Decided to Try and Remake it! It's Currently Still an Ongoing Process. You Can Play it <a href='https://experimental-penguins-open-source.netlify.app/'>here.</a>"
+        },
+        {
+            "name": "Watching Someone Pee Simulator 2",
+            "thumbnail": "wsps2.png",
+            "description": "On April 1st, I Decided that I Wanted to Make a Game for April 1st. You Know, For April Fool's Day? I Decided to make a Sequel to WSPS Because That Was Kinda Funny and so I Made the ENTIRE thing in that 1 Day and Released it. \nMusic: \n<a href='https://www.newgrounds.com/audio/listen/1121694'>Advance of the Avalanch by DXLS</a> \n<a href='https://www.newgrounds.com/audio/listen/1121707'>Deadclub of Everything 2 by valbook2</a>",
+            "gameFrame":{"type":"flash","src": "Assets/Games/peesim2.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Button Factory",
+            "thumbnail": "buttonfactory.png",
+            "description": "I Made this for Ludum Dare 50 with the Theme of Delay the Inevitable, But I Don't Like my Voice so It's Password Protected by the Secret Word from GMod.",
+            "gameFrame":{"type":"password","src": "Assets/Games/peesim2.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Game & Watch: Toyventure",
+            "thumbnail": "GWToyventure.png",
+            "description": "I Wanted to Make a Game for the Playdate, so I did. It was Designed After a Toyventure Game & Watch Mockup that my Friend flines Made. I Then Ported it to Javascript so YOU can Play it in your Browser! You Can Get the Playdate Version on Itch.io.",
+            "gameFrame":{"type":"iframe","src": "Assets/Games/GWToyventure/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1575963' width='552' height='167'><a href='https://farawaydrip30.itch.io/game-watch-toyventure'>Game &amp; Watch: Toyventure by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Die Evil Die",
+            "thumbnail": "DieEvilDie.png",
+            "description": "For the GMTK Game Jam 2022 (Theme: Roll of the Dice) I Asked my Buddy Reman from Rat Man Games if he Wanted to Help Me with Making a Game, and he Agreed. Together we Decided to Make a Card Turn-Based Battler Based on Box Critters' Combat Card Game. I Like it! We also Asked Eribetra to Make the Music, which Turned Out Splendid!",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/6262132/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1615986' width='552' height='167'><a href='https://farawaydrip30.itch.io/die-evil-die'>Die Evil Die by FarawayDrip30, ratman</a></iframe>"
+        },
+        {
+            "name": "D.O.G. Eat Apple",
+            "thumbnail": "dogeatapple.png",
+            "description": "This was my Submission to the WOWIE Jam 4.0, with the Theme of 'Collaborate with AI'. I had had the Idea in my Head for a While, so I Made a Robot Dog to Fit the Theme Better and Got Round to Making it! I'm REALLY Happy with how it Turned Out, And also Very Pleased with its Rankings, Although Level 2 was too Hard for the Second Level, and Made a Couple People Quit. Oops.",
+            "gameFrame":{"type":"iframe","src": "https://v6p9d9t4.ssl.hwcdn.net/html/6340782/index.html","width":1280,"height":720},
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1660748' width='552' height='167'><a href='https://farawaydrip30.itch.io/dog-eat-apple'>D.O.G eat Apple by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Those Gosh Darn Flies",
+            "thumbnail": "thosegoshdarnflies.png",
+            "description": "I Wanted to Enter Ludum Dare 52 (Theme: Harvest) and I Also was Getting to Grips with Java at the Time. The Result? A very Rushed and Unpolished Game about Harvesting that I Didn't Get to Playtest. It's also DOWNLOAD ONLY!!!!!!!     HOW TO PLAY: You can dig up to 3 holes at a time by clicking the trowel button then on the ground. Drag a strawberry to it to plant it. Click it when the new strawberries are red to pick them. At the end of a 30 second round your score is the number of strawberries/strawberry plants x round. If a fly touches a strawberry plant it will disappear, so put a strawberry plant in its path to stop it.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/1870508' width='552' height='167'><a href='https://farawaydrip30.itch.io/those-gosh-darn-flies'>Those Gosh Darn Flies by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Watching Someone Pee Simulator VS",
+            "thumbnail": "WSPSVS.webp",
+            "description": "For April Fool's 2023 I Wanted to Make Another WSPS Game. I Was Finding it Hard to Come up With an Idea for a Threequel so I Decided to Make a Multiplayer Version. To Make a Multiplayer Version, I Felt Like the Game Should Have Something Else to Add to its Complexity - I Was Making the Next ESport After all. So I Came Up with the Idea to Add a Zone that Speeds up your Cursor, to Add the Risk of it being Harder to Hit the Green Area, but the Reward of Reaching it Faster than your Opponent. \nMUSIC: <a href='https://www.newgrounds.com/audio/listen/1204232'>Constipated as FUUUUUUU- by MrDumbDuck</a> and <a href='https://www.newgrounds.com/audio/listen/1204630'>Killer V.2 by SootSpek</a>",
+            "gameFrame":{"type":"flash","src": "Assets/Games/WSPS VS.swf","width":1280,"height":720}
         }
     ]
 }
