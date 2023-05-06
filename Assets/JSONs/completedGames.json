@@ -1,0 +1,76 @@
+{
+    "Games":[
+        {
+            "name": "Toree 3D",
+            "platform": "Nintendo Switch",
+            "completionDate": "???",
+            "effort": true
+        },
+        {
+            "name": "Achievement Unlocked 2",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": true
+        },
+        {
+            "name": "Castle Crashing the Beard HD",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": true
+        },
+        {
+            "name": "Friday Night Funkin'",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "Highschool Bathroom Simulator",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "Teleport Jumper",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "RUN FOR THE HILLS! YOUR FAVOURITE NEWGROUNDS USERS ARE COMING FO",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "qomp",
+            "platform": "Steam",
+            "completionDate": "8th July 2021",
+            "effort": false
+        },
+        {
+            "name": "Nina Aquila: Legal Eagle, Season One",
+            "platform": "Steam",
+            "completionDate": "25th March 2023",
+            "effort": false
+        },
+        {
+            "name": "Portal",
+            "platform": "Steam",
+            "completionDate": "6th April 2023",
+            "effort": true
+        },
+        {
+            "name": "Bloody Trapland",
+            "platform": "Steam",
+            "completionDate": "1st May 2023",
+            "effort": true
+        },
+        {
+            "name": "Pico's School",
+            "platform": "Newgrounds",
+            "completionDate": "6th May 2023",
+            "effort": false
+        }
+    ]
+}
