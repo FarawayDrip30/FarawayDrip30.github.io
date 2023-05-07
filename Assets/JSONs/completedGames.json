@@ -71,6 +71,12 @@
             "platform": "Newgrounds",
             "completionDate": "6th May 2023",
             "effort": false
+        },
+        {
+            "name": "Jerma's Big Adventure",
+            "platform": "Steam",
+            "completionDate": "7th May 2023",
+            "effort": true
         }
     ]
 }
