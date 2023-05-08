@@ -77,6 +77,12 @@
             "platform": "Steam",
             "completionDate": "7th May 2023",
             "effort": true
+        },
+        {
+            "name": "Berry People",
+            "platform": "Steam",
+            "completionDate": "8th May 2023",
+            "effort": true
         }
     ]
 }
