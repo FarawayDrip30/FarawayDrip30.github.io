@@ -142,6 +142,12 @@
             "thumbnail": "WSPSVS.webp",
             "description": "For April Fool's 2023 I Wanted to Make Another WSPS Game. I Was Finding it Hard to Come up With an Idea for a Threequel so I Decided to Make a Multiplayer Version. To Make a Multiplayer Version, I Felt Like the Game Should Have Something Else to Add to its Complexity - I Was Making the Next ESport After all. So I Came Up with the Idea to Add a Zone that Speeds up your Cursor, to Add the Risk of it being Harder to Hit the Green Area, but the Reward of Reaching it Faster than your Opponent. \nMUSIC: <a href='https://www.newgrounds.com/audio/listen/1204232'>Constipated as FUUUUUUU- by MrDumbDuck</a> and <a href='https://www.newgrounds.com/audio/listen/1204630'>Killer V.2 by SootSpek</a>",
             "gameFrame":{"type":"flash","src": "Assets/Games/WSPS VS.swf","width":1280,"height":720}
+        },
+        {
+            "name": "Flashbang Ninja",
+            "thumbnail": "flashbangNinja.png",
+            "description": "During my GCSEs I Wanted a Project to Occupy me, but I Didn't Want to Spend Time on Already Existing Projects Because I Didn't Have Enough Time, so I Made This Instead for a Laugh. I also Used it to Test how to use Newgrounds API in Godot 4, which You can See in Action <a href='https://www.newgrounds.com/portal/view/887367'>here</a> and See how I did it <a href='https://farawaydrip30.newgrounds.com/news/post/1364916'>here</a>.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2098574' width='552' height='167'><a href='https://farawaydrip30.itch.io/flashbang-ninja'>Flashbang Ninja by FarawayDrip30</a></iframe>"
         }
     ]
 }

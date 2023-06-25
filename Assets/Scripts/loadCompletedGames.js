@@ -1,6 +1,6 @@
 var gamesTable = document.getElementById("gamesTable")
 var gamesJSON = null
-$.getJSON('../Assets/JSONs/completedGames.json', function(data) {
+function loadCompletedGames(data){
     gamesJSON = data.Games;
 
     for(let i = 0; i < data.Games.length; i++){
@@ -14,4 +14,6 @@ $.getJSON('../Assets/JSONs/completedGames.json', function(data) {
         if(!effort){noeffort = "hidden class='noEffort'"}
         gamesTable.innerHTML += '<tr '+noeffort+'><td>'+name+'</td><td>'+platform+'</td><td>'+dateCompleted+'</td><td>'+effort+'</td></tr>'
     }
-},);
+};
+
+loadFromJSON("../Assets/JSONs/completedGames.json", loadCompletedGames)

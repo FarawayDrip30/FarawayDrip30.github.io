@@ -1,7 +1,7 @@
 {
     "Games":[
         {
-            "name": "Toree 3D",
+            "name": "Beeny",
             "platform": "Nintendo Switch",
             "completionDate": "???",
             "effort": true
@@ -82,6 +82,24 @@
             "name": "Berry People",
             "platform": "Steam",
             "completionDate": "8th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Toree Genesis",
+            "platform": "PC",
+            "completionDate": "13th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Stick Fight: The Game",
+            "platform": "Steam",
+            "completionDate": "28th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Toree 3D",
+            "platform": "Nintendo Switch",
+            "completionDate": "24th June 2023",
             "effort": true
         }
     ]

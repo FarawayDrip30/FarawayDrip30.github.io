@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>FarawayDrip30</title>
     <style>
         body{
@@ -47,12 +48,16 @@
             left: 50%;
             width: fit-content;
             max-width: 80%;
+            width: 80%;
 			overflow: hidden;
             text-align: center;
             margin-bottom: 15px;
 		}
         #gamesDiv{
             background-color: gold;
+        }
+        #musicDiv{
+            background-color: darkseagreen;
         }
         #toolsDiv{
             background-color: hotpink;
@@ -106,12 +111,16 @@
                 <p class="showcaseText">Friday Night Forgin'</p>
             </a>
         </div>
+        <div id="musicDiv" class="showcaseDiv">
+            <h2>Music I've Made</h2>
+        </div>
 
         <h1 id="gameTitle"></h1>
+        <iframe id="musicFrame" hidden frameborder="0" src="Assets/Externals/Scritch/index.html" width="50%" height="fit-content" onload="initMusicFrame()"></iframe>
         <p id="gameDescription"></p>
         <iframe id="gameFrame" frameborder="0" src="" hidden></iframe>
         <div hidden id="container" style="text-align: center; margin:0 auto;"></div>
-        <script src="./Assets/Ruffle/ruffle.js"></script>
+        <script src="./Assets/Externals/Ruffle/ruffle.js"></script>
         <script>
             var player;
             window.RufflePlayer = window.RufflePlayer || {};
@@ -142,10 +151,26 @@
         <a style="font: 11;" href="Pages/completedGames.html">Completed Games</a>
     </center>
 
-    <script src="Assets/JQuery/jquery-3.6.0.min.js"></script>
-    <script src="Assets/Scripts/loadGamesFromJSON.js"></script>
+    <script src="Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
+
+    <script src="Assets/Scripts/loadFromJSON.js"></script>
+    <script src="Assets/Scripts/loadHomepageFromJSON.js"></script>
 
     <script>
+        window.addEventListener("message", (event) => {
+            musicFrameLoaded()
+        });
+
+        var musicFrame = document.getElementById("musicFrame")
+        function initMusicFrame(){
+            //musicFrame.contentWindow.postMessage("../../JSONs/ScritchConfigs/ursoIsland.json")
+        }
+        function musicFrameLoaded(){
+            musicFrame.hidden = false
+            musicFrame.width  = musicFrame.contentWindow.document.body.scrollWidth;
+            musicFrame.height = musicFrame.contentWindow.document.body.scrollHeight;
+        }
+
         var gameTitle = document.getElementById("gameTitle");
         var gameDesc = document.getElementById("gameDescription");
         var gameFrame = document.getElementById("gameFrame");
@@ -200,9 +225,30 @@
             }
         }
 
+        var musicIndex = 0
+
+        function changeMusic(i){
+            disableAllInfo()
+            if(currentTitle != musicJSON[i].name){
+                //musicFrame.hidden = false
+                //musicFrame.width  = musicFrame.contentWindow.document.body.scrollWidth;
+                //musicFrame.height = musicFrame.contentWindow.document.body.scrollHeight + 10;
+                musicFrame.contentWindow.postMessage("../../JSONs/ScritchConfigs/"+musicJSON[i].scritchConfig+".json")
+                musicIndex = i
+                gameTitle.scrollIntoView({behavior: "smooth"})
+                //gameTitle.innerHTML = musicJSON[i].name;
+                gameDesc.innerHTML = musicJSON[i].description;
+                currentTitle = musicJSON[i].name;
+            }
+            else{
+                currentTitle = ""
+            }
+        }
+
         function disableAllInfo(){
             player.pause()
             ruffleFrame.hidden = true
+            musicFrame.hidden = true
             gameFrame.hidden = true
             gameTitle.innerHTML = "";
             gameDesc.innerHTML = "";
