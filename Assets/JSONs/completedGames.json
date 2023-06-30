@@ -101,6 +101,12 @@
             "platform": "Nintendo Switch",
             "completionDate": "24th June 2023",
             "effort": true
+        },
+        {
+            "name": "Pikuniku",
+            "platform": "Steam",
+            "completionDate": "30th June 2023",
+            "effort": true
         }
     ]
 }
