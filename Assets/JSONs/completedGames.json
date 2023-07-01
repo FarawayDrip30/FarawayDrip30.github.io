@@ -107,6 +107,12 @@
             "platform": "Steam",
             "completionDate": "30th June 2023",
             "effort": true
+        },
+        {
+            "name": "Kindergarten",
+            "platform": "Steam",
+            "completionDate": "1st July 2023",
+            "effort": true
         }
     ]
 }
