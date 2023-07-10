@@ -113,6 +113,12 @@
             "platform": "Steam",
             "completionDate": "1st July 2023",
             "effort": true
+        },
+        {
+            "name": "The Looker",
+            "platform": "Steam",
+            "completionDate": "10th July 2023",
+            "effort": true
         }
     ]
 }
