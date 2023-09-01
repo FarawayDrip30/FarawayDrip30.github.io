@@ -9,10 +9,12 @@ function loadCompletedGames(data){
         let name = item.name;
         let platform = item.platform;
         let dateCompleted = item.completionDate;
+        let completionRequirement = item.completionRequirement
+        if(completionRequirement == null){completionRequirement = "All Achievements"}
         let effort = item.effort
         let noeffort
         if(!effort){noeffort = "hidden class='noEffort'"}
-        gamesTable.innerHTML += '<tr '+noeffort+'><td>'+name+'</td><td>'+platform+'</td><td>'+dateCompleted+'</td><td>'+effort+'</td></tr>'
+        gamesTable.innerHTML += '<tr '+noeffort+'><td>'+name+'</td><td>'+platform+'</td><td>'+dateCompleted+'</td><td>'+completionRequirement+'</td><td>'+effort+'</td></tr>'
     }
 };
 
