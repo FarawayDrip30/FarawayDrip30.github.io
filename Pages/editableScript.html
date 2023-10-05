@@ -1,0 +1,20 @@
+<head>
+    <body>
+        <p id="editableScript" contenteditable="">function func1(){alert("button pressed")}</p>
+        <script id="script"></script>
+        <script>
+            var scriptToChange = document.getElementById("script")
+            var editableScript = document.getElementById("editableScript")
+
+            editableScript.addEventListener("input", function() {
+                scriptToChange.remove()
+                var s = document.createElement( 'script' );
+                s.innerHTML = editableScript.innerHTML;
+                s.id = "script";
+                document.body.appendChild( s );
+                console.log(s)
+            }, false);
+        </script>
+        <button onclick="func1()">Button</button>
+    </body>
+</head>
