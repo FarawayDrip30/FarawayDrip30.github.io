@@ -148,6 +148,24 @@
             "thumbnail": "flashbangNinja.png",
             "description": "During my GCSEs I Wanted a Project to Occupy me, but I Didn't Want to Spend Time on Already Existing Projects Because I Didn't Have Enough Time, so I Made This Instead for a Laugh. I also Used it to Test how to use Newgrounds API in Godot 4, which You can See in Action <a href='https://www.newgrounds.com/portal/view/887367'>here</a> and See how I did it <a href='https://farawaydrip30.newgrounds.com/news/post/1364916'>here</a>.",
             "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2098574' width='552' height='167'><a href='https://farawaydrip30.itch.io/flashbang-ninja'>Flashbang Ninja by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Asteroid God",
+            "thumbnail": "asteroidgod.png",
+            "description": "Made in Godot 4.1 for the GMTK Game Jam 2023. </p><p>This Theme was actually really hard for me, I spent the majority of the first day working on projects that were probably more interesting than this, but weren't that fun.</p><p>This idea isn't a winner, but game jams are just a way to finally finish something. Hopefully next year I can come up with a far better idea.</p><p>Also, cos of the whole wasting the majority of the first day + other stuff, I didn't really have time for balancing, so you might find it either too easy or to hard.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2157871' width='552' height='167'><a href='https://farawaydrip30.itch.io/asteroid-god'>Asteroid God by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "A Boy and His --TODO-- Add Creature Name Here.",
+            "thumbnail": "aboyandhis.png",
+            "description": "Your 'Gamedev' 'Friend' just sent you his newest game to try! The only issue is, he's pretty indecisive and hasn't finalised the whole 'creature' part of the game. you know. the main mechanic. </p><p>So you're gonna have to step in! Change the creature on the fly to get past these half-baked 'puzzles'.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2195824' width='552' height='167'><a href='https://farawaydrip30.itch.io/a-boy-and-his-todo-add-creature-here'>A Boy and His --TODO-- Add Creature Name Here. by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Me HATE Pumpkins",
+            "thumbnail": "mehatepumpkins.png",
+            "description": "ME HATE PUMPKINS is a weird walking simulator/semi-rocket jumper/collectathon about being a guy that goes around smashing pumpkins and jumping all over the place, in a strange flesh world filled with turnip men.</p><p>The game takes 20-30 minutes to complete.</p><p>Made for a personal game jam over the month of October for Halloween, along with Craity who made into the dark as his entry.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2344533' width='552' height='167'><a href='https://farawaydrip30.itch.io/me-hate-pumpkins'>ME HATE PUMPKINS by FarawayDrip30</a></iframe>"
         }
     ]
 }
