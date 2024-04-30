@@ -1,305 +1,116 @@
-<!DOCTYPE html>
-<head>
-    <body>
+<html>
+    <head>
         <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
         <title>FarawayDrip30</title>
-        
-        <div style="text-align: left;">
-            <a href="Old/index.html" >Old Website</a>
-        </div>
-    
-        <h1 id="Title"><b id="TitleB">FarawayDrip30</b></h1>
-        <a class="titleLink" href="https://www.youtube.com/channel/UCQHx127o2j3G7kTpBMD5aYw">YouTube</a>
-        <a class="titleLink" href="https://twitter.com/FarawayDrip30">Twitter</a>
-        <a class="titleLink" href="https://farawaydrip30.itch.io/">Itch.io</a>
-        <a class="titleLink" href="https://farawaydrip30.newgrounds.com/">Newgrounds</a>
-        <hr>
-        <button onclick="showCSS()">Show CSS</button>
-        <style id="SiteCSS" hidden style="" contenteditable="">
-            body{
-                background-color: royalblue;
-                text-align: center;
-                background: rgb(108,205,255);
-                background: radial-gradient(circle, rgba(108,205,255,1) 0%, rgba(0,14,255,1) 100%);
-                overflow-x: hidden;
-            }
-            /* width */
-            ::-webkit-scrollbar {
-            width: 10px;
-            }
-            /* Track */
-            ::-webkit-scrollbar-track {
-            background: #5f6fff;
-            }
-            /* Handle */
-            ::-webkit-scrollbar-thumb {
-            background: rgb(29, 38, 163);
-            }
-            /* Handle on hover */
-            ::-webkit-scrollbar-thumb:hover {
-            background: rgb(20, 0, 134);
-            }
-            /*body::after{
-                content:"";
-                position: absolute;
-                width:200vw;
-                height: 200vh;
-                left: -50%;
-                top: -50%;
-                background-image: url(noise.webp);
-                pointer-events: none
-            }*/
-            #TitleB{
-                font-size: 60px;
-                background-color: white;
-            }
-            .titleLink{
-                font-size: larger;
-            }
-
-            .showcaseDiv {
-                left: 50%;
-                width: fit-content;
-                max-width: 80%;
-                width: 80%;
-                overflow: hidden;
-                text-align: center;
-                margin-bottom: 15px;
-            }
-            #gamesDiv{
-                background-color: gold;
-            }
-            #musicDiv{
-                background-color: darkseagreen;
-            }
-            #toolsDiv{
-                background-color: hotpink;
-            }
-            .showcaseImg{
-                height: 106px;
-            }
-            .showcase{
-                text-align: center;
-                padding: 20px;
-                width: fit-content;
-                margin: auto;
-                display: inline-block;
-                cursor:pointer;
-            }
-            .showcase:hover{
-                background-color: mediumaquamarine;
-            }
-            #gameDescription{
-                max-width: 80%;
-            }
-            #spaceFiller{
-                height: 100vh;
-            }
-        </style>
-        <hr>
-
+    </head>
+    <body>
         <center>
-            <div id="gamesDiv" class="showcaseDiv">
-                <h2>Games I've Made</h2>
-            </div>
-            <div hidden id="toolsDiv" class="showcaseDiv">
-                <h2>Tools I've Made</h2>
-                <a class="showcase" onclick="changeGame('Microfigure Maker','A tool to create the Toyventure Microfigure of your Dreams! \n I will probably never finish this.')">
-                    <img class="showcaseImg" src="Assets/Images/MicrofigureMaker.PNG">
-                    <p class="showcaseText">Microfigure Maker</p>
-                </a>
-                <a class="showcase" onclick="changeGame('Friday Night Forgin','A bad Python tool to reskin FNF characters. It works.')">
-                    <img class="showcaseImg" src="Assets/Images/forgin.png">
-                    <p class="showcaseText">Friday Night Forgin'</p>
-                </a>
-            </div>
-            <div id="musicDiv" class="showcaseDiv">
-                <h2>Music I've Made</h2>
+            <div class="background"></div>
+            <br><br>
+
+            <div id="page" style="position: relative; transition: margin-top 2s;">
+                <div style="position: absolute; top: 200px; left: 50%; right: 50%; transform: translate(-50%, -50%); display:flex; width: fit-content; margin: auto; pointer-events: none;">
+                    <div><img src="../Assets/Images/floatinghead.png" class="floatinghead"></div>
+                    <div class="boxWidth"></div>
+                    <div><img src="../Assets/Images/floatinghead.png" class="floatinghead" style="animation-delay: -1s;"></div>
+                </div>
+                
+                <div>
+                    <div class="headerBox">
+                        <h1 class="title">FarawayDrip30</h1>
+                    </div>
+
+                    <div class="box" style="background-color: lightblue;">
+                        <a class="titleLink" href="https://www.youtube.com/channel/UCQHx127o2j3G7kTpBMD5aYw">YouTube</a>
+                        <a class="titleLink" href="https://twitter.com/FarawayDrip30">Twitter</a>
+                        <a class="titleLink" href="https://farawaydrip30.itch.io/">Itch.io</a>
+                        <a class="titleLink" href="https://farawaydrip30.newgrounds.com/">Newgrounds</a>
+                    </div>
+
+                    <div id="mainBox" class="box" style="display: inline-block;">
+                        <h2 class="title">MAIN STUFF</h2>
+                        <div style="width: fit-content;">
+                            <a href="../index.html" id="latestA">
+                                <div id="latestDiv" class="mediaBox" style="float: left;">
+                                    <img src="" style="height: 300px;">
+                                    <p>Latest</p>
+                                </div>
+                            </a>
+                            <div id="sideFeatures" style="float: left; width: calc(100% - fit-content);">
+                                <a href="info.html?file=Games&type=Game&name=Birdpals">
+                                    <div class="mediaBox">
+                                        <img src="../Assets/Images/birdpals2.png" style="height: 127px;">
+                                        <p>Birdpals</p>
+                                    </div>
+                                </a>
+                                <a href="info.html?file=Games&type=Game&name=Watching Someone Pee Simulator">
+                                    <div class="mediaBox">
+                                        <img src="../Assets/Images/WSPSVS2.webp" style="height: 127px;">
+                                        <p>WSPS</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="box" style="border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
+                        <a href="info.html?file=Games&type=IconList&entryType=Game">
+                            <div class="mediaBox">
+                                <img src="../Assets/Images/WSPSVS.webp">
+                                <p>Games</p>
+                            </div>
+                        </a>
+                        <a href="info.html?file=Music&type=IconList&entryType=Music">
+                            <div class="mediaBox">
+                                <img src="../Assets/Images/birdpalsAlbum.jpg">
+                                <p>Music</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
-            <h1 id="gameTitle"></h1>
-            <iframe id="musicFrame" hidden frameborder="0" src="Assets/Externals/Scritch/index.html" width="50%" height="fit-content" onload="initMusicFrame()"></iframe>
-            <p id="gameDescription"></p>
-            <iframe id="gameFrame" frameborder="0" src="" hidden></iframe>
-            <div hidden id="container" style="text-align: center; margin:0 auto;"></div>
-            <script src="./Assets/Externals/Ruffle/ruffle.js"></script>
+            <script src="../Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
+            <script src="../Assets/Scripts/loadFromJSON.js"></script>
             <script>
-                var player;
-                window.RufflePlayer = window.RufflePlayer || {};
-                window.RufflePlayer.config = {
-                    "letterbox": "on",
+                var latestA = document.getElementById("latestA");
+                var latestDiv = document.getElementById("latestDiv");
+                var mainBox = document.getElementById("mainBox");
+
+                var games;
+                function setGames(data){
+                    games = data
+                    
+                    let latestGame = games.Games[games.Games.length-1]
+                    latestDiv.children[0].src = "Assets/Images/" + latestGame.thumbnail
+                    latestA.href = "info.html?file=Games&type=Game&name="+latestGame.name;
                 }
-                window.addEventListener("load", (event) => {
-                    const ruffle = window.RufflePlayer.newest();
-                    player = ruffle.createPlayer();
-                    const container = document.getElementById("container");
-                    container.appendChild(player);
-                });
+                loadFromJSON("../Assets/JSONs/Games.json",setGames);
+
+                function resizeSideFeatures(){
+                    // Sets Side Features div to either be on top of each other or next to (depending on room)
+                    var sideFeatures = document.getElementById("sideFeatures")
+                    sideFeatures.style.width = "fit-content"
+                    if(sideFeatures.offsetWidth / 2 + latestDiv.offsetWidth < mainBox.offsetWidth-20){
+                        sideFeatures.style.width = sideFeatures.offsetWidth / 2;
+                        //console.log("latestDiv: " + latestDiv.offsetWidth + ", sideFeatures: " + sideFeatures.offsetWidth + ", mainBox: " + mainBox.offsetWidth)
+                    }
+                }
+                addEventListener("resize", function(e){
+                    resizeSideFeatures();
+                })
+                resizeSideFeatures();
+                latestDiv.children[0].onload = resizeSideFeatures;
+                
             </script>
-            <br>
-            <button id="toggleGameFrameButton" onclick="toggleGameFrame()" hidden>Toggle Game in Website</button>
 
-            <div hidden id="funnyPasswordDiv">
-                <input id="funnyPassword" type="password">
-                <button onclick="enterPassword()">Open Sesame</button>
-            </div>
-            <p></p>
-            <br>
-            <div id="itchWidget"></div>
-
-            <div id="spaceFiller"></div>
-
-            <hr>
-            <a style="font: 11;" href="Pages/completedGames.html">Completed Games</a>
+            <script>
+                function floatPage(){
+                    let page = document.getElementById("page");
+                    page.style.marginTop = "-100%";
+                }
+            </script>
         </center>
-
-        <script src="Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
-
-        <script src="Assets/Scripts/loadFromJSON.js"></script>
-        <script src="Assets/Scripts/loadHomepageFromJSON.js"></script>
-
-        <script>
-            var siteCSS = document.getElementById("SiteCSS")
-            function showCSS(){
-                if(siteCSS.style.display == ""){
-                    siteCSS.style = "display: block; white-space: pre; text-align: left; font-size: smaller;";
-                }
-                else{
-                    siteCSS.style = "";
-                }
-            }
-
-            window.addEventListener("message", (event) => {
-                musicFrameLoaded()
-            });
-
-            var musicFrame = document.getElementById("musicFrame")
-            function initMusicFrame(){
-                //musicFrame.contentWindow.postMessage("../../JSONs/ScritchConfigs/ursoIsland.json")
-            }
-            function musicFrameLoaded(){
-                musicFrame.hidden = false
-                musicFrame.width  = musicFrame.contentWindow.document.body.scrollWidth;
-                musicFrame.height = musicFrame.contentWindow.document.body.scrollHeight;
-            }
-
-            var gameTitle = document.getElementById("gameTitle");
-            var gameDesc = document.getElementById("gameDescription");
-            var gameFrame = document.getElementById("gameFrame");
-            var ruffleFrame = document.getElementById("container");
-            var funnyPasswordDiv = document.getElementById("funnyPasswordDiv")
-            var toggleGameFrameButton = document.getElementById("toggleGameFrameButton");
-            var itchWidget = document.getElementById("itchWidget");
-            var currentTitle = ""
-
-            var usesGameFrame = true
-            var gameIndex = 0
-
-            function changeGame(i){
-                disableAllInfo()
-                if(currentTitle != gamesJSON[i].name){
-                    gameFrame.hidden = true
-                    gameIndex = i
-                    gameTitle.scrollIntoView({behavior: "smooth"})
-                    gameTitle.innerHTML = gamesJSON[i].name;
-                    gameDesc.innerHTML = gamesJSON[i].description;
-                    currentTitle = gamesJSON[i].name;
-
-                    if(gamesJSON[i].itchWidget){itchWidget.innerHTML = gamesJSON[i].itchWidget}else{itchWidget.innerHTML = ""}
-
-                    if(gamesJSON[i].gameFrame){
-                        if(gamesJSON[i].gameFrame.type == "iframe"){
-                            usesGameFrame = true
-                            toggleGameFrameButton.hidden = false
-                            //gameFrame.src = gamesJSON[i].gameFrame.src;
-                            gameFrame.width = gamesJSON[i].gameFrame.width;
-                            gameFrame.height = gamesJSON[i].gameFrame.height;
-                            player.pause()
-                            ruffleFrame.hidden = true
-                        }
-                        else if(gamesJSON[i].gameFrame.type == "flash"){
-                            usesGameFrame = false
-                            ruffleFrame.hidden = true
-                            toggleGameFrameButton.hidden = false
-                            //player.load(gamesJSON[i].gameFrame.src);
-                        }
-                        else if(gamesJSON[i].gameFrame.type == "password"){
-                            funnyPasswordDiv.hidden = false
-                        }
-                    }else{
-                        gameFrame.hidden = true
-                        gameFrame.src = ""
-                        toggleGameFrameButton.hidden = true
-                    }
-                }
-                else{
-                    currentTitle = "";
-                }
-            }
-
-            var musicIndex = 0
-
-            function changeMusic(i){
-                disableAllInfo()
-                if(currentTitle != musicJSON[i].name){
-                    //musicFrame.hidden = false
-                    //musicFrame.width  = musicFrame.contentWindow.document.body.scrollWidth;
-                    //musicFrame.height = musicFrame.contentWindow.document.body.scrollHeight + 10;
-                    musicFrame.contentWindow.postMessage("../../JSONs/ScritchConfigs/"+musicJSON[i].scritchConfig+".json")
-                    musicIndex = i
-                    gameTitle.scrollIntoView({behavior: "smooth"})
-                    //gameTitle.innerHTML = musicJSON[i].name;
-                    gameDesc.innerHTML = musicJSON[i].description;
-                    currentTitle = musicJSON[i].name;
-                }
-                else{
-                    currentTitle = ""
-                }
-            }
-
-            function disableAllInfo(){
-                player.pause()
-                ruffleFrame.hidden = true
-                musicFrame.hidden = true
-                gameFrame.hidden = true
-                gameTitle.innerHTML = "";
-                gameDesc.innerHTML = "";
-                gameFrame.src = "";
-                itchWidget.innerHTML = "";
-                toggleGameFrameButton.hidden = true
-                usesGameFrame = false
-                funnyPasswordDiv.hidden = true
-            }
-
-            function enterPassword(){
-                if(document.getElementById("funnyPassword").value.toLowerCase() == "bloxwich"){
-                    gameFrame.src = "Assets/Games/ButtonFactory/index.html"
-                    gameFrame.width = 1300
-                    gameFrame.height = 750
-                    gameFrame.hidden = false
-                }
-            }
-
-            function toggleGameFrame(){
-                if(usesGameFrame){
-                    gameFrame.hidden = !gameFrame.hidden
-                    if(!gameFrame.hidden){
-                        gameFrame.src = gamesJSON[gameIndex].gameFrame.src
-                    }
-                    else{
-                        gameFrame.src = ""
-                    }
-                }
-                else{
-                    container.hidden = !container.hidden
-                    if(!container.hidden){
-                        player.load(gamesJSON[gameIndex].gameFrame.src);
-                    }
-                    else{
-                        player.pause()
-                    }
-                }
-            }
-        </script>
     </body>
-</head>
+</html>

@@ -9,7 +9,7 @@ function loadGames(data) {
         let name = item.name;
         let desc = item.description;
         let img = item.thumbnail;
-        gamesDiv.innerHTML += '<a class="showcase" id="'+name+'" onclick="changeGame('+i+')"> <img class="showcaseImg" src="Assets/Images/'+img+'"> <p class="showcaseText">'+name+'</p> </a>'
+        gamesDiv.innerHTML += '<a class="showcase" id="'+name+'" onclick="changeGame('+i+')"> <img class="showcaseImg" src="../Assets/Images/'+img+'"> <p class="showcaseText">'+name+'</p> </a>'
     }
 };
 
@@ -24,9 +24,9 @@ function loadMusic(data) {
         let name = item.name;
         let desc = item.description;
         let img = item.thumbnail;
-        musicDiv.innerHTML += '<a class="showcase" id="'+name+'" onclick="changeMusic('+i+')"> <img class="showcaseImg" src="Assets/Images/'+img+'"> <p class="showcaseText">'+name+'</p> </a>'
+        musicDiv.innerHTML += '<a class="showcase" id="'+name+'" onclick="changeMusic('+i+')"> <img class="showcaseImg" src="../Assets/Images/'+img+'"> <p class="showcaseText">'+name+'</p> </a>'
     }
 };
 
-loadFromJSON("Assets/JSONs/myGames.json", loadGames)
-loadFromJSON("Assets/JSONs/myMusic.json", loadMusic)
+loadFromJSON("../Assets/JSONs/myGames.json", loadGames)
+loadFromJSON("../Assets/JSONs/myMusic.json", loadMusic)

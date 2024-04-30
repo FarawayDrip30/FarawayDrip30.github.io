@@ -23,7 +23,7 @@
 body {
     font-family: Arial;
     margin: 0;
-    background-image: url("../Assets/Textures/cobblestone.png");
+    background-image: url("../../Assets/Textures/cobblestone.png");
     /*animation-name: wiggleBG;
     animation-duration: 5s;
     animation-iteration-count: infinite;*/
@@ -50,7 +50,7 @@ a{
     border-radius: 10px;
     display: inline-block;
     margin-bottom: 5px;
-    background-image: url("../Assets/Textures/cobble_stone.png");
+    background-image: url("../../Assets/Textures/cobble_stone.png");
     /*animation-name: hueShift;
     animation-duration: 5s;
     animation-iteration-count: infinite;*/

@@ -166,6 +166,24 @@
             "thumbnail": "mehatepumpkins.png",
             "description": "ME HATE PUMPKINS is a weird walking simulator/semi-rocket jumper/collectathon about being a guy that goes around smashing pumpkins and jumping all over the place, in a strange flesh world filled with turnip men.</p><p>The game takes 20-30 minutes to complete.</p><p>Made for a personal game jam over the month of October for Halloween, along with Craity who made into the dark as his entry.",
             "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2344533' width='552' height='167'><a href='https://farawaydrip30.itch.io/me-hate-pumpkins'>ME HATE PUMPKINS by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Preventing Someone Watching You Pee via a Shotgun Simulator",
+            "thumbnail": "wsps-prevent.png",
+            "description": "It's time to take back the bathroom.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2619508' width='552' height='167'><a href='https://farawaydrip30.itch.io/wa'>Preventing Someone Watching You Pee via a Shotgun Simulator by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Birdpals (Offline Legacy Version)",
+            "thumbnail": "birdpals2.png",
+            "description": "Birdpals was supposed to be a Club Penguin-esque Virtual World developed by me with lots of cool other people shown below. It was originally planned to later have RPG features, but during the colour party event a bug appeared where whenever a certain user joined, the game would crash. This bug ended up not being solved and the game eventually ended up being cancelled as we couldn't find a fix. After a while I managed to make this singleplayer version in a bit more than a day because I hate when online stuff shuts down forever.<br><br>CREDITS:<br>Penguin Giraffe (leader,  designer, artist)<br>FarawayDrip30 (programmer)<br>GaseGamer (programmer)<br>Flines (artist)<br>Luna/Nyaatsuki (artist)<br>Dan Mizu (programmer)<br>Dream (programmer)<br>Flower Boy (writer)<br>Nyota (designer)<br>Paige (designer)<br>Rosekki (designer)<br>ManicMinerBurns (programmer, music guy)<br>BuddyCrafted // Eastern Studios (publisher, serverhost)<br><br>Yeah, lots of people, unfortunately most people either weren't given tasks to do or the stuff they did didn't make it into the game because management was BAD and people kept getting added to the team for no real reason.             oh well.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2636713' width='552' height='167'><a href='https://farawaydrip30.itch.io/birdpals-singleplayer-legacy-version'>Birdpals (Singleplayer Legacy Version) by FarawayDrip30</a></iframe>"
+        },
+        {
+            "name": "Super Raptor Producer",
+            "thumbnail": "superraptorproducer.png",
+            "description": "A game I made for Ludum Dare 55. A day had passed since I realised Ludum Dare had started, and so on the last day of the holidays I decided to make a simple game I could make in a day for the compo, which I achieved! I'm very happy with it, as a matter of fact.",
+            "itchWidget": "<iframe frameborder='0' src='https://itch.io/embed/2645927' width='552' height='167'><a href='https://farawaydrip30.itch.io/super-raptor-producer'>Super Raptor Producer by FarawayDrip30</a></iframe>"
         }
     ]
 }
