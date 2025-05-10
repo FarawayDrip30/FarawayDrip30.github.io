@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<head>
+    <title>FarawayDrip30</title>
+    
+    <style>
+        body{
+            background-color: orange;
+            padding: 12px;
+            padding-top: 0px;
+        }
+
+        a{
+            color: black;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        a:hover{
+            color: white;
+        }
+
+        h1{
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            font-style: oblique;
+            text-decoration: underline;
+        }
+        h2{
+            position: relative;
+            width: fit-content;
+        }
+
+        #h_1{
+            left: 40%;
+        }
+        #h_2{
+            left: 20%;
+        }
+        #h_3{
+            left: 10%;
+        }
+        #h_4{
+            left: 5%;
+        }
+        #h_5{
+            left: 2.5%;
+        }
+        #h_6{
+            left: 1.25%;
+        }
+
+        
+        #head{
+            position: absolute;
+            left: 60%;
+            top: 500px;
+        }
+        
+        @keyframes pull_up{
+            from{
+                top: 0px;
+            }
+            to{
+                top: -1280px;
+            }
+        }
+
+    </style>
+
+    <script>
+        function to_page(){}
+
+        window.onload = function(){
+            var page_frame = document.getElementById("page_frame");
+            to_page = function(path){
+                console.log(path);
+                page_frame.src = path;
+                page_frame.hidden = false;
+            }
+            
+            var head_canvas = document.getElementById("head");
+            var head_ctx = head_canvas.getContext("2d");
+
+            head_canvas.style.width = "320px";
+            head_canvas.style.height = "220px";
+
+            var center_x = head_canvas.width / 2;
+            var center_y = 110;
+            console.log(center_y);
+
+            head_ctx.fillStyle = "white";
+
+            function draw_circle(x, y, radius){
+                head_ctx.beginPath();
+                head_ctx.arc(x, y, radius, 0, 2 * Math.PI);
+                head_ctx.fill();
+                head_ctx.closePath();
+            }
+
+            var layers = []
+
+            for(let i = 0; i < head_canvas.height; i++){
+                layers.push([]);
+            }
+            
+            let layers_center = layers.length / 2;
+
+            function add_to_layer(z, item){
+                layers[layers_center - radius + z].push( item );
+            }
+
+            function add_sphere(x, y, z, radius, colour){
+                let diameter = radius * 2;
+                let bottom_z = layers_center - radius + z;
+                for(let i = 0; i < diameter; i++){
+                    //                                                  x^2 = r^2 + y^2
+                    layers[bottom_z + i].push( { colour: colour, x: x, y: y, r: Math.sqrt( Math.pow(radius, 2) - Math.pow(i - radius, 2) ) } );
+                }
+            }
+            
+            function add_spike(x, y, z, height, radius, slant_x, slant_y, colour){
+                let bottom_z = layers_center + z
+                let radius_fragment = radius / height;
+                let slant_x_fragment = slant_x / height;
+                let slant_y_fragment = slant_y / height;
+                for(let i = 0; i < height; i++){
+                    layers[bottom_z + i].push( { colour: colour, x: x + slant_x_fragment * i, y: y + slant_y_fragment * i, r: radius - radius_fragment * i } );
+                }
+            }
+
+            // Head
+            add_sphere(0, 0, 0, 64, "white")
+
+            // Left Eye
+            add_sphere(-40, 40, 20, 10, "black");
+            // Right Eye
+            add_sphere(40, 40, 20, 10, "black");
+
+            // Hair
+            add_spike(0, 0, 60, 50, 20, 0, 0, "#290f00");
+            add_spike(20, 20, 50, 40, 20, 20, 20, "#421b05");
+            add_spike(5, 15, 50, 30, 20, 0, 12, "#4f240c");
+            add_spike(-5, 15, 50, 40, 20, -10, 15, "#391204");
+            add_spike(-15, 12, 50, 30, 25, -30, 4, "#662702");
+            add_spike(-15, 0, 50, 40, 25, -40, -10, "#421b05");
+            add_spike(-15, -20, 40, 35, 20, -30, -20, "#4f240c");
+            add_spike(-10, -20, 50, 35, 15, -10, -10, "#662702");
+            add_spike(0, -20, 50, 40, 20, -5, -30, "#290f00");
+            add_spike(10, -15, 50, 50, 20, 5, -10, "#410f01");
+            add_spike(15, 0, 45, 40, 25, 35, 5, "#662702");
+
+
+            //layers[layers.length-1].push( { colour: "black", x: 55, y: 55, r: 10} );
+
+            var head_angle = 0;
+            function draw_layers(){
+                
+                head_ctx.clearRect(0, 0, head_canvas.width, head_canvas.height);
+
+                for(let l_i = 0; l_i < layers.length; l_i++){
+                    head_ctx.translate(center_x, layers.length - l_i);
+                    head_ctx.rotate(head_angle * Math.PI / 180);
+                    for(let c_i = 0; c_i < layers[l_i].length; c_i++){
+                        
+                        head_ctx.fillStyle = layers[l_i][c_i].colour;
+                        draw_circle(layers[l_i][c_i].x, layers[l_i][c_i].y, layers[l_i][c_i].r);
+                        
+                    }
+                    head_ctx.rotate(-head_angle * Math.PI / 180);
+                    head_ctx.translate(-center_x, -(layers.length - l_i));
+                }
+
+                
+            }
+
+            var mouse_x = 0;
+            var mouse_y = 0;
+
+            var head_x = 500;
+            var head_y = 300;
+
+            function update(){
+                //head_angle++;
+                //if(head_angle == 360){ head_angle = 0; }
+
+                //head_x = mouse_x;
+                //head_y = mouse_y;
+
+                let distance_x = head_x + center_x - mouse_x;
+                let distance_y = head_y + center_y - mouse_y;
+                head_angle = Math.atan2(distance_y, distance_x) * 180 / Math.PI + 90;
+
+                head_canvas.style.left = head_x + "px";
+                head_canvas.style.top = head_y + "px";
+                draw_layers();
+
+                requestAnimationFrame(update);
+            }
+            
+
+            function mouse_move(e){
+                mouse_x = e.clientX;
+                mouse_y = e.clientY;
+            }
+            document.addEventListener("mousemove",mouse_move);
+
+            requestAnimationFrame(update);
+        }
+    </script>
+</head>
+<body>
+    <div id="main_div" width="100%" height="100%">
+        <h1>FarawayDrip30</h1>
+        <h2 id="h_1"><a href="#" onclick="to_page('Pages/About/about.html')">About</a></h2>
+        <h2 id="h_2"><a href="#">News</a></h2>
+        <h2 id="h_3"><a href="#">Blog</a></h2>
+        <h2 id="h_4"><a href="#">Games</a></h2>
+        <h2 id="h_5"><a href="#">Music</a></h2>
+        <h2 id="h_6"><a href="#">Movies</a></h2>
+        <h2 id="h_7"><a href="#">Comics</a></h2>
+        <h2 id="h_8"><a href="#">Art</a></h2>
+        <h2 id="h_8"><a href="#">Links</a></h2>
+        <h2 id="h_8"><a href="#">Other</a></h2>
+    </div>
+    <div id="page_div" width="100%" height="100%">
+        <center>
+            <iframe hidden id="page_frame" width="90%" height="90%" src=""></iframe>
+        </center>
+    </div>
+
+    <canvas id="head" width="320" height="320"></canvas>
+
+    
+</body>

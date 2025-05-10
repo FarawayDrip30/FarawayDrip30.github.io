@@ -1,0 +1,95 @@
+{
+    "frames": {
+      "old_cabin_Background.png": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "w": 1000,
+          "h": 600
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 1000,
+          "h": 600
+        },
+        "sourceSize": {
+          "w": 1000,
+          "h": 600
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "old_cabin_Foreground.png": {
+        "frame": {
+          "x": 0,
+          "y": 600,
+          "w": 236,
+          "h": 143
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 236,
+          "h": 143
+        },
+        "sourceSize": {
+          "w": 236,
+          "h": 143
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "position": {
+            "x": 0,
+            "y": 457
+        }
+      },
+      "cabin_ping pong table.png": {
+        "frame": {
+          "x": 236,
+          "y": 600,
+          "w": 224,
+          "h": 206
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 224,
+          "h": 206
+        },
+        "sourceSize": {
+          "w": 224,
+          "h": 206
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "position": {
+          "x": 682,
+          "y": 295
+        }
+      }
+    },
+    "meta": {
+      "app": "http://github.com/odrick/free-tex-packer-core",
+      "version": "0.3.4",
+      "image": "../Sprites/rooms/oldcabin/cabin.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 1000,
+        "h": 806
+      },
+      "scale": 1
+    }
+  }

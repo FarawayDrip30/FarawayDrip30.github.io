@@ -1,0 +1,99 @@
+{
+    "frames": {
+      "alpha_town_Background.png": {
+        "frame": {
+          "x": 0,
+          "y": 0,
+          "w": 892,
+          "h": 510
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+          "x": 0,
+          "y": 0,
+          "w": 892,
+          "h": 510
+        },
+        "sourceSize": {
+          "w": 892,
+          "h": 510
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      },
+      "alpha_town_Foreground.png": {
+        "frame": {
+          "x": 891,
+          "y": 0,
+          "w": 762,
+          "h": 436
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+          "x": 891,
+          "y": 0,
+          "w": 762,
+          "h": 436
+        },
+        "sourceSize": {
+          "w": 762,
+          "h": 436
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "position":{
+            "x": 0,
+            "y": 0
+        },
+        "size": {
+            "w": 1000,
+            "h": 600
+        }
+      },
+      "town_cake.png": {
+        "frame": {
+          "x": 1655,
+          "y": 0,
+          "w": 191,
+          "h": 230
+        },
+        "rotated": false,
+        "trimmed": false,
+        "spriteSourceSize": {
+            "x": 1655,
+            "y": 0,
+            "w": 191,
+            "h": 230
+        },
+        "sourceSize": {
+            "w": 191,
+            "h": 191
+        },
+        "pivot": {
+          "x": 0.5,
+          "y": 0.5
+        },
+        "position": {
+          "x": 508,
+          "y": 303
+        }
+      }
+    },
+    "meta": {
+      "app": "http://github.com/odrick/free-tex-packer-core",
+      "version": "0.3.4",
+      "image": "../Sprites/rooms/classic town/old_town.png",
+      "format": "RGBA8888",
+      "size": {
+        "w": 1000,
+        "h": 600
+      },
+      "scale": 0.85
+    }
+  }

@@ -1,0 +1,134 @@
+{
+    "Games":[
+        {
+            "name": "Beeny",
+            "platform": "Nintendo Switch",
+            "completionDate": "???",
+            "completionRequirement": "All Levels + Time Trials",
+            "effort": true
+        },
+        {
+            "name": "Achievement Unlocked 2",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": true
+        },
+        {
+            "name": "Castle Crashing the Beard HD",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": true
+        },
+        {
+            "name": "Friday Night Funkin'",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "Highschool Bathroom Simulator",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "Teleport Jumper",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "RUN FOR THE HILLS! YOUR FAVOURITE NEWGROUNDS USERS ARE COMING FO",
+            "platform": "Newgrounds",
+            "completionDate": "???",
+            "effort": false
+        },
+        {
+            "name": "Nina Aquila: Legal Eagle, Season One",
+            "platform": "Steam",
+            "completionDate": "25th March 2023",
+            "effort": false
+        },
+        {
+            "name": "Portal",
+            "platform": "Steam",
+            "completionDate": "6th April 2023",
+            "effort": true
+        },
+        {
+            "name": "Bloody Trapland",
+            "platform": "Steam",
+            "completionDate": "1st May 2023",
+            "effort": true
+        },
+        {
+            "name": "Pico's School",
+            "platform": "Newgrounds",
+            "completionDate": "6th May 2023",
+            "effort": false
+        },
+        {
+            "name": "Jerma's Big Adventure",
+            "platform": "Steam",
+            "completionDate": "7th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Berry People",
+            "platform": "Steam",
+            "completionDate": "8th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Toree Genesis",
+            "platform": "PC",
+            "completionDate": "13th May 2023",
+            "completionRequirement": "All Stars + All S Ranks",
+            "effort": true
+        },
+        {
+            "name": "Stick Fight: The Game",
+            "platform": "Steam",
+            "completionDate": "28th May 2023",
+            "effort": true
+        },
+        {
+            "name": "Toree 3D",
+            "platform": "Nintendo Switch",
+            "completionDate": "24th June 2023",
+            "completionRequirement": "All Stars + All S Ranks (Including Jumbled Jam)",
+            "effort": true
+        },
+        {
+            "name": "Pikuniku",
+            "platform": "Steam",
+            "completionDate": "30th June 2023",
+            "effort": true
+        },
+        {
+            "name": "Kindergarten",
+            "platform": "Steam",
+            "completionDate": "1st July 2023",
+            "effort": true
+        },
+        {
+            "name": "The Looker",
+            "platform": "Steam",
+            "completionDate": "10th July 2023",
+            "effort": true
+        },
+        {
+            "name": "Sludge Life 2: The Big Mud Sessions",
+            "platform": "Steam",
+            "completionDate": "19th August 2023",
+            "effort": false
+        },
+        {
+            "name": "qomp",
+            "platform": "Steam",
+            "completionDate": "30th August 2023",
+            "completionRequirement": "All Levels + Challenge Levels",
+            "effort": true
+        }
+    ]
+}

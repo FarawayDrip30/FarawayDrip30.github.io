@@ -1,0 +1,91 @@
+{
+  "frames": {
+    "attic_Background.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 600
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 600
+      },
+      "sourceSize": {
+        "w": 1000,
+        "h": 600
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "attic_Foreground.png": {
+      "frame": {
+        "x": 0,
+        "y": 600,
+        "w": 1000,
+        "h": 284
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 284
+      },
+      "sourceSize": {
+        "w": 1000,
+        "h": 284
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "attic_Crates.png": {
+      "frame": {
+        "x": 0,
+        "y": 884,
+        "w": 215,
+        "h": 113
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 215,
+        "h": 113
+      },
+      "sourceSize": {
+        "w": 215,
+        "h": 113
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "position": {
+        "x": 210,
+        "y": 267
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "../Sprites/rooms/attic/attic.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1000,
+      "h": 997
+    },
+    "scale": 1
+  }
+}

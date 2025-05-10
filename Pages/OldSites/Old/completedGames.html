@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<head>
+    <style>
+    body{
+        background-color: royalblue;
+        text-align: center;
+        background: rgb(108,205,255);
+        background: radial-gradient(circle, rgba(108,205,255,1) 0%, rgba(0,14,255,1) 100%);
+        overflow-x: hidden;
+    }
+
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <title>Completed Games</title>
+    <div style="text-align: center;">
+        <h2>Games I've Completed</h2>
+        <input type="checkbox" id="showNoEffort" onclick="toggleNoEffort()">
+        <label for="showNoEffort"> Show No Effort Completed Games</label><br>
+        <br>
+        <table id="gamesTable">
+            <tr>
+              <th>Game</th>
+              <th>Platform</th>
+              <th>Date Completed</th>
+              <th>Completion Requirement</th>
+              <th>Took Effort to Finish?*</th>
+            </tr>
+        </table>
+        <p style="font-size: 11px;">*counts as true if I feel like it. there is no criteria.</p>
+
+        <hr>
+        <a href="old.html">Back</a>
+    </div>
+    
+    <script src="../Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
+
+    <script src="../Assets/Scripts/loadFromJSON.js"></script>
+    <script src="../Assets/Scripts/loadCompletedGames.js"></script>
+
+    <script>
+        let effortCheckbox = document.getElementById("showNoEffort")
+        function toggleNoEffort(){
+            let noEffortElements = document.getElementsByClassName("noEffort");
+            for(let i = 0; i < noEffortElements.length; i++){
+                noEffortElements[i].hidden = !effortCheckbox.checked
+            }
+        }
+    </script>
+</body>

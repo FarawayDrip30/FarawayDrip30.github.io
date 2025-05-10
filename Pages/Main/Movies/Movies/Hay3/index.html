@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <link href="../../../../../Assets/style.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: orange;
+            color: white;
+        }
+    </style>
+    <script src="../../../../../Assets/Scripts/ruffle/ruffle.js"></script>
+</head>
+<body>
+    <a href="../../index.html">back</a>
+    <h1>Hay 3</h1>
+    <div id="container" style="text-align: center; margin:0 auto;"></div>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+            //player.config.autoplay = "off";
+            player.load("hay 3.swf");
+            player.style.width = "1280px";
+            player.style.height = "720px";
+        });
+    </script>
+    <p>An animation based on the third entry in my comic series, Hay. I'm actually rather happy with the animation and joke in this one, which is pretty cool.</p>
+</body>

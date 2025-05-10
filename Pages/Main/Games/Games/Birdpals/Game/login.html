@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./Website Assets/LoginPage/login.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+		<link rel="shortcut icon" type="image/png" href="./Website Assets/Logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Birdpals</title>
+
+		<div class="topnav">
+			<div><a href="./index.html">
+				<img src="./Website Assets/LoginPage/logo.png" id="logo" />
+			</a></div>
+			<h1 id="MeetNewPals">Meet new pals!</h1>
+			<h1 id="PlayForFree">PLAY FOR FREE!</h1>
+		</div>
+
+	</head>
+
+	<body>
+		<div class="mainBox">
+			<h1>Login</h1>
+			<div class="loginBox">
+				<img src="./Website Assets/LoginPage/cool_birds.png" id="loginImage">
+				<div>
+					<form id="eMail">
+						<input class="input" id="input-e" type="text" maxlength="50" autocomplete="off" placeholder="E-mail"/>
+					</form>
+					<form id="password">
+						<input class="input" id="input-p" type="password" maxlength="50" autocomplete="off" placeholder="Password"/>
+					</form>
+					<button id="loginButton" class="button">Sign In</button>
+					<button id="createAccountButton" class="button">Create Account</button>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="./Modules/PlayFabClientApi.js"></script>
+	<script src="./Modules/jquery.min.js"></script>
+	<script src="./Scripts/login.js"></script>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="./Css/play.css"/>
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"/>
+		<link rel="shortcut icon" type="image/png" href="Website Assets\Logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Birdpals</title>
+		<div class="topnav">
+			<div><a href="./index.html">
+					<img src="./Website Assets/LoginPage/logo.png" id="logo" />
+			</a></div>
+			<h1 id="MeetNewPals">Meet new pals!</h1>
+			<h1 id="PlayForFree">PLAY FOR FREE!</h1>
+		</div>
+	</head>
+
+	<body>
+
+		<div id ="stage">
+			<audio src="Audio/Songbirds.mp3" id='backgroundMusic' autoplay loop></audio>
+			<center>
+				<img id='loading' src="Sprites/other/Loading.gif" class="loading">
+				<canvas id="game"></canvas>
+				<textarea id="bioInput" spellcheck="true" maxlength="144" placeholder="Write your description here." hidden></textarea>
+				<div class="reportDiv" id="reportDiv" hidden>
+					<div id="reportingDiv">
+						<img id="reportEnvelopeBackground" src="Sprites/hud/reportEnvelope.png">
+						<h1 id="REPORTtext">REPORT</h1>
+						<textarea id="reportInput" class="reportInput" maxlength="200" placeholder="Write the reason of the report here..."></textarea>
+						<img id="reportSubmit" src="Sprites/hud/submitreport.png">
+					</div>
+					<div id="submittedDiv" hidden>
+						<img id="reportEnvelopeClosedBackground" src="Sprites/hud/reportEnvelopeClosed.png">
+						<h2 id="reportThanks">Thanks for Reporting!</h2>
+					</div>
+					<img id="closeReport" src="Sprites/hud/closereport.png">
+				</div>
+				<div id="chatbox" class="chatbox"></div>
+			</center>
+		</div>
+
+		<div id="inputElements" hidden="true" class="inputElements">
+			<form id="form" action="">
+				<input id="input" type="text" maxlength="50" autocomplete="off" placeholder="Type a Message..."/>
+				<img id="SendButton" src="Sprites/hud/send.png" class="ButtonImg">
+			</form> 
+			<img src="Sprites/hud/inventory.png" id="inventory" class="ButtonImg">
+			<img src="Sprites/hud/settings.png" id="SettingsButton" class="ButtonImg">
+			<div id="SettingsDiv" hidden>
+				<p class="settingsText">Music</p>
+				<p class="settingsText">Sound</p>
+				<p class="settingsText">Chat Box</p>
+				<img id="MusicCheck" src="Sprites/hud/checked.png" class="SettingsBox">
+				<img id="SoundCheck" src="Sprites/hud/checked.png" class="SettingsBox">
+				<img id="ChatBoxCheck" src="Sprites/hud/checked.png" class="SettingsBox">
+			</div>
+			<div id="debugDiv">
+				<p id="debugParagraph"></p>
+			</div>
+		</div>
+		<center>
+			<div id="colourPickers" hidden>
+				<input type="color" id="bird_color_top" value="#359ADE">
+				<input type="color" id="bird_color_bottom" value="#359ADE">
+			</div>
+		</center>
+
+		<br><br>
+		<center>
+			<div>
+				<select id="partySelect" style="background-color: lightskyblue; border-radius: 10px; padding: 5px; border: 0px;">
+					<option value="town">Normal</option>
+					<option value="halloween_town">Halloween Party</option>
+					<option value="colour_town">Colour Party</option>
+					<option disabled>--Rooms--</option>
+					<option value="alpha_town">Alpha Town</option>
+					<option value="toyventure_alpha_town">Toyventure Alpha Town</option>
+					<option value="old_cabin">Old Cabin</option>
+					<option value="shop">Shop (Unfinished)</option>
+				</select>
+			</div>
+		</center>
+
+		<div id='Scripts'>
+			<script src="./Modules/jquery.min.js"></script>
+			<script src="./Modules/lodash.min.js"></script>
+			<script src="./Modules/pixi.min.js"></script>
+			<script src="./Modules/pixi-sound.js"></script>
+			<script src="./Modules/unsafe-eval.min.js"></script>
+			<script src="./Modules/viewport.min.min.js"></script>
+			<script src="./Modules/pixi-filters.js"></script>
+			<script src="./Modules/particle-emitter.min.js"></script>
+			<script src="./Modules/pixi-particles.min.js"></script>
+			<script src="./Modules/word-wrapper.js"></script>
+			<script src="./Modules/pixijs-grid.js"></script>
+			<script src="./Modules/utils.js"></script>
+			<script src="./Modules/Collisions.min.js"></script>
+			<script src="./Modules/decomp.min.js"></script>
+			
+			<script src="./Scripts/addAddScriptsToDoc.js"></script> <!--Adds Scripts without using the Cache (good thing)-->
+		</div>
+	</body>
+</html>

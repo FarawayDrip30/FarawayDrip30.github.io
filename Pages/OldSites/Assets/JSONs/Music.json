@@ -1,0 +1,22 @@
+{
+    "Music": [
+        {
+            "name": "MISC",
+            "thumbnail": "trashcan.png",
+            "description": "Miscellaneous Musical Activity",
+            "scritchConfig": "misc"
+        },
+        {
+            "name": "Urso Island OST",
+            "thumbnail": "ursobear2.png",
+            "description": "Music for a Virtual World in the same Vein as Club Penguin that was Being Made by my Pals Craity, Flines and Avarito.",
+            "scritchConfig": "ursoIsland"
+        },
+        {
+            "name": "Birdpals - Faraway Tracks",
+            "thumbnail": "birdpalsAlbum.jpg",
+            "description": "Music for a Virtual World in the same Vein as Club Penguin that I helped make along with some other folks",
+            "scritchConfig": "birdpals"
+        }
+    ]
+}

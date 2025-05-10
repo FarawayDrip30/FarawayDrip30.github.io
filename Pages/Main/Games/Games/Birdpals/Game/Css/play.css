@@ -1,0 +1,350 @@
+body {
+    background-color: #00975C;
+}
+
+.topnav {
+	background-color: #7b5e43;
+	overflow: hidden;
+	box-shadow: 0 6px 4px 0 rgba(0,0,0,.5);
+	margin: 0 -8px;
+	margin-top: -8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.topnav h1 {
+	float: left;
+	display: block;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-size: 36px;
+	font-family: 'Fredoka One';
+    transform: translate(-50%, 0%);
+}
+
+#logo {
+	position: relative;
+	max-width: 60%;
+	height: auto;
+    transform: translate(50%, 0%);
+}
+
+#stage{
+	margin-top: 50px;
+}
+
+#game{
+	margin-left: auto;
+	margin-right: auto;
+	touch-action: none;
+	cursor: inherit;
+	border-radius: 4px;
+	border: 5px solid #ffffff;
+}
+
+.loading{
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	height: 610px;
+	width: 1010px;
+	border-radius: 4px;
+	border: 5px solid #ffffff;
+	z-index: 99;
+}
+
+.inputElements{
+	position: absolute;
+	z-index: 5;
+}
+
+#bioInput{
+	position: absolute;
+	width: 335px;
+	height: 260px;
+	text-align: center;
+	border: none;
+	outline: none;
+	resize: none;
+	background: transparent;
+	font-family:"Caslon";  
+	font-size: 25px; 
+	color: #615f5b;
+}
+
+input {
+  width: 300px;
+  padding: 8px 8px;
+  margin-top: 8px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #bfbfbf;
+  font-family: "Fredoka One", cursive;
+  transition-duration: 0.2s;
+}
+
+input:focus {
+  border: 3px solid #000000;
+  box-shadow: 0 0 8px 0 rgb(0, 0, 0);
+}
+
+button {
+  background-color: #f07018;
+  color: white;
+  width: 80px;
+  padding: 8px;
+  text-align: center;
+  border: 2px solid #f07018;
+  border-radius: 4px;
+  font-family: "Fredoka One", cursive;
+  margin-top: 8px;
+  outline: none;
+}
+
+button:hover {
+  background-color: #e06818;
+  border: 2px solid#e06818;
+  transition-duration: 0.2s;
+  cursor: pointer;
+}
+
+.ButtonImg{
+	width: 39.5px;
+	height: 43px;
+}
+.ButtonImg:hover{
+	cursor: pointer;
+}
+
+@font-face {
+	font-family: "VarelaRound";
+	src: url("/Fonts/VarelaRound-Regular.ttf");
+}
+
+.chatbox {
+	background-color: rgba(0,0,0,0.5);
+	color: #ffffff;
+	width: 400px;
+	height: 150px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+	text-align: left;
+	padding-left: 15px;
+	position: absolute;
+	z-index: 20;
+	margin-left: auto;
+	margin-right: auto;
+	scrollbar-color: rgba(0,0,0);
+	line-height: 20px;
+	font-family: "VarelaRound";
+	padding-bottom: 5px;
+}
+
+.reportDiv{
+	margin: 0px;
+	width: 400px;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	word-wrap: break-word;
+	text-align: center;
+	position:absolute;
+	z-index: 31;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 20px;
+	font-family: "VarelaRound";
+}
+
+.reportInput{
+	position: absolute;
+	top: 100px;
+	right: 0px;
+	left: 50px;
+	width: 290px;
+	height: 290px;
+	z-index: 31;
+	text-align: left;
+	border: none;
+	outline: none;
+	resize: none;
+	font-family:"VarelaRound";  
+	font-size: 30px; 
+	color: #000000;
+	background-color: #ffffff94;
+	overflow-x: hidden;
+	word-wrap: break-word;
+}
+
+#reportSubmit{
+	position:absolute;
+	bottom: 25px;
+	right: 95px;
+	width: 200px;
+	z-index: 72;
+}
+
+#closeReport{
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	width: 50px;
+	z-index: 72;
+}
+
+#reportThanks{
+	font-family:"VarelaRound";
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	color: #000000;
+}
+
+#reportingDiv{
+	margin: 0%;
+}
+
+#submittedDiv{
+	margin: 0%;
+}
+
+#reportEnvelopeBackground{
+	position: absolute;
+	width: 99%;
+	height: 99%;
+	left:0;
+	right:0;
+	top:0;
+}
+
+#reportEnvelopeClosedBackground{
+	position: absolute;
+	width: 99%;
+	height: 99%;
+	left:0;
+	right:0;
+	top:0;
+}
+
+#REPORTtext{
+	color: red;
+}
+
+/* Scrollbar Stuff */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: grey;
+	border-radius: 5px;
+}
+
+/* Buttons and UI*/
+.inputElements{
+	position: absolute;
+}
+#form{
+	position: absolute;
+}
+#input{
+	position: absolute;
+	top: -70px;
+	left: -155px;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	height: 42px;
+}
+#SendButton{
+	position: absolute;
+	top: -62px;
+	left: 20px;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#inventory{
+	position: absolute;
+	top: -62px;
+	left: 70px;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+}
+#SettingsButton{
+	position: absolute;
+	top: -62px;
+	left: 645px;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	  z-index: 5;
+}
+#SettingsDiv{
+	position: absolute;
+	background-color: #A300FF;
+	border-radius: 5px;
+	width: 175px;
+	height: 100px;
+	top: -140px;
+	left: 575px;
+	background-color: #E9E0CB;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	font-family: "VarelaRound";
+	color: #000000;
+	font-size: 25px;
+	font-weight: bolder;
+	border: 3px solid #A300FF;
+	border-radius: 5px;
+	line-height: 5px;
+}
+.settingsText{
+	position: relative;
+	margin-left: 5px;
+	top: -10px;
+}
+.SettingsBox{
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	  left: 150px;
+}
+.SettingsBox:hover{
+	cursor: pointer;
+}
+
+/*Settings*/
+#MusicCheck{
+	top: 18px;
+}
+#SoundCheck{
+	top: 48px;
+}
+#ChatBoxCheck{
+	top: 78px;
+}
+
+/*Colour Pickers*/
+#colourPickers{
+	text-align: center;
+}
+#bird_color_top{
+	z-index: 100;
+	position: fixed;
+	-ms-transform: translate(-112%, -50%);
+  	transform: translate(-112%, -50%);
+	top: 700px;
+}
+#bird_color_bottom{
+	z-index: 100;
+	position: fixed;
+	-ms-transform: translate(12%, -50%);
+  	transform: translate(12%, -50%);
+	top: 700px;
+}

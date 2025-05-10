@@ -1,0 +1,91 @@
+{
+  "frames": {
+    "halloween_town_Background.png": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 600
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 600
+      },
+      "sourceSize": {
+        "w": 1000,
+        "h": 600
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "halloween_town_Foreground.png": {
+      "frame": {
+        "x": 0,
+        "y": 600,
+        "w": 1000,
+        "h": 189
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 1000,
+        "h": 189
+      },
+      "sourceSize": {
+        "w": 1000,
+        "h": 189
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      }
+    },
+    "town_Hydrant.png": {
+      "frame": {
+        "x": 1000,
+        "y": 0,
+        "w": 39,
+        "h": 76
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 39,
+        "h": 76
+      },
+      "sourceSize": {
+        "w": 39,
+        "h": 76
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "position": {
+        "x": 404,
+        "y": 363
+      }
+    }
+  },
+  "meta": {
+    "app": "http://github.com/odrick/free-tex-packer-core",
+    "version": "0.3.4",
+    "image": "../Sprites/rooms/town/halloween_town.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1039,
+      "h": 789
+    },
+    "scale": 1
+  }
+}

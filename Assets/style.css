@@ -1,0 +1,21 @@
+html{
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,h2,a,p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1,h2{
+    margin: 0px;
+    padding: 0px;
+}
+
+a{
+    color: white;
+    text-decoration: underline;
+}
+a:hover{
+    cursor: pointer;
+}

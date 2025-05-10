@@ -1,0 +1,48 @@
+body{
+    background-color: lightblue;
+}
+
+h1{
+    color: white;
+    font-size: 20pt;
+    font-family: Comic Sans MS;
+    margin-top: 0px;
+}
+h2{
+    color: white;
+    font-size: 15pt;
+    font-family: Comic Sans MS;
+    margin-top: 0px;
+}
+p{
+    color: white;
+    font-family: Comic Sans MS;
+}
+a{
+    color: white;
+    font-weight: bold;
+    font-family: Comic Sans MS;
+}
+
+.box{
+    padding: 25px;
+    margin-bottom: 10px;
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    background-color: #5555FF;
+    max-width: fit-content;
+}
+.imgOverlay{
+    pointer-events:none;
+}
+.button img{
+    height: 31px;
+}
+
+#header{
+    height: 20px; 
+    margin-bottom: 5px; 
+    background-color: #5555FF;
+    border-bottom: 2px solid darkblue;
+    margin-bottom: 20px;
+}

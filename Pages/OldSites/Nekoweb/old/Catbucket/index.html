@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Stop Caching -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<script>
+    const cacheBuster = Math.round(new Date().getTime() / 1000);
+    
+    document.head.innerHTML += '<link rel="stylesheet" href="style.css?cb='+cacheBuster+'">'
+    
+    window.onload = function(){
+        lamp.src = "images/cats/lamp.gif?cb="+cacheBuster;
+    }
+</script>
+
+<title>Faraway's Catbucket</title>
+</head>
+<body style="margin: 0px;">
+<div id="header"></div>
+<marquee scrollamount=10 direction="right" onmouseover="this.stop();" onmouseout="this.start();">
+    <a class="button" href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button1.gif"></a>
+    <a class="button" href="https://farawaydrip30.github.io/Pages/bongandmarriagecounselling/BongsAndMarriageCounselling.html"><img src="https://raflines.github.io/assets/funkytown_stamps/various/faraway.png"></a>
+    <a class="button" href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button2.gif"></a>
+    <a class="button" href="https://farawaydrip30.nekoweb.org/"><img src="https://farawaydrip30.nekoweb.org/images/button.png"></a>
+    <a class="button" href="https://raflines.github.io/"><img src="https://raflines.github.io/assets/funkytown_stamps/flines/star.png"></a>
+    <a class="button" href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button3.gif"></a>
+    <a class="button" href="https://ratmanteam.github.io/"><img src="https://raflines.github.io/assets/funkytown_stamps/ratman/ratman.png"></a>
+    <a class="button" href="https://gamejolt.com/@thetacoman_"><img src="https://raflines.github.io/assets/funkytown_stamps/various/tacoman.png"></a>
+    <a class="button" href="https://craity.itch.io/"><img src="https://raflines.github.io/assets/funkytown_stamps/various/craity.png"></a>
+    
+</marquee>
+
+<div style="margin-left: 8px; float: left;">
+    <div class="box">
+        <h1>FarawayDrip30's Catbucket</h1>
+        <p>Hi, I'm FarawayDrip30, I make games and art and stuff in outdated programs.</p>
+        <p>Sometimes I use indated programs too.</p>
+    </div>
+    <div class="box">
+        <a href="https://farawaydrip30.github.io/" style="font-size: 15pt">Main Site</a>
+        <br>
+        <a href="https://farawaydrip30.itch.io/">Itch.io</a>
+        <br>
+        <a href="https://farawaydrip30.newgrounds.com/">Newgrounds</a>
+        <br>
+        <a href="https://twitter.com/FarawayDrip30">Twitter</a>
+        <br>
+        <a href="https://www.youtube.com/channel/UCQHx127o2j3G7kTpBMD5aYw">YouTube</a>
+    </div>
+    <div class="box" style="text-align: center;">
+        <p>Funny Button Thing</p>
+        <img src="images/button.png">
+        <textarea><a href="https://farawaydrip30.nekoweb.org/"><img src="https://farawaydrip30.nekoweb.org/images/button.png"></a></textarea>
+        <p>(Kinda sucks, will change later)</p>
+    </div>
+    <img src="images/cat.gif" width="500px" style="position: absolute; top: -135px; left: -120px" class="imgOverlay">
+</div>
+<div class="sidebox" style="margin-right: 8px; float: right; text-align: right;">
+    <div class="box" style="margin-left: auto; margin-right: 0px;">
+        <h2>The Cats</h2>
+    </div>
+    
+    <div class="box">
+        <div style="position: absolute; margin-left: auto; margin-right: 0px; margin-top: -140px;"><img id="lamp" style="height: 200px;"></div>
+        <h2>Sir Lampytoes</h2>
+        <p>Sir Lampytoes became this way due to running into a lamp at high velocity. <br> He is also a human trapped in a cat's body, but that comes up in conversation less frequently.</p>
+    </div>
+</div>
+</body>
+</html>

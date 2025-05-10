@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<head>
+    <link href="Assets/style.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: black;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #canvas{
+            position: fixed;
+
+            width: 100%;
+            height: 100%;
+
+            pointer-events: none;
+
+            z-index: 10;
+        }
+
+        h1{
+            color: white;
+            font-size: 10vw;
+
+            z-index: 0;
+        }
+
+        .above{
+            z-index: 20;
+        }
+
+        .circle {
+            height: 5vw;
+            width: 5vw;
+        }
+
+        .eye{
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        #eye{
+            width: 40vw;
+            margin-top: -3.5vw;
+            transform-origin: 50%;
+        }
+
+        .eyeSocket{
+            position: absolute;
+            width: fit-content;
+            height: fit-content;
+
+            top: 50%;
+            left: 0; 
+            right: 0; 
+            margin-inline: auto; 
+        }
+
+        .pagePanel{
+            position: absolute;
+            left: 10%;  
+            top: 10%;
+
+            width: 80%;
+            height: 80%;
+
+            z-index: 100;
+
+            padding-top: 6px;
+
+            border-style: solid;
+            border-width: 2px;
+            border-color: white;
+
+            
+        }
+        .visible-panel{
+            display: flex;
+            flex-flow: column;
+        }
+        .flexbox-part{
+            flex: 1 1 auto;
+        }
+        .pagePanel hr{
+            border-top: 1px solid white;
+        }
+        .close{
+            font-size: 18pt;
+            font-weight: bold;
+            margin: 6px;
+        }
+        .black hr{
+            border: 1px solid black;
+        }
+        .black{
+            border-color: black;
+        }
+        .black a{
+            color: black;
+        }
+
+        h2{
+            position: relative;
+            width: fit-content;
+            color: white;
+            font-size: 24pt;
+        }
+        
+        #h_1{
+            left: 40%;
+            background-color: red;
+        }
+        #h_2{
+            left: 20%;
+            background-color: blue;
+        }
+        #h_3{
+            left: 10%;
+            background-color: yellow;
+        }
+        #h_3 a{
+            color: black;
+        }
+        #h_4{
+            left: 5%;
+            background-color: purple;
+        }
+        #h_5{
+            left: 2.5%;
+            background-color: lime;
+        }
+        #h_5 a{
+            color: black;
+        }
+        #h_6{
+            left: 1.25%;
+            background-color: orange;
+        }
+        #h_7{
+            left: 0%;
+            background-color: aqua;
+        }
+        #h_7 a{
+            color: black;
+        }
+        #h_8{
+            left: 0%;
+            background-color: green;
+        }
+        #h_9{
+            left: 0%;
+            background-color: pink;
+        }
+        #h_9 a{
+            color: black;
+        }
+    </style>
+    <script src="Assets/Scripts/canvas_blocks.js"></script>
+    <script>
+        var possible_pupils = [
+            {"src": "Assets/Images/FaceStuff/Pupils/blue_yellow.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Pupils/orange_red.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Pupils/pink_white.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Pupils/white_purple.png", "chance": 25},
+        ]
+
+        var possible_eyes = [
+            {"src": "Assets/Images/FaceStuff/Eyes/blue_orange.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Eyes/red_green.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Eyes/yellow_blue.png", "chance": 25},
+            {"src": "Assets/Images/FaceStuff/Eyes/green_pink.png", "chance": 25},
+        ]
+
+        function setRandomImg(imgElement, arr, randomTotal){
+            let randomValue = Math.floor(Math.random() * randomTotal);
+
+            for(let i = 0; i < arr.length; i++){
+                randomValue -= arr[i].chance;
+                if(randomValue <= 0){
+                    imgElement.src = arr[i].src;
+                    return;
+                }
+            }
+        }
+        function start_eyes(){
+            var pupil = document.getElementById("pupil");
+            var eye = document.getElementById("eye");
+
+            setRandomImg(pupil, possible_pupils, 100);
+            setRandomImg(eye, possible_eyes, 100);
+
+
+            function moveEye(evt){
+                //let x = 25 + (evt.clientX - (window.innerWidth / 2))/50;
+                //let y = 25 + (evt.clientY - (window.innerHeight / 2))/50;
+                let x = (evt.clientX - (window.innerWidth / 2));
+                let y = (evt.clientY - (window.innerHeight / 2));
+
+                pupil.style.left = x/4 + "px";
+                pupil.style.top = y/4 + "px";
+
+                eye.style.left = x/10 + "px"
+                eye.style.top = y/10 + "px"
+            }
+            
+            document.addEventListener("mousemove", moveEye)
+        }
+    </script>
+    <script>
+        var pagePanel;
+        var pagePanelFrame;
+        let closingFrame = false;
+        function start_pages(){
+            pagePanel = document.getElementById("pagePanel");
+            pagePanelFrame = document.getElementById("pagePanelFrame");
+            pagePanelFrame.onload = function(){
+                if(pagePanel.hidden && !closingFrame){
+                    pagePanel.hidden = false;
+                    pagePanel.className += " visible-panel";
+                }
+            }
+        }
+        function changePage(src, colour, blackBorder){
+            closingFrame = false;
+            if(pagePanel){
+                if(blackBorder){
+                    pagePanel.className = "pagePanel black";
+                }
+                else{
+                    pagePanel.className = "pagePanel";
+                }
+                pagePanelFrame.src = src;
+                pagePanel.style.background = colour;
+            }
+        }
+        function closePanel(){
+            closingFrame = true;
+            pagePanelFrame.src = "";
+            pagePanel.className = "pagePanel";
+            pagePanel.hidden = true;
+        }
+    </script>
+    <script>
+        window.onload = function(){
+            start_pages();
+            start_blocks();
+            start_eyes();
+        }
+    </script>
+</head>
+<body>
+    <canvas id="canvas" width="1280" height="720"></canvas>
+
+    <br><br>
+    <center>
+        <h1>FARAWAYDRIP30</h1>
+    </center>
+
+    <div class="above" style="margin-left: 10%">
+        <h2 id="h_1"><a onclick="changePage('Pages/Main/About/index.html', 'red', false)">About</a></h2>
+        <h2 id="h_2"><a onclick="changePage('Pages/Main/News/index.html', 'blue', false)">News</a></h2>
+        <h2 id="h_3"><a onclick="changePage('Pages/Main/Blog/index.html', 'yellow', true)">Blog</a></h2>
+        <h2 id="h_4"><a onclick="changePage('Pages/Main/Games/index.html', 'purple', false)">Games</a></h2>
+        <h2 id="h_5"><a onclick="changePage('Pages/Main/Music/index.html', 'lime', true)">Music</a></h2>
+        <h2 id="h_6"><a onclick="changePage('Pages/Main/Movies/index.html', 'orange', false)">Movies</a></h2>
+        <h2 id="h_7"><a onclick="changePage('Pages/Main/Comics/index.html', 'aqua', true)">Comics</a></h2>
+        <h2 id="h_8"><a onclick="changePage('Pages/Main/Art/index.html', 'green', false)">Art</a></h2>
+        <h2 id="h_9"><a onclick="changePage('Pages/Main/Links/index.html', 'pink', true)">Links</a></h2>
+        <h2><a onclick="changePage('Pages/Main/Other/index.html', 'black', false)">Other</a></h2>
+    </div>
+
+    <div id="eyeDiv">
+        <div class="eyeSocket">
+            <img id="eye" class="eye" src="">
+        </div>
+        <div class="eyeSocket">
+            <img class="eye circle" id="pupil" src="">
+        </div>
+    </div>
+
+    <div class="pagePanel" id="pagePanel" hidden>
+        <div>
+            <a class="close" onclick="closePanel()">Close</a>
+            <hr>
+        </div>
+        <div class="flexbox-part">
+            <iframe id="pagePanelFrame" frameborder="0" src="" width="100%" height="100%"></iframe>
+        </div>
+    </div>
+</body>

@@ -1,116 +1,23 @@
 <html>
     <head>
-        <link rel="icon" type="image/x-icon" href="favicon.ico">
-        <link rel="stylesheet" href="style.css">
         <title>FarawayDrip30</title>
+        <style>
+            body{
+                background-color: black;
+                color: white;
+            }
+            a{
+                color: red;
+            }
+        </style>
     </head>
     <body>
         <center>
-            <div class="background"></div>
-            <br><br>
-
-            <div id="page" style="position: relative; transition: margin-top 2s;">
-                <div style="position: absolute; top: 200px; left: 50%; right: 50%; transform: translate(-50%, -50%); display:flex; width: fit-content; margin: auto; pointer-events: none;">
-                    <div><img src="../Assets/Images/floatinghead.png" class="floatinghead"></div>
-                    <div class="boxWidth"></div>
-                    <div><img src="../Assets/Images/floatinghead.png" class="floatinghead" style="animation-delay: -1s;"></div>
-                </div>
-                
-                <div>
-                    <div class="headerBox">
-                        <h1 class="title">FarawayDrip30</h1>
-                    </div>
-
-                    <div class="box" style="background-color: lightblue;">
-                        <a class="titleLink" href="https://www.youtube.com/channel/UCQHx127o2j3G7kTpBMD5aYw">YouTube</a>
-                        <a class="titleLink" href="https://twitter.com/FarawayDrip30">Twitter</a>
-                        <a class="titleLink" href="https://farawaydrip30.itch.io/">Itch.io</a>
-                        <a class="titleLink" href="https://farawaydrip30.newgrounds.com/">Newgrounds</a>
-                    </div>
-
-                    <div id="mainBox" class="box" style="display: inline-block;">
-                        <h2 class="title">MAIN STUFF</h2>
-                        <div style="width: fit-content;">
-                            <a href="../index.html" id="latestA">
-                                <div id="latestDiv" class="mediaBox" style="float: left;">
-                                    <img src="" style="height: 300px;">
-                                    <p>Latest</p>
-                                </div>
-                            </a>
-                            <div id="sideFeatures" style="float: left; width: calc(100% - fit-content);">
-                                <a href="info.html?file=Games&type=Game&name=Birdpals">
-                                    <div class="mediaBox">
-                                        <img src="../Assets/Images/birdpals2.png" style="height: 127px;">
-                                        <p>Birdpals</p>
-                                    </div>
-                                </a>
-                                <a href="info.html?file=Games&type=Game&name=Watching Someone Pee Simulator">
-                                    <div class="mediaBox">
-                                        <img src="../Assets/Images/WSPSVS2.webp" style="height: 127px;">
-                                        <p>WSPS</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="box" style="border-bottom-right-radius: 50px; border-bottom-left-radius: 50px;">
-                        <a href="info.html?file=Games&type=IconList&entryType=Game">
-                            <div class="mediaBox">
-                                <img src="../Assets/Images/WSPSVS.webp">
-                                <p>Games</p>
-                            </div>
-                        </a>
-                        <a href="info.html?file=Music&type=IconList&entryType=Music">
-                            <div class="mediaBox">
-                                <img src="../Assets/Images/birdpalsAlbum.jpg">
-                                <p>Music</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <script src="../Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
-            <script src="../Assets/Scripts/loadFromJSON.js"></script>
-            <script>
-                var latestA = document.getElementById("latestA");
-                var latestDiv = document.getElementById("latestDiv");
-                var mainBox = document.getElementById("mainBox");
-
-                var games;
-                function setGames(data){
-                    games = data
-                    
-                    let latestGame = games.Games[games.Games.length-1]
-                    latestDiv.children[0].src = "Assets/Images/" + latestGame.thumbnail
-                    latestA.href = "info.html?file=Games&type=Game&name="+latestGame.name;
-                }
-                loadFromJSON("../Assets/JSONs/Games.json",setGames);
-
-                function resizeSideFeatures(){
-                    // Sets Side Features div to either be on top of each other or next to (depending on room)
-                    var sideFeatures = document.getElementById("sideFeatures")
-                    sideFeatures.style.width = "fit-content"
-                    if(sideFeatures.offsetWidth / 2 + latestDiv.offsetWidth < mainBox.offsetWidth-20){
-                        sideFeatures.style.width = sideFeatures.offsetWidth / 2;
-                        //console.log("latestDiv: " + latestDiv.offsetWidth + ", sideFeatures: " + sideFeatures.offsetWidth + ", mainBox: " + mainBox.offsetWidth)
-                    }
-                }
-                addEventListener("resize", function(e){
-                    resizeSideFeatures();
-                })
-                resizeSideFeatures();
-                latestDiv.children[0].onload = resizeSideFeatures;
-                
-            </script>
-
-            <script>
-                function floatPage(){
-                    let page = document.getElementById("page");
-                    page.style.marginTop = "-100%";
-                }
-            </script>
+            <h1>FarawayDrip30</h1>
+            <h3>(Epilepsy Warning)</h3>
+            <a href="home.html">Enter Site</a>
+            <h4>If you want to view a non-epileptic version of the site or a raw version:</h4>
+            <a href="raw.html">Enter Raw Site</a>
         </center>
     </body>
 </html>

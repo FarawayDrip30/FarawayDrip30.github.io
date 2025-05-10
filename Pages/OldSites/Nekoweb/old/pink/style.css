@@ -1,0 +1,53 @@
+html{
+    margin: 0px;
+}
+body{
+    margin: 0px;
+    background-image: linear-gradient(#FF00AA,#FFAAAA);
+    background-attachment: fixed;
+}
+h1, p{
+    color: yellow;
+}
+a{
+    position: relative;
+    color: white;
+}
+h1 a{
+    color: yellow;
+}
+h1,h2,p,a{
+   
+}
+hr{
+    border-color: white;
+}
+        
+.entries{
+    width: 30%;
+    min-width: 500px;
+    text-align: left;
+}
+.entries p{
+    margin: 0px;
+    margin-top: -1px;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 1px;
+}
+
+.box{
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: yellow;
+    border-width: 2px;
+    width: fit-content;
+    background-color: #FFFFAA55;
+}
+
+#nav{
+    position: fixed;
+    height: 100%;
+}

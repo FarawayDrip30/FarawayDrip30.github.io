@@ -1,0 +1,124 @@
+<html>
+    <head>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="../Assets/Scripts/getFileParameter.js"></script>
+        <script src="../Assets/Externals/JQuery/jquery-3.6.0.min.js"></script>
+        <script src="../Assets/Scripts/loadFromJSON.js"></script>
+    </head>
+    <body>
+        <div class="background"></div>
+        <br><br>
+
+        <center>
+            <div class="headerBox">
+                <h1 class="title">FarawayDrip30</h1>
+            </div>
+
+            <div class="box" style="background-color: lightblue; text-align: left;">
+                <a id="back" class="titleLink" href="home.html">Back</a>
+            </div>
+
+            <div id="mainBox" class="box" style="border-bottom-right-radius: 50px; border-bottom-left-radius: 50px; height: fit-content;">
+                <h2 class="title" id="gameTitle">Loading...</h2>
+                <div id="contents" class="mediaBoxTable"></div>
+                <p id="description"></p>
+            </div>
+        </center>
+
+        <script>
+            var contents = document.getElementById("contents");
+
+            var params = getFileParameters();
+
+            var JSON_Data;
+
+            if(params.type != "Blog"){
+                loadFromJSON("../Assets/JSONs/"+params.file+".json",infoJSONLoaded);
+            }
+            else{
+                loadFromMD("Blog/1/Farablog1.md",infoJSONLoaded)
+            }
+
+            if(params.back){document.getElementById("back").href = params.back}
+
+            function setTitle(title,headerShows=true){
+                document.title = "FarawayDrip30 - " + title;
+                if(headerShows) {document.getElementById("gameTitle").innerHTML = title; }
+                else{ document.getElementById("gameTitle").innerHTML = ""; }
+            }
+
+            function infoJSONLoaded(data){
+                switch(params.type){
+                    case "Game":
+                        for(i in data.Games){
+                            if(data.Games[i].name == params.name){
+                                data = data.Games[i];
+                                break;
+                            }
+                        }
+                        setTitle(params.name);
+                        document.getElementById("description").innerHTML = data.description;
+
+                        if(data.itchWidget){contents.innerHTML = data.itchWidget}
+                        break;
+
+                    case "Music":
+                        window.addEventListener("message", (event) => {
+                            // When the music player tells us it's ready, set it to the correct height.
+                            musicFrame.height = musicFrame.contentWindow.document.body.scrollHeight + 6;
+                        });
+
+                        for(i in data.Music){
+                            if(data.Music[i].name == params.name){
+                                data = data.Music[i];
+                                break;
+                            }
+                        }
+                        setTitle(params.name);
+
+                        contents.innerHTML = '<iframe id="musicFrame" hidden frameborder="0" src="../Assets/Externals/Scritch/index.html" width="90%" height="fit-content" ></iframe>'
+                        var musicFrame = document.getElementById("musicFrame");
+                        musicFrame.onload = function(){
+                            musicFrame.contentWindow.postMessage("../../JSONs/scritchConfigs/"+data.scritchConfig+".json")
+                            
+                            musicFrame.hidden = false;
+                        }
+                        document.getElementById("description").innerHTML = data.description;
+                        break;
+                        
+                    case "Blog":
+                        setTitle("Blog",false)
+                        contents.classList.remove("mediaBoxTable");
+                        contents.classList.add("blogContents");
+                        let markdownJS = document.createElement('script');
+                        markdownJS.setAttribute('src',"https://cdn.jsdelivr.net/npm/marked/marked.min.js");
+                        document.head.appendChild(markdownJS);
+                        markdownJS.onload = function(){
+                            contents.innerHTML = marked.parse(data)
+                        }
+                        break;
+                    
+                    case "List":
+                        setTitle(params.file);
+                        let listString = "<ul>";
+                        for(i in data[params.file]){
+                            listString += "<li><a href='?file="+params.file+"&type="+params.entryType+"&back="+encodeURIComponent(window.location.href)+"&name="+data[params.file][i].name+"'>"+data[params.file][i].name+"</a></li>";
+                        }
+                        listString += "</ul>";
+                        contents.innerHTML = listString;
+                        break;
+
+                    case "IconList":
+                        setTitle(params.file);
+                        for(i in data[params.file]){
+                            let entry = data[params.file][i]
+                            contents.innerHTML += "<a href='?file="+params.file+"&type="+params.entryType+"&back="+encodeURIComponent(window.location.href)+"&name="+entry.name+"'><div class='mediaBox2'><img src='../Assets/Images/"+entry.thumbnail+"'><marquee><p>"+entry.name+"</p></marquee></div></a>";
+                        }
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>

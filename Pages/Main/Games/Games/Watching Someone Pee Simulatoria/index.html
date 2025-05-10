@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+    <link href="../../../../../Assets/style.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: purple;
+            color: white;
+        }
+    </style>
+    <script src="../../../../../Assets/Scripts/ruffle/ruffle.js"></script>
+</head>
+<body>
+    <a href="../../index.html">back</a>
+    <h1>Watching Someone Pee Simulatoria</h1>
+    <p>Note: You can say "No" to logging in with Newgrounds if you just wanna play.</p>
+    <div id="container" style="text-align: center; margin:0 auto;"></div>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.addEventListener("load", (event) => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+            player.load("wspsria_ng.swf");
+            player.style.width = "1000px";
+            player.style.height = "600px";
+        });
+    </script>
+    <p>In the 5th installment of the Watching Someone Pee Simulator series, you are tasked to pay for your previous crimes by working in a fast-food piss establishment.</p>
+    <p>This was made in about a month for April Fool's day, I wanted to add more, as always, but I'm still very proud of it.</p>
+</body>

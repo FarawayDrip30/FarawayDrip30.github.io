@@ -1,0 +1,92 @@
+body {
+	background-image: url("../Website Assets/backdrop.png");
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+  }
+  
+  h1 {
+	text-align: center;
+  }
+
+  .inputElements{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 630px;
+	z-index: 5;
+  }
+
+  input {
+	width: 30%;
+	padding: 8px 8px;
+	margin-top: 8px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	outline: none;
+	border: 2px solid #bfbfbf;
+	font-family: "Fredoka One", cursive;
+	transition-duration: 0.2s;
+  }
+  
+  input:focus {
+	border: 3px solid #000000;
+	box-shadow: 0 0 8px 0 rgb(0, 0, 0);
+  }
+  
+  button {
+	background-color: #f07018;
+	color: white;
+	width: 10%;
+	padding: 8px;
+	text-align: center;
+	border: 2px solid #f07018;
+	border-radius: 4px;
+	font-family: "Fredoka One", cursive;
+	margin-top: 8px;
+	outline: none;
+  }
+  
+  button:hover {
+	background-color: #e06818;
+	border: 2px solid#e06818;
+	transition-duration: 0.2s;
+  }
+  
+  .infocard {
+	width: 30%;
+	background-color: #d6f5f5;
+	margin-top: 20px;
+	padding: 50px;
+	border-radius: 4px;
+	transition-duration: 0.2s;
+  }
+  
+  .infotext {
+	color: black;
+	font-family: "Fredoka One", cursive;
+	font-weight: bold;
+  }
+  
+  .infocard2 {
+	width: 30%;
+	background-color: #d6f5f5;
+	margin-top: 20px;
+	padding: 50px;
+	border-radius: 4px;
+	transition-duration: 0.2s;
+  }
+  
+  .infotext2 {
+	color: black;
+	font-family: "Fredoka One", cursive;
+	font-weight: bold;
+  }
+  
+  .infocard:hover {
+	background-color: #c1dfdf;
+  }
+  
+  .infocard2:hover {
+	background-color: #c1dfdf;
+  }

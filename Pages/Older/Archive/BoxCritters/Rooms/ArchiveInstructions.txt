@@ -1,9 +1,0 @@
-Create folders for year, event, and part of event (e.g. 2043/Spobberween/Part1withAnacondas)
-Go on chrome
-Open Console
-type "world.rooms"
-copy array
-paste in text file in that folder
-Copy RoomArchiveScript.txt and paste in console to download files
-put all the files in the folder
-done!

@@ -1,0 +1,3 @@
+Any script on this folder, expect for game.js and gsap.min.js, is for development only, which means you need to delete them before publishing it.
+
+In development, in case of any modification in a script, that is not game.js or gsap.min.js, run the .bat file "create game.js.bat"

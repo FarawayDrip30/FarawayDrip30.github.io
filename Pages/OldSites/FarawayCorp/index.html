@@ -1,0 +1,287 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0px;
+                padding: 0px;
+                background-color: aquamarine;
+                overflow: hidden;
+            }
+            #skip{
+                background-color: cadetblue;
+                color: white;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                font-size: 25;
+                padding: 6px;
+            }
+            #skip a{
+                color: white;
+                font-family: Comic Sans MS;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <canvas id="canvas"></canvas>
+
+        <div id="skip"><a href="home.html">Go to Home</a></div>
+
+        <script>
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+
+            var mouseDown = false;
+            var mouseX = 0;
+            var mouseY = 0;
+
+            window.addEventListener("mousemove",function(e){
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            })
+            
+            function getLines(text, maxWidth) {
+                ctx.font = "12px Comic Sans MS";
+
+                var words = text.split(" ");
+                var lines = [];
+                var currentLine = words[0];
+
+                for (var i = 1; i < words.length; i++) {
+                    var word = words[i];
+                    var width = ctx.measureText(currentLine + " " + word).width;
+                    if (width < maxWidth) {
+                        currentLine += " " + word;
+                    } else {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    }
+                }
+                lines.push(currentLine);
+                return lines;
+            }
+
+            class Button{
+                constructor(text,href,panelWidth){
+                    this.text = text;
+
+                    ctx.font = "20px Comic Sans MS";
+                    this.width = ctx.measureText(this.text).width;
+                    this.greyWidth = this.width + 20
+
+                    this.x = panelWidth / 2 - this.width / 2
+                    this.greyX = this.x - 10;
+
+                    this.href = href;
+
+                    this.hovering = false;
+                }
+
+                draw(x,y){
+                    ctx.font = "20px Comic Sans MS";
+
+                    ctx.fillStyle = "#AAAAAA";
+                    ctx.beginPath();
+                    ctx.roundRect(x + this.greyX, y-25, this.greyWidth, 40, 5);
+                    ctx.fill();
+                    ctx.fillStyle = "black";
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.fillStyle = "blue";
+                    ctx.strokeStyle = "blue";
+                    ctx.fillText(this.text,x + this.x,y);
+                    ctx.beginPath();
+                    ctx.moveTo(x + this.x,y+2);
+                    ctx.lineTo(x + this.x + this.width,y+2);
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    this.update(x + this.x,y)
+                }
+
+                update(x,y){
+                    if(mouseX > x - 5 && mouseX < x - 5 + this.width &&
+                        mouseY > y - 25 && mouseY < y + 15){
+                            canvas.style.cursor = "pointer";
+                            this.hovering = true;
+                    }
+                    else{
+                        this.hovering = false;
+                    }
+                }
+
+                click(){
+                    if(this.hovering){
+                        window.location.href = this.href;
+                    }
+                }
+            }
+
+            class Panel{
+                constructor(x,y,width,height,title,text,buttons){
+                    this.x = x;
+                    this.y = y;
+                    this.width = width;
+                    this.height = height;
+
+                    this.title = title;
+                    console.log(text);
+                    this.text = [];
+                    for(let i = 0; i < text.length; i++){
+                        this.text = this.text.concat(getLines(text[i],width - 20));
+                    }
+
+                    this.buttons = buttons;
+                }
+
+                draw(){
+                    ctx.beginPath();
+                    ctx.fillStyle = "lightblue";
+                    ctx.roundRect(this.x,this.y,this.width,40,[10,10,0,0]);
+                    ctx.fill();
+                    ctx.strokeStyle = "black";
+                    ctx.stroke();
+                    ctx.closePath();
+                    ctx.beginPath();
+                    ctx.fillStyle = "white";
+                    ctx.roundRect(this.x,this.y+40,this.width,this.height,[0,0,10,10]);
+                    ctx.fill();
+                    ctx.fillStyle = "black";
+                    ctx.stroke();
+                    ctx.closePath();
+
+                    ctx.font = "25px Comic Sans MS";
+                    ctx.fillText(this.title,this.x + 10,this.y + 30);
+
+                    ctx.font = "12px Comic Sans MS";
+                    let textY = 60;
+                    for(let i = 0; i < this.text.length; i++){
+                        ctx.fillText(this.text[i],this.x + 10,this.y + textY);
+                        if(this.text[i] == ""){ textY += 10; } else{ textY += 20; }
+                    }
+                    textY += 20;
+
+                    for(let i = 0; i < this.buttons.length; i++){
+                        this.buttons[i].draw(this.x, this.y + textY);
+                    }
+                }
+
+                click(){
+                    for(let i = 0; i < this.buttons.length; i++){
+                        this.buttons[i].click();
+                    }
+                }
+            }
+            var panels = [
+                new Panel(300,100,500,270,"Enter Site?",[
+                    "A whole new, exciting world awaits you at the official FARAWAYCORP(tm) website!!!!",
+                    "",
+                    "Experience world-renowned CORPORATE PRODUCED SLOP such as:",
+                    "• Games!",
+                    "• Music!",
+                    "• Comics!",
+                    "• Error!",
+                    "• Error!",
+                    "• ErrorErrorErrorErrorError!",
+                    "",
+                    "What are you waiting for? Submit to CAPITALISM now!"
+                ],[new Button("Submit","home.html",500)]),
+
+                new Panel(20,600,300,220,"Other Sites",[
+                    "If you desire to consume further FARAWAYCORP(tm) products, be sure to check out our [very willing to cooperate] partners!!!",
+                    "",
+                    "",
+                    "",
+                    "WARNING: Do not contact partners about relations to FARAWAYCORP(tm) and do not feed anybody associated."
+                ],[new Button("Nekoweb", "https://farawaydrip30.nekoweb.org/",300)])
+            ];
+
+            var heldPanel = null;
+            var holdOffsetX = 0;
+            var holdOffsetY = 0;
+
+            var canvasImg = new Image();
+
+            var shrinkSize = 10;
+            var shrinkWidth = canvas.width - (shrinkSize * 2);
+            var shrinkHeight = canvas.height - (shrinkSize * 2);
+
+            function drawPanels(){
+                ctx.clearRect(0,0,canvas.width,canvas.height)
+
+                ctx.globalAlpha = 0.02;
+                ctx.fillStyle = "darkblue";
+                ctx.fillRect(0,0,canvas.width,canvas.height);
+                ctx.globalAlpha = 0.99;
+                ctx.drawImage(canvasImg,20,20,canvas.width-40,canvas.height-40);
+                //ctx.fillStyle = "rgba(255, 255, 255, 0.001)";
+                //ctx.fillRect(shrinkSize,shrinkSize,shrinkWidth,shrinkHeight);
+
+                ctx.globalAlpha = 1;
+                for(let i = 0; i < panels.length; i++){
+                    panels[i].draw()
+                }
+
+                canvasImg.src = canvas.toDataURL();;
+            }
+
+            window.addEventListener("mousedown", function(){ 
+                mouseDown = true; 
+                for(let i = 0; i < panels.length; i++){
+                    if(mouseX < panels[i].x + panels[i].width && mouseX > panels[i].x &&
+                        mouseY < panels[i].y + 40 && mouseY > panels[i].y){
+                            panels[i].held = true;
+                            heldPanel = i;
+                            holdOffsetX = panels[i].x - mouseX;
+                            holdOffsetY = panels[i].y - mouseY;
+                            break;
+                    }
+                }
+            })
+            window.addEventListener("mouseup", function(){ 
+                mouseDown = false; 
+                heldPanel = null;
+            })
+            window.addEventListener("click", function(){ 
+                for(let i = 0; i < panels.length; i++){
+                    panels[i].click();
+                }
+            })
+
+            function update(){
+                canvas.style.cursor = "default";
+
+                if(mouseDown){
+                    if(heldPanel != null){
+                        panels[heldPanel].x = mouseX + holdOffsetX;
+                        panels[heldPanel].y = mouseY + holdOffsetY;
+                    }
+                }
+
+                //for(let i = 0; i < panels.length; i++){ panels[i].update(); }
+
+                drawPanels()
+
+                
+
+                requestAnimationFrame(update)
+            }
+
+            function resizeCanvas(){
+                canvas.width = window.innerWidth; 
+                canvas.height = window.innerHeight; 
+                if(canvas.width < canvas.height){
+                    window.location.href = "home.html"
+                }
+            }
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas()
+
+            ctx.lineWidth = 2;
+
+            update()
+        </script>
+    </body>
+</html>

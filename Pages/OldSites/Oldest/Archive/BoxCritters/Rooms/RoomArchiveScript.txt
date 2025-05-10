@@ -1,0 +1,27 @@
+function download(fileUrl, fileName) {
+  var a = document.createElement("a");
+  a.href = fileUrl;
+  a.setAttribute("download", fileName);
+  a.click();
+}
+
+function downloadSet(i){
+	let arrayDuplicate = world.rooms;
+		if(arrayDuplicate[i].media.background != null)
+			download(arrayDuplicate[i].media.background, arrayDuplicate[i].roomId + "_background.png");
+		if(arrayDuplicate[i].media.foreground != null)
+			download(arrayDuplicate[i].media.foreground, arrayDuplicate[i].roomId + "_foreground.png");
+		if(arrayDuplicate[i].media.music != null)
+			download(arrayDuplicate[i].media.music, arrayDuplicate[i].roomId + "_music.mp3");
+		if(arrayDuplicate[i].media.navMesh != null)
+			download(arrayDuplicate[i].media.navMesh, arrayDuplicate[i].roomId + "_navMesh.png");
+		if(arrayDuplicate[i].media.treasure != null)
+			download(arrayDuplicate[i].media.treasure, arrayDuplicate[i].roomId + "_treasure.png");
+		if(arrayDuplicate[i].media.video != null)
+			download(arrayDuplicate[i].media.treasure, arrayDuplicate[i].roomId + "_video.mp4");
+		for(let s = 0; s < arrayDuplicate[i].spriteSheet.images.length; s++){
+			download(arrayDuplicate[i].spriteSheet.images[s], arrayDuplicate[i].roomId + "_spriteSheet_" + s.toString() + ".png");
+		}
+}
+var downloadIndex = 0
+setInterval(function(){downloadSet(downloadIndex); if(downloadIndex < world.rooms.length) downloadIndex += 1},5000)
