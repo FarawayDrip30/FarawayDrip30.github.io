@@ -190,21 +190,45 @@
             setRandomImg(pupil, possible_pupils, 100);
             setRandomImg(eye, possible_eyes, 100);
 
-
-            function moveEye(evt){
+            //let mouse_x = (window.innerWidth / 2);
+            //let mouse_y = (window.innerHeight / 2);
+            let mouse_x = 0;
+            let mouse_y = 0;
+            
+            function moveMouse(evt){
                 //let x = 25 + (evt.clientX - (window.innerWidth / 2))/50;
                 //let y = 25 + (evt.clientY - (window.innerHeight / 2))/50;
-                let x = (evt.clientX - (window.innerWidth / 2));
-                let y = (evt.clientY - (window.innerHeight / 2));
-
-                pupil.style.left = x/4 + "px";
-                pupil.style.top = y/4 + "px";
-
-                eye.style.left = x/10 + "px"
-                eye.style.top = y/10 + "px"
+                mouse_x = (evt.clientX - (window.innerWidth / 2));
+                mouse_y = (evt.clientY - (window.innerHeight / 2));
             }
+
+            let pupil_x = 0;
+            let pupil_y = 0;
+            let pupil_jitter = 2;
+
+            let eye_x = 0;
+            let eye_y = 0;
+
+            function moveEye(){
+                let pupil_target_x = mouse_x/4;
+                let pupil_target_y = mouse_y/4;
+                pupil_x = (pupil_x + pupil_target_x) / 2;
+                pupil_y = (pupil_y + pupil_target_y) / 2;
+                pupil.style.left = pupil_x + Math.random() * pupil_jitter + "px";
+                pupil.style.top = pupil_y + Math.random() * pupil_jitter + "px";
+
+                let eye_target_x = mouse_x/10;
+                let eye_target_y = mouse_y/10;
+                eye_x = (eye_x + eye_target_x) / 2;
+                eye_y = (eye_y + eye_target_y) / 2;
+                eye.style.left = eye_x + "px";
+                eye.style.top = eye_y + "px";
+
+                requestAnimationFrame(moveEye);
+            }
+            moveEye();
             
-            document.addEventListener("mousemove", moveEye)
+            document.addEventListener("mousemove", moveMouse)
         }
     </script>
     <script>
