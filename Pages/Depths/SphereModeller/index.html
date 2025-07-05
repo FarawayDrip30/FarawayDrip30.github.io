@@ -5,9 +5,26 @@
                 background-color: white;
             }
         </style>
-        <script src="sphere_modeller.js"></script>
+        
     </head>
     <body>
         <canvas id="canvas" width="1280" height="720"></canvas>
+
+        <script src="sphere_modeller.js"></script>
+        <div>
+            <p>x</p>
+            <button onclick="rotate(true, 0)">up</button>
+            <button onclick="rotate(false, 0)">down</button>
+        </div>
+        <div>
+            <p>y</p>
+            <button onclick="rotate(true, 1)">up</button>
+            <button onclick="rotate(false, 1)">down</button>
+        </div>
+        <div>
+            <p>z</p>
+            <button onclick="rotate(true, 2)">up</button>
+            <button onclick="rotate(false, 2)">down</button>
+        </div>
     </body>
 </html>
