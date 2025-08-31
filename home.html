@@ -264,6 +264,10 @@
             pagePanel.className = "pagePanel";
             pagePanel.hidden = true;
         }
+
+        function fullscreen(){
+            window.location.href = pagePanelFrame.contentWindow.location.href + "?back_url=none";
+        }
     </script>
     <script>
         window.onload = function(){
@@ -276,10 +280,18 @@
 <body>
     <canvas id="canvas" width="1280" height="720"></canvas>
 
+    <object data="Assets/HTML/music.html" width="100%" height="35px"></object>
+
     <br><br>
     <center>
         <h1>FARAWAYDRIP30</h1>
     </center>
+
+    <script>
+        const WINDOW_STYLES = {
+            
+        }
+    </script>
 
     <div class="above" style="margin-left: 10%">
         <h2 id="h_1"><a onclick="changePage('Pages/Main/About/index.html', 'red', false)">About</a></h2>
@@ -290,9 +302,14 @@
         <h2 id="h_6"><a onclick="changePage('Pages/Main/Movies/index.html', 'orange', false)">Movies</a></h2>
         <h2 id="h_7"><a onclick="changePage('Pages/Main/Comics/index.html', 'aqua', true)">Comics</a></h2>
         <h2 id="h_8"><a onclick="changePage('Pages/Main/Art/index.html', 'green', false)">Art</a></h2>
-        <h2 id="h_9"><a onclick="changePage('Pages/Main/Links/index.html', 'pink', true)">Links</a></h2>
-        <h2><a onclick="changePage('Pages/Main/Other/index.html', 'black', false)">Other</a></h2>
+        <h2 id="h_9"><a onclick="changePage('Pages/Main/Other/index.html', 'pink', true)">Other</a></h2>
+        <!--<h2><a onclick="changePage('Pages/Main/Other/index.html', 'black', false)">Other</a></h2>-->
     </div>
+
+    <script>
+        const url = new URL(window.location.toLocaleString());
+        var params = url.searchParams();
+    </script>
 
     <div id="eyeDiv">
         <div class="eyeSocket">
@@ -305,7 +322,7 @@
 
     <div class="pagePanel" id="pagePanel" hidden>
         <div>
-            <a class="close" onclick="closePanel()">Close</a>
+            <a class="close" onclick="closePanel()">Close</a><a class="close" style="text-decoration: none;">|</a><a class="close" onclick="fullscreen()">Fullscreen</a>
             <hr>
         </div>
         <div class="flexbox-part">

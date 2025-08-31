@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link href="../style.css" rel="stylesheet">
+        <style>
+            body{
+                background-color: red;
+                animation-name: body_change;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            audio{
+                border-radius: 0px;
+                opacity: 10%;
+                color: white;
+
+                width: 100%;
+                height: 20px;
+            }
+            audio:hover{
+                opacity: 50%;
+            }
+
+            .container{
+                display: flex;
+                width: 100%;
+            }
+            .fill-space{
+                flex: 1;
+            }
+
+            @keyframes body_change{
+                0% {background-color: red;}
+                10%{background-color: darkseagreen;}
+                20%{background-color: blue;}
+                30%{background-color: violet;}
+                40%{background-color: orange;}
+                50%{background-color: purple;}
+                60%{background-color: darkblue;}
+                70%{background-color: black;}
+                80%{background-color: green;}
+                90%{background-color: darkcyan;}
+                100%{background-color: red;}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <a id="nowPlaying">Loading...</a>
+            <div class="fill-space">
+                <audio id="pageMusic" src="" autoplay controls></audio>
+            </div>
+        </div>
+
+        <script>
+            const songs = [
+                {
+                    name: "The Munch", 
+                    file: "../Music/The Munch Web.mp3"
+                },
+                {
+                    name: "This is the House (Flintastic Experiences: The Gambling Emporium OST)",
+                    file: "../Music/This is the House Web.mp3"
+                },
+                {
+                    name: "Putting it all on Red (Flintastic Experiences: The Gambling Emporium OST)",
+                    file: "../Music/Putting it all on Red Web.mp3"
+                },
+                {
+                    name: "Space Poker (Flintastic Experiences: The Gambling Emporium OST)",
+                    file: "../Music/Space Poker Web.mp3"
+                },
+                {
+                    name: "Roulette Circus (Bonus Track) (Flintastic Experiences: The Gambling Emporium OST)",
+                    file: "../Music/Roulette Circus Web.mp3"
+                }
+            ]
+
+            var pageMusic = document.getElementById("pageMusic");
+            pageMusic.volume = 0.25;
+
+            var nowPlaying = document.getElementById("nowPlaying");
+            
+            var current_song_id = 0;
+
+            function new_music_track(){
+                var last_song_id = current_song_id
+                while(current_song_id == last_song_id){
+                    current_song_id = Math.floor(Math.random() * songs.length);
+                }
+                nowPlaying.innerHTML = "Now Playing: " + songs[current_song_id].name
+                pageMusic.src = songs[current_song_id].file;
+            }
+
+            pageMusic.onload = function(){
+                pageMusic.play();
+            }
+            pageMusic.addEventListener("ended", function(e){
+                new_music_track();
+            });
+
+            new_music_track();
+        </script>
+    </body>
+</html>

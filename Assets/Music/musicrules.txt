@@ -1,0 +1,1 @@
+Music should have a bitrate of 56kbps or whatever gets it under 1mb.

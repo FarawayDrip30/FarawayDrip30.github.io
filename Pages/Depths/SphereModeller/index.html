@@ -13,18 +13,44 @@
         <script src="sphere_modeller.js"></script>
         <div>
             <p>x</p>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rot_x_slider">
             <button onclick="rotate(true, 0)">up</button>
             <button onclick="rotate(false, 0)">down</button>
         </div>
         <div>
             <p>y</p>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rot_y_slider">
             <button onclick="rotate(true, 1)">up</button>
             <button onclick="rotate(false, 1)">down</button>
         </div>
         <div>
             <p>z</p>
+            <input type="range" min="0" max="360" value="0" class="slider" id="rot_z_slider">
             <button onclick="rotate(true, 2)">up</button>
             <button onclick="rotate(false, 2)">down</button>
         </div>
+
+        <script>
+            var rot_x_slider = document.getElementById("rot_x_slider")
+            rot_x_slider.oninput = function(){
+                rot_x_slider.oninput = function() {
+                    rotation_x = this.value;
+                }
+            }
+
+            var rot_y_slider = document.getElementById("rot_y_slider")
+            rot_y_slider.oninput = function(){
+                rot_y_slider.oninput = function() {
+                    rotation_y = this.value;
+                }
+            }
+
+            var rot_z_slider = document.getElementById("rot_z_slider")
+            rot_z_slider.oninput = function(){
+                rot_z_slider.oninput = function() {
+                    rotation_z = this.value;
+                }
+            }
+        </script>
     </body>
 </html>

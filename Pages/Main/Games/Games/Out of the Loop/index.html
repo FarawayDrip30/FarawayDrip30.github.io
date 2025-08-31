@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <link href="../../../../../Assets/style.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: purple;
+            color: white;
+        }
+
+        .normal{
+
+        }
+        .fullscreen{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+    <a href="../../index.html">back</a>
+    <h1>Out of the Loop</h1>
+    <center>
+        <div id="webGameDiv" hidden>
+            <iframe id="gameFrame" width="640px" height="360px" frameborder="0" src=""></iframe>
+            <br><button id="fullscreenButton">Fullscreen</button>
+        </div>
+        <button id="playGameButton">Play Game</button>
+        <script>
+            var inIframe = window.self !== window.top;
+
+            document.getElementById("playGameButton").addEventListener('click', function(){
+                if(inIframe){
+                    window.top.fullscreen();
+                }
+                else{
+                    document.getElementById("webGameDiv").hidden = false;
+                    gameFrame.src = "WebGame/index.html";
+                    document.getElementById("playGameButton").hidden = true;
+                }
+            });
+
+            var gameFrame = document.getElementById("gameFrame");
+
+            gameFrame.onload = function(){
+                gameFrame.contentWindow.addEventListener('keydown', function (e) {
+                    if(e.key === "Escape") {
+                        console.log("hi")
+                        gameFrame.className = "normal";
+                    }
+                })
+            }
+            
+            document.getElementById("fullscreenButton").addEventListener('click', function(){
+                gameFrame.className = "fullscreen";
+            });
+            
+        </script>
+    </center>
+    <p>You are in a party and it seems like everyone knows some secret you don't, you are...</p>
+    <img src="PageAssets/logo_half.png">
+    <p>You are a clown that has the power to possess other people, with the cost of having the day restart, you must find out the gossip and get in the loop.</p>
+    <p>A bouncer, a guy that oddly looks like a frog, an electrician, a cat, a lesbian, a vampire and other strange characters walk into a party. What do they know, can you find out?</p>
+    <img src="PageAssets/silhouettes.png">
+    <br><br>
+    <!--<img src="PageAssets/screenshot1.png">
+    <img src="PageAssets/screenshot2.png">
+    <img src="PageAssets/screenshot3.png">
+    <img src="PageAssets/screenshot4.png">
+    <img src="PageAssets/screenshot5.png">-->
+</body>

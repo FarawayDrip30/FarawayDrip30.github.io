@@ -19,3 +19,37 @@ a{
 a:hover{
     cursor: pointer;
 }
+
+button{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition-duration: 0.2s;
+}
+button:hover{
+    padding: 10px;
+    margin: 0px;
+}
+
+.musicBox{
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+
+    padding: 6px;
+    margin-bottom: 6px;
+
+    width: fit-content;
+
+    background-color: rgb(35, 179, 35);
+}
+.musicBox p{
+    margin: 0px;
+}
