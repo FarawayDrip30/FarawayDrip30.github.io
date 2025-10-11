@@ -1,0 +1,18 @@
+<rss version="2.0">
+    <channel>
+        <title>FarawayDrip30</title>
+        <link>https://FarawayDrip30.github.io</link>
+        <description>Best RSS Feed in the County</description>
+        <language>en-uk</language>
+        
+        <ttl>60</ttl>
+
+        <item>
+            <title>RSS Feed Added</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:11.10.2025:19.54</guid>
+            <pubDate>Sat, 11th October 2025 19:55:00 +0000</pubDate>
+            <description><p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><img src="https://farawaydrip30.github.io/Pages/Main/Blog/Blogs/2%20-%20Moth%20Survival%20Log/moth2.jpg" /></description>
+        </item>
+    </channel>
+</rss>
