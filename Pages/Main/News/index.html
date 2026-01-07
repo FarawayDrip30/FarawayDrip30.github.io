@@ -1,24 +1,76 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
-    <link href="../../../Assets/style.css" rel="stylesheet">
+    <link href="../../../Assets/style.css" rel="stylesheet" />
     <style>
-        body{
+        body {
             background-color: blue;
             color: white;
+        }
+        .newsDiv {
+            border-width: 1px;
+            border-style: solid;
+            border-color: white;
+            background-color: darkblue;
+            margin: 8px;
+            padding: 6px;
         }
     </style>
 </head>
 <body>
     <h2><a target="_blank" href="../../../rss.xml">Add the RSS Feed</a></h2>
-    <br>
-    <h1>NEWS</h1>
+    <br />
+    <div id="news_div"></div>
+    <script>
+        // Get File
+        fetch("../../../rss.xml").then((data) => {
+            data.text().then((text) => {
+                //console.log(text);
+                let news_div = document.getElementById("news_div");
+
+                let parser = new DOMParser();
+                let xml = parser.parseFromString(text, "text/xml");
+
+                let items = xml.getElementsByTagName("item");
+
+                for (let i = 0; i < items.length; i++) {
+                    news_div.innerHTML +=
+                        "<a id='title" +
+                        i +
+                        "'>" +
+                        items[i].getElementsByTagName("title")[0].innerHTML +
+                        "</a><br>" +
+                        "<div id='news" +
+                        i +
+                        "' class='newsDiv' hidden>" +
+                        items[i]
+                            .getElementsByTagName("description")[0]
+                            .innerHTML.substr(
+                                0,
+                                items[i].getElementsByTagName("description")[0]
+                                    .innerHTML.length - 4,
+                            ) +
+                        "</div>";
+                }
+                for (let i = 0; i < items.length; i++) {
+                    document
+                        .getElementById("title" + i)
+                        .addEventListener("click", (e) => {
+                            console.log(e);
+                            let temp_news = document.getElementById("news" + i);
+                            temp_news.hidden = !temp_news.hidden;
+                        });
+                }
+            });
+        });
+    </script>
+    <!--<h1>NEWS</h1>
     <p>[02/11/2025]> Finally released the game me and <a href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p>
-    <p>[11/09/2025]> The news page now has an <a target="_blank" href="../../../rss.xml">RSS Feed!</a></p>
+    <p>[11/10/2025]> The news page now has an <a target="_blank" href="../../../rss.xml">RSS Feed!</a></p>
     <p>[28/09/2025]> I released my A-level NEA project, Cult Worms.</p>
     <p>[19/09/2025]> The game jam game made in a week for my university's first week game jam is out, Glorball.</p>
     <p>[31/08/2025]> The Flintastic Experiences: Gambling Emporium OST is now on the website, along with bonus and unfinished tracks. Also, the site has background music now.</p>
     <p>[03/08/2025]> Me, Flines, Craity & Eribetra made <a target="_parent" href="../Games/Games/Out of the Loop/index.html">Out of the Loop</a> for the <a href="https://itch.io/jam/gmtk-2025/rate/3783305">GMTK Game Jam 2025</a>.</p>
     <p>[29/05/2025]> <a target="_parent" href="https://flines.itch.io/flintastic-experiences-the-gambling-emporium/devlog/955118/heartbreaking-gambling-interest-drops-to-0">An update to Flintastic Adventures: Gambling Emporium</a> has released and features a new Soundtrack by yours truly!</p>
     <p>[13/05/2025]> Made a neocities portal to this site: <a href="https://farawaydrip30.neocities.org/">https://farawaydrip30.neocities.org/</a></p>
-    <p>[10/05/2025]> New website is LAUNCHED!</p>
+    <p>[10/05/2025]> New website is LAUNCHED!</p>-->
 </body>

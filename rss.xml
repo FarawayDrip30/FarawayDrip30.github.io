@@ -4,22 +4,102 @@
         <link>https://FarawayDrip30.github.io</link>
         <description>Best RSS Feed in the County</description>
         <language>en-uk</language>
-        
+
         <ttl>60</ttl>
 
         <item>
-            <title>Less Trains Please RELEASED!!!</title>
-            <link>https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
-            <guid isPermaLink="false">farawaydrip30:11.10.2025:19.54</guid>
+            <title>New Site (not) Christmas Update</title>
+            <link
+            >https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
+            <guid isPermaLink="false">farawaydrip30:07.01.2026:22.30</guid>
+            <pubDate>Wed, 7th January 2026 22:30:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Got a new site update out for (not) christmas!! (but instead January 7th) Because the old one was messy as hell. The news page now reads from the RSS feed instead of me manually having to do it...... It's lit. Shame the eye's gone though. I'll be trying to return the cool level of the site in the coming times though.... merry (not) christmas (but January 7th)....</p>]]></description>
+        </item>
+        <item>
+            <title>Less Trains Please Available on Armor Games</title>
+            <link
+            >https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
+            <guid isPermaLink="false">farawaydrip30:24.12.2025:22.06</guid>
             <pubDate>Sun, 2nd November 2025 21:25:00 +0000</pubDate>
-            <description><![CDATA[<p>[02/11/2025]> Finally released the game me and <a href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
+            <description
+            ><![CDATA[<p>LTP can now be played on <a href='https://armorgames.com/less-trains-please-game/19645?fp=ng'>Armor Games!</a> It's really cool to see a game I made be present with the same intro screen that old flash games I used to play</p>]]></description>
+        </item>
+        <item>
+            <title>Less Trains Please RELEASED!!!</title>
+            <link
+            >https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
+            <guid isPermaLink="false">farawaydrip30:02.11.2025:19.54</guid>
+            <pubDate>Sun, 2nd November 2025 21:25:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>[02/11/2025]> Finally released the game me and <a href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
         </item>
         <item>
             <title>RSS Feed Added</title>
             <link>https://FarawayDrip30.github.io</link>
             <guid isPermaLink="false">farawaydrip30:11.10.2025:19.54</guid>
             <pubDate>Sat, 11th October 2025 19:55:00 +0000</pubDate>
-            <description><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><p><img src="https://farawaydrip30.github.io/Assets/Images/Misc/Add_the_RSS_Feed.png" alt="" /></p>]]></description>
+            <description
+            ><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><p><img src="https://farawaydrip30.github.io/Assets/Images/Misc/Add_the_RSS_Feed.png" alt="" /></p>]]></description>
+        </item>
+
+        <item>
+            <title>Cult Worms Released</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:28.09.2025:19.54</guid>
+            <pubDate>Sun, 28th September 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>I released my A-level NEA project, <a href="https://farawaydrip30.itch.io/cult-worms">Cult Worms</a>.</p>]]></description>
+        </item>
+        <item>
+            <title>University Jam Game Released</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:19.09.2025:00.00</guid>
+            <pubDate>Fri, 19th September 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>The game jam game made in a week for my university's first week game jam is out, <a href="https://granti13.itch.io/glorball">Glorball</a>.</p>]]></description>
+        </item>
+        <item>
+            <title
+            >Flintastic Experiences: Gambling Emporium OST Released</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:31.08.2025:00.00</guid>
+            <pubDate>Sun, 31st August 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>The Flintastic Experiences: Gambling Emporium OST is <a href="../Music/Music/FlintasticGambling/index.html">now on the website</a>, along with bonus and unfinished tracks. Also, the site has background music now.</p>]]></description>
+        </item>
+        <item>
+            <title>GMTK Game, Out of the Loop, Released</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:03.08.2025:00.00</guid>
+            <pubDate>Sun, 3rd August 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Me, Flines, Craity & Eribetra made <a target="_parent" href="../Games/Games/Out of the Loop/index.html">Out of the Loop</a> for the <a href="https://itch.io/jam/gmtk-2025/rate/3783305">GMTK Game Jam 2025</a>.</p>]]></description>
+        </item>
+        <item>
+            <title
+            >Flintastic Experiences: Gambling Emporium OST Added to the Game</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:29.05.2025:00.00</guid>
+            <pubDate>Thu, 29th May 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p><a target="_parent" href="https://flines.itch.io/flintastic-experiences-the-gambling-emporium/devlog/955118/heartbreaking-gambling-interest-drops-to-0">An update to Flintastic Adventures: Gambling Emporium</a> has released and features a new Soundtrack by yours truly!</p>]]></description>
+        </item>
+        <item>
+            <title>New Neocities Web Portal</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:12.05.2025:00.00</guid>
+            <pubDate>Tue, 13th May 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Made a neocities portal to this site: <a href="https://farawaydrip30.neocities.org/">https://farawaydrip30.neocities.org/</a></p></p>]]></description>
+        </item>
+        <item>
+            <title>New Website Launched</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:10.05.2025:00.00</guid>
+            <pubDate>Sat, 10th May 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>New website is LAUNCHED!</p>]]></description>
         </item>
     </channel>
 </rss>
