@@ -233,7 +233,7 @@
             var params = url.searchParams();
         </script>
 
-        <div style="flex: 1">
+        <div id="page_panel_parent" style="flex: 1">
             <iframe
                 id="page_panel"
                 frameborder="0"
@@ -242,17 +242,35 @@
                 height="100%"
             ></iframe>
         </div>
-
-        <script>
-            var page_panel = document.getElementById("page_panel");
-
-            function change_page(url) {
-                page_panel.src = url;
-            }
-        </script>
     </div>
 
-    <br /><br />
+    <div id="bottom_break" style="width: 100%"></div>
+    <br />
+    <hr />
+    <hr />
+    <hr />
+    <br />
+
+    <script>
+        var page_panel = document.getElementById("page_panel");
+        var page_panel_parent = document.getElementById("page_panel_parent");
+        var bottom_break = document.getElementById("bottom_break");
+
+        function change_page(url) {
+            page_panel.src = url;
+        }
+
+        page_panel.onload = function () {
+            console.log("yo");
+            page_panel.style.height =
+                Math.max(
+                    page_panel.contentWindow.document.body.scrollHeight + 100,
+                    page_panel_parent.scrollHeight,
+                ) + "px";
+            bottom_break.style.height = page_panel.style.height;
+        };
+    </script>
+
     <center>
         <div id="sfc4mpznhayuwlycwn2dat1n3aqxzrxt324"></div>
         <script
