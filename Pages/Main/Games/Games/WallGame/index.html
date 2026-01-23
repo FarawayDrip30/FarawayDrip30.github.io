@@ -1,0 +1,116 @@
+<!doctype html>
+<head>
+    <link href="../../../../../Assets/style.css" rel="stylesheet" />
+    <style>
+        body {
+            background-color: purple;
+            color: white;
+        }
+
+        .normal {
+        }
+        .fullscreen {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+    <script>
+        window.addEventListener(
+            "keydown",
+            function (e) {
+                if (
+                    [
+                        "Space",
+                        "ArrowUp",
+                        "ArrowDown",
+                        "ArrowLeft",
+                        "ArrowRight",
+                    ].indexOf(e.code) > -1
+                ) {
+                    e.preventDefault();
+                }
+            },
+            false,
+        );
+    </script>
+</head>
+<body>
+    <a href="../../index.html">back</a>
+    <h1>WallGame</h1>
+    <center>
+        <div id="webGameDiv" hidden>
+            <iframe
+                id="gameFrame"
+                width="768px"
+                height="576px"
+                frameborder="0"
+                src=""
+            ></iframe>
+        </div>
+        <button id="playGameButton">Play Game</button>
+        <script>
+            var inIframe = window.self !== window.top;
+
+            document
+                .getElementById("playGameButton")
+                .addEventListener("click", function () {
+                    if (inIframe) {
+                        window.top.fullscreen();
+                    } else {
+                        document.getElementById("webGameDiv").hidden = false;
+                        gameFrame.src = "Game/index.html";
+                        document.getElementById("playGameButton").hidden = true;
+                    }
+                });
+
+            var gameFrame = document.getElementById("gameFrame");
+        </script>
+    </center>
+    <p>WallGame is a Game about Walls.</p>
+    <h3>Meet the Cast!</h3>
+    <p><strong>WallGame</strong></p>
+    <p>
+        <img src="Game/res/player/boy_down_1_medium.png" /><br />WallGame has
+        unfortunately become insane from the tribulations of living on a planet
+        where giant walls arise from the ground and slaughter millions, and has
+        since lost all sense and runs around the planet freely and dangerously.
+    </p>
+    <p>
+        <strong>MouseGame<br /></strong
+        ><img src="Game/res/player/boy_down_1_medium.png" /><strong
+            ><br /></strong
+        >MouseGame is a prisoner of God and is puppeteered against his will by
+        the omnipotent force, who will one day certainly stop taking pity on him
+        and allow him to be claimed by the walls.
+    </p>
+    <p>
+        <strong>BounceGame<br /></strong
+        ><img src="Game/res/bouncePlayer/rightUp_medium.png" /><strong></strong
+        ><br />A psychic, one day BounceGame had a vision of a game of
+        basketball, here on Earth, and was determined to dedicate his life to
+        perfecting the sport through trial of fire through the walls, even if he
+        were to die doing it. &nbsp; &nbsp;<strong></strong>
+    </p>
+    <p>============================================</p>
+    <p>
+        This is a game I made in while not paying attention in Computer Science
+        GCSE, originally (and to-be&nbsp;downloadably (it doesn't work
+        properly)) in Java! I have ported it to Javascript for your convenience.
+        You gotta go through all the walls.
+    </p>
+    <p>
+        Interestingly, I found an exact copy of the game, despite making it
+        myself, at a car boot sale on CD. Unfortunately it was possessed by a
+        ghost and killed seven people, I&nbsp;would upload it here but it's in
+        for evidence.
+    </p>
+    <br /><br />
+    <!--<img src="PageAssets/screenshot1.png">
+    <img src="PageAssets/screenshot2.png">
+    <img src="PageAssets/screenshot3.png">
+    <img src="PageAssets/screenshot4.png">
+    <img src="PageAssets/screenshot5.png">-->
+</body>

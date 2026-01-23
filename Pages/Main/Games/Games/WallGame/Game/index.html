@@ -1,0 +1,269 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <canvas id="recolourCanvas" hidden></canvas>
+
+        <script src="src/lib/NewgroundsIO.min.js"></script>
+        <script src="src/main/Utils.js"></script>
+
+        <script src="src/main/GamePanel.js"></script>
+        <script src="src/main/KeyHandler.js"></script>
+        <script src="src/main/MouseHandler.js"></script>
+        <script src="src/main/SaveObject.js"></script>
+        <script src="src/main/SoundHandler.js"></script>
+        <script src="src/main/SelectionMenu.js"></script>
+        <script src="src/main/SettingsMenu.js"></script>
+
+        <script src="src/entity/Wall.js"></script>
+        <script src="src/entity/BurnedWall.js"></script>
+        <script src="src/entity/Entity.js"></script>
+        <script src="src/entity/Player.js"></script>
+        <script src="src/entity/MousePlayer.js"></script>
+        <script src="src/entity/BouncePlayer.js"></script>
+
+        <script src="src/states/State.js"></script>
+        <script src="src/states/LoadState.js"></script>
+        <script src="src/states/TitleState.js"></script>
+        <script src="src/states/HowToPlayState.js"></script>
+        <script src="src/states/GameState.js"></script>
+        <script src="src/states/MouseState.js"></script>
+        <script src="src/states/GameOverState.js"></script>
+        <script src="src/states/HighScoresState.js"></script>
+        <script src="src/states/BounceState.js"></script>
+        <script src="src/states/NewgroundsState.js"></script>
+
+        <script src="src/main/Main.js"></script>
+
+        <script>
+            var g_sprites_loaded = 0;
+            var g_sprites_all_loaded = false;
+            function loadSprite(key) {
+                g_sprites[key] = new Image();
+                g_sprites[key].onload = function () {
+                    g_sprites_loaded++;
+
+                    if (
+                        g_sprites_loaded ==
+                        Object.keys(g_sprites_unloaded).length
+                    ) {
+                        g_sprites_all_loaded = true;
+                    }
+                };
+                g_sprites[key].src = g_sprites_unloaded[key];
+            }
+
+            try {
+                var g_audioContext = new AudioContext();
+
+                var g_musicGainNode = g_audioContext.createGain();
+                var g_sfxGainNode = g_audioContext.createGain();
+                g_musicGainNode.connect(g_audioContext.destination);
+                g_sfxGainNode.connect(g_audioContext.destination);
+            } catch (e) {
+                alert(
+                    "Web Audio API is not supported in this browser. \nError: " +
+                        e,
+                );
+            }
+
+            var g_sounds_loaded = 0;
+            var g_sounds_all_loaded = false;
+            function loadSound(key) {
+                console.log("load");
+
+                let request = new XMLHttpRequest();
+                request.open("GET", g_sounds_unloaded[key], true);
+                request.responseType = "arraybuffer";
+
+                // Decode asynchronously
+                request.onload = function () {
+                    g_audioContext.decodeAudioData(
+                        request.response,
+                        function (buffer) {
+                            g_sounds[key] = buffer;
+
+                            g_sounds_loaded++;
+                            console.log(key, "Loaded");
+
+                            if (
+                                g_sounds_loaded ==
+                                Object.keys(g_sounds_unloaded).length
+                            ) {
+                                g_sounds_all_loaded = true;
+                            }
+                        },
+                        function (error) {
+                            alert("Audio Error Happened:", error);
+                        },
+                    );
+                };
+                request.send();
+
+                //g_sounds[key].onload = function () {};
+                //g_sounds[key].src = g_sounds_unloaded[key];
+                //console.log(g_sounds[key].src);
+                //g_sounds[key].load();
+            }
+
+            //var g_keyH = new KeyHandler();
+            var g_keyH = {
+                upPressed: false,
+                downPressed: false,
+                leftPressed: false,
+                rightPressed: false,
+                startPressed: false,
+            };
+
+            var g_mouseH = {
+                x: 0,
+                y: 0,
+                down: false,
+                outside: false,
+                last_x: 0,
+                last_y: 0,
+                moving: false,
+            };
+
+            var g_sprites_unloaded = {
+                pd_1: "res/player/boy_down_1.png",
+                pd_2: "res/player/boy_down_2.png",
+                pl_1: "res/player/boy_left_1.png",
+                pl_2: "res/player/boy_left_2.png",
+                pr_1: "res/player/boy_right_1.png",
+                pr_2: "res/player/boy_right_2.png",
+                pu_1: "res/player/boy_up_1.png",
+                pu_2: "res/player/boy_up_2.png",
+
+                b_plu: "res/bouncePlayer/leftUp.png",
+                b_pld: "res/bouncePlayer/leftDown.png",
+                b_pru: "res/bouncePlayer/rightUp.png",
+                b_prd: "res/bouncePlayer/rightDown.png",
+
+                owch: "res/misc/owch.png",
+                how_to_play: "res/howToPlay/howtoplay.png",
+            };
+            var g_sprites = {};
+
+            var g_sounds_unloaded = {
+                alive: "res/sounds/At least you are alive in real life.mp3",
+                devil: "res/sounds/Devil worship.mp3",
+                food: "res/sounds/Food banks.mp3",
+                motherfucker:
+                    "res/sounds/MOTHERFUCKER I did NOT steal your CHIPS.mp3",
+                please: "res/sounds/Please help me good sir my dog has turned into jelly.mp3",
+                dolphin: "res/sounds/The dolphin is attacking me.mp3",
+                ocean: "res/sounds/The only thing I can see around me is ocean.mp3",
+
+                scream: "res/sounds/scream.wav",
+                fizz: "res/sounds/fizz.wav",
+            };
+            var g_sounds = {};
+
+            var g_sfx_volume = 8;
+            var g_music_volume = 8;
+
+            document.addEventListener("keydown", function (e) {
+                let code = e.key;
+
+                if (code == "w" || code == "ArrowUp") {
+                    g_keyH.upPressed = true;
+                }
+                if (code == "s" || code == "ArrowDown") {
+                    g_keyH.downPressed = true;
+                }
+                if (code == "a" || code == "ArrowLeft") {
+                    g_keyH.leftPressed = true;
+                }
+                if (code == "d" || code == "ArrowRight") {
+                    g_keyH.rightPressed = true;
+                }
+
+                if (code == " " || code == "Enter" || code == "Escape") {
+                    g_keyH.startPressed = true;
+                }
+            });
+            document.addEventListener("keyup", function (e) {
+                let code = e.key;
+
+                if (code == "w" || code == "ArrowUp") {
+                    g_keyH.upPressed = false;
+                }
+                if (code == "s" || code == "ArrowDown") {
+                    g_keyH.downPressed = false;
+                }
+                if (code == "a" || code == "ArrowLeft") {
+                    g_keyH.leftPressed = false;
+                }
+                if (code == "d" || code == "ArrowRight") {
+                    g_keyH.rightPressed = false;
+                }
+
+                if (code == " " || code == "Enter" || code == "Escape") {
+                    g_keyH.startPressed = false;
+                }
+            });
+
+            let canvas = document.getElementById("canvas");
+            canvas.addEventListener("mousemove", function (e) {
+                g_mouseH.last_x = g_mouseH.x;
+                g_mouseH.last_y = g_mouseH.y;
+                g_mouseH.x = Math.floor(e.clientX);
+                g_mouseH.y = Math.floor(e.clientY);
+                g_mouseH.moving = true;
+            });
+            canvas.addEventListener("mousedown", function (e) {
+                g_mouseH.down = true;
+            });
+            canvas.addEventListener("mouseup", function (e) {
+                g_mouseH.down = false;
+            });
+            canvas.addEventListener("mouseleave", function (e) {
+                g_mouseH.outside = true;
+            });
+            canvas.addEventListener("mouseenter", function (e) {
+                g_mouseH.outside = false;
+            });
+
+            var g_recolourCanvas = document.getElementById("recolourCanvas");
+            var g_recolourCtx = g_recolourCanvas.getContext("2d");
+
+            var g_gamePanel;
+            Main.main();
+
+            var ng_options = {
+                // This should match the version number in your Newgrounds App Settings page
+                version: "1.0.0",
+
+                // If you aren't using any of these features, set them to false, or delete the line
+                //checkHostLicense: true,
+                //autoLogNewView: true,
+                preloadMedals: true,
+                preloadScoreBoards: true,
+                preloadSaveSlots: true,
+            };
+
+            // initialize the API, using the App ID and AES key from your Newgrounds project
+            NGIO.init("61371:aGWpxZar", "94EAjpI+PnLr60DMylG9oQ==", ng_options);
+
+            var g_ngInterval = setInterval(function () {
+                console.log("Keep Newgrounds Session Alive");
+                NGIO.keepSessionAlive();
+            }, 10000);
+
+            for (let key in g_sprites_unloaded) {
+                loadSprite(key);
+            }
+            for (let key in g_sounds_unloaded) {
+                loadSound(key);
+            }
+        </script>
+    </body>
+</html>

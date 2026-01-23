@@ -8,6 +8,15 @@
         <ttl>60</ttl>
 
         <item>
+            <title>WallGame is OutGame!</title>
+            <link
+            >https://FarawayDrip30.github.io/Pages/Main/Games/Games/WallGame/index.html</link>
+            <guid isPermaLink="false">farawaydrip30:23.01.2026:19.00</guid>
+            <pubDate>Fri, 23rd January 2026 19:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>This has been in the backburner for a while. WallGame is OUT! I started and basically finished its original Java version in GCSE Computer Science like 2/3 years ago now (wow), but only recently decided to finish it by adding sounds, a soundtrack, some QOL, and ported it in its entirety to Javascript and added Newgrounds shit. Unfortunately the sound system in Java is really jank so I'm not gonna release that just yet and try to fix it, but I hope you like the java version! <br> <a href="https://www.youtube.com/watch?v=oKjsiMWvM8g">(It even has a trailer!)</a></p> <img src="https://FarawayDrip30.github.io/Pages/Main/Games/Games/WallGame/wallgame_coloured_small.png">]]></description>
+        </item>
+        <item>
             <title>New Site (not) Christmas Update</title>
             <link
             >https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
@@ -23,7 +32,7 @@
             <guid isPermaLink="false">farawaydrip30:24.12.2025:22.06</guid>
             <pubDate>Sun, 2nd November 2025 21:25:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>LTP can now be played on <a href='https://armorgames.com/less-trains-please-game/19645?fp=ng'>Armor Games!</a> It's really cool to see a game I made be present with the same intro screen that old flash games I used to play</p>]]></description>
+            ><![CDATA[<p>LTP can now be played on <a target="_blank" href='https://armorgames.com/less-trains-please-game/19645?fp=ng'>Armor Games!</a> It's really cool to see a game I made be present with the same intro screen that old flash games I used to play</p>]]></description>
         </item>
         <item>
             <title>Less Trains Please RELEASED!!!</title>
@@ -32,7 +41,7 @@
             <guid isPermaLink="false">farawaydrip30:02.11.2025:19.54</guid>
             <pubDate>Sun, 2nd November 2025 21:25:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>[02/11/2025]> Finally released the game me and <a href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
+            ><![CDATA[<p>[02/11/2025]> Finally released the game me and <a target="_blank" href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
         </item>
         <item>
             <title>RSS Feed Added</title>
