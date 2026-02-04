@@ -8,13 +8,21 @@
         <ttl>60</ttl>
 
         <item>
+            <title>New Website Design!</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:04.02.2026:23.08</guid>
+            <pubDate>Fri, 4th February 2026 23:08:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Today I felt rather unhappy with my website, so I redid it all again! Completely new! It'll take some time for it to have all the stuff I want it to have but I fuck with it so far. <br> Don't worry if you missed the old site design, like all the others, it is archived and accessible! I might have to go back and update the images for all my old RSS posts though... ugh..................... ( it is rather weird to type out onamatopeia. it's like when someone's trying to seek out attention so they type "sigh..." in the chat or some bollocks. )</p>]]></description>
+        </item>
+        <item>
             <title>WallGame is OutGame!</title>
             <link
             >https://FarawayDrip30.github.io/Pages/Main/Games/Games/WallGame/index.html</link>
             <guid isPermaLink="false">farawaydrip30:23.01.2026:19.00</guid>
             <pubDate>Fri, 23rd January 2026 19:00:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>This has been in the backburner for a while. WallGame is OUT! I started and basically finished its original Java version in GCSE Computer Science like 2/3 years ago now (wow), but only recently decided to finish it by adding sounds, a soundtrack, some QOL, and ported it in its entirety to Javascript and added Newgrounds shit. Unfortunately the sound system in Java is really jank so I'm not gonna release that just yet and try to fix it, but I hope you like the java version! <br> <a href="https://www.youtube.com/watch?v=oKjsiMWvM8g">(It even has a trailer!)</a></p> <img src="https://FarawayDrip30.github.io/Pages/Main/Games/Games/WallGame/wallgame_coloured_small.png">]]></description>
+            ><![CDATA[<p>This has been in the backburner for a while. WallGame is OUT! I started and basically finished its original Java version in GCSE Computer Science like 2/3 years ago now (wow), but only recently decided to finish it by adding sounds, a soundtrack, some QOL, and ported it in its entirety to Javascript and added Newgrounds shit. Unfortunately the sound system in Java is really jank so I'm not gonna release that just yet and try to fix it, but I hope you like the java version! <br> <a href="https://www.youtube.com/watch?v=oKjsiMWvM8g">(It even has a trailer!)</a></p> <img src="https://FarawayDrip30.github.io/Pages/OldSites/Void/Pages/Main/Games/Games/WallGame/wallgame_coloured_small.png">]]></description>
         </item>
         <item>
             <title>New Site (not) Christmas Update</title>
@@ -41,7 +49,7 @@
             <guid isPermaLink="false">farawaydrip30:02.11.2025:19.54</guid>
             <pubDate>Sun, 2nd November 2025 21:25:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>[02/11/2025]> Finally released the game me and <a target="_blank" href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="../Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
+            ><![CDATA[<p>[02/11/2025]> Finally released the game me and <a target="_blank" href="https://raflines.github.io/">flines</a> have been making for like the last 4 months, <a href="https://farawaydrip30.github.io/Pages/OldSites/Void/Pages/Main/Games/Games/LessTrainsPlease/index.html">Less Trains, Please...?</a> Really happy with how the game turned out, also made a day 1 update. I will probably make a blog on a retrospective of the game at some point!</p><p><img src="https://farawaydrip30.github.io/Pages/OldSites/Void/Pages/Main/Games/Games/LessTrainsPlease/lesstrainsplease.png" alt="" /></p>]]></description>
         </item>
         <item>
             <title>RSS Feed Added</title>
@@ -49,7 +57,7 @@
             <guid isPermaLink="false">farawaydrip30:11.10.2025:19.54</guid>
             <pubDate>Sat, 11th October 2025 19:55:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><p><img src="https://farawaydrip30.github.io/Assets/Images/Misc/Add_the_RSS_Feed.png" alt="" /></p>]]></description>
+            ><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><p><img src="https://farawaydrip30.github.io/Pages/OldSites/Void/Assets/Images/Misc/Add_the_RSS_Feed.png" alt="" /></p>]]></description>
         </item>
 
         <item>
@@ -75,7 +83,7 @@
             <guid isPermaLink="false">farawaydrip30:31.08.2025:00.00</guid>
             <pubDate>Sun, 31st August 2025 00:00:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>The Flintastic Experiences: Gambling Emporium OST is <a href="../Music/Music/FlintasticGambling/index.html">now on the website</a>, along with bonus and unfinished tracks. Also, the site has background music now.</p>]]></description>
+            ><![CDATA[<p>The Flintastic Experiences: Gambling Emporium OST is <a href="https://FarawayDrip30/Pages/OldSites/Void/Pages/Main/Music/Music/FlintasticGambling/index.html">now on the website</a>, along with bonus and unfinished tracks. Also, the site has background music now.</p>]]></description>
         </item>
         <item>
             <title>GMTK Game, Out of the Loop, Released</title>
@@ -83,7 +91,7 @@
             <guid isPermaLink="false">farawaydrip30:03.08.2025:00.00</guid>
             <pubDate>Sun, 3rd August 2025 00:00:00 +0000</pubDate>
             <description
-            ><![CDATA[<p>Me, Flines, Craity & Eribetra made <a target="_parent" href="../Games/Games/Out of the Loop/index.html">Out of the Loop</a> for the <a href="https://itch.io/jam/gmtk-2025/rate/3783305">GMTK Game Jam 2025</a>.</p>]]></description>
+            ><![CDATA[<p>Me, Flines, Craity & Eribetra made <a target="_parent" href="https://farawaydrip30.github.io/Pages/OldSites/Void/Pages/Main/Games/Games/Out of the Loop/index.html">Out of the Loop</a> for the <a href="https://itch.io/jam/gmtk-2025/rate/3783305">GMTK Game Jam 2025</a>.</p>]]></description>
         </item>
         <item>
             <title

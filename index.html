@@ -1,23 +1,293 @@
+<!doctype html>
 <html>
     <head>
         <title>FarawayDrip30</title>
+
+        <meta content="FarawayDrip30.github.io" property="og:title" />
+        <meta
+            content="wet things made by wet people"
+            property="og:description"
+        />
+        <meta content="https://farawaydrip30.github.io" property="og:url" />
+        <!--<meta content="https://embed.com/embedimage.png" property="og:image" />-->
+        <meta content="#0000AA" data-react-helmet="true" name="theme-color" />
+
         <style>
-            body{
-                background-color: black;
-                color: white;
+            html {
+                margin: 0px;
+                padding: 0px;
             }
-            a{
-                color: red;
+            body {
+                margin: 0px;
+                padding: 0px;
+                background: #61d2ff;
+                background: linear-gradient(
+                    180deg,
+                    rgba(97, 210, 255, 1) 0%,
+                    rgba(255, 255, 255, 1) 50%,
+                    rgba(173, 173, 173, 1) 100%
+                );
+                background-attachment: fixed;
+            }
+
+            h1,
+            h2,
+            h3 {
+                margin: 0px;
+            }
+
+            h1,
+            h2,
+            h3,
+            p,
+            a {
+                font-family: sans-serif;
+            }
+
+            a {
+                color: blue;
+            }
+            a:hover {
+                color: green;
+            }
+
+            .divBorder {
+                padding: 2px;
+                margin: 0px;
+                background: linear-gradient(#7777bb, #ffffff);
+                width: fit-content;
+            }
+            .featureBox {
+                padding: 12px;
+            }
+
+            #centerDiv {
+                padding: 6px;
+                padding-left: 24px;
+                padding-right: 24px;
+                margin: 0px;
+                background-color: white;
+                text-align: left;
+                width: 70vw;
             }
         </style>
+
+        <script>
+            var taglines = [
+                "The Front Page of the Internet",
+                "Where all the MFs are",
+                "MMMmpmphhphghgggg.....",
+                "The Site for Everything FarawayDrip30",
+                "The Royal Mail Web Portal",
+                "also check out <a href='https://raflines.github.io/'>RAFLINES.GITHUB.IO!</a>",
+            ];
+
+            var billboards = [
+                {
+                    img: "Pages/Main/index/Billboards/Images/ozzy1.PNG",
+                    src: "Pages/Main/index/Billboards/Pages/ozzy/index.html",
+                },
+                {
+                    img: "Pages/Main/index/Billboards/Images/wallgame_coloured_small.png",
+                    src: "Pages/OldSites/Void/Pages/Main/Games/Games/WallGame/index.html",
+                },
+                {
+                    img: "Pages/Main/index/Billboards/Images/jerbema.png",
+                    src: "https://jerbemas-funky-town.github.io/",
+                },
+            ];
+
+            window.onload = function () {
+                document.getElementById("tagline").innerHTML =
+                    taglines[Math.floor(Math.random() * taglines.length)];
+
+                var billboardId = Math.floor(Math.random() * billboards.length);
+                document.getElementById("billboardDiv").style[
+                    "background-image"
+                ] = "url('" + billboards[billboardId].img + "')";
+                document.getElementById("billboardLink").href =
+                    billboards[billboardId].src;
+            };
+        </script>
     </head>
     <body>
         <center>
-            <h1>FarawayDrip30</h1>
-            <h3>(Epilepsy Warning)</h3>
-            <a href="home.html">Enter Site</a>
-            <h4>If you want to view a non-epileptic version of the site or a raw version:</h4>
-            <a href="raw.html">Enter Raw Site</a>
+            <div class="divBorder">
+                <div id="centerDiv">
+                    <h1>FarawayDrip30.github.io</h1>
+                    <h2 id="tagline"></h2>
+
+                    <hr />
+
+                    <br />
+                    <center>
+                        <div
+                            style="
+                                background: linear-gradient(#ff0000, #ffaaaa);
+                                padding: 24px;
+                                text-align: center;
+                                width: fit-content;
+                            "
+                        >
+                            <h2>
+                                This Website is a Work-in-Progress, see a (More)
+                                Finished Past Version
+                                <a href="Pages/OldSites/Void/index.html"
+                                    >Here</a
+                                >
+                            </h2>
+                        </div>
+                    </center>
+
+                    <br />
+
+                    <div
+                        style="
+                            background: linear-gradient(#78b4fd, #9b66ff);
+                            width: fit-content;
+                            margin-left: 60%;
+                            padding: 24px;
+                        "
+                    >
+                        <a href="Pages/Main/news.html"><h2>News (RSS)</h2></a>
+                    </div>
+
+                    <br />
+                    <h3>featured shit</h3>
+                    <div
+                        class="featureBox"
+                        style="background: linear-gradient(#aaaa22, #552211)"
+                    >
+                        <a href="https://farawaydrip30.itch.io/"
+                            ><h2>Games</h2></a
+                        >
+                        <div
+                            class="featureBox"
+                            style="
+                                background: linear-gradient(#32bb98, #bbcc00);
+                                margin-left: 20%;
+                                margin-right: 5%;
+                            "
+                        >
+                            <a
+                                href="Pages/OldSites/Void/Pages/Main/Games/Games/WallGame/index.html"
+                                ><h2>WallGame</h2></a
+                            >
+                            <div
+                                class="featureBox"
+                                style="
+                                    background: linear-gradient(
+                                        #dd33aa,
+                                        #dd33ff
+                                    );
+                                    margin-left: 2%;
+                                    margin-right: 25%;
+                                "
+                            >
+                                <a
+                                    href="Pages/OldSites/Void/Pages/Main/Comics/index.html"
+                                    ><h2>Comics</h2></a
+                                >
+                                <p style="color: white; margin: -15px">
+                                    (It's just Hay it's the only comic I've made
+                                    it's just Hay, th only comic I've ever made)
+                                </p>
+                                <div
+                                    class="featureBox"
+                                    style="
+                                        background: linear-gradient(
+                                            #aaaa22,
+                                            #552211
+                                        );
+                                    "
+                                >
+                                    <a
+                                        href="Pages/Main/games/games/cristos_ball/index.html"
+                                        ><h2>Cristo's Ball</h2></a
+                                    >
+                                    <img
+                                        src="Pages/Main/games/games/cristos_ball/ball.webp"
+                                    />
+                                    <br />
+                                    <div
+                                        class="featureBox"
+                                        style="
+                                            background: linear-gradient(
+                                                #aa55aa,
+                                                #55aa55
+                                            );
+                                            margin-left: 40%;
+                                        "
+                                    >
+                                        <a
+                                            href="https://armorgames.com/less-trains-please-game/19645?fp=ng"
+                                            ><h2>Less Trains, Please...?</h2></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <br /><br /><br />
+                    <center>
+                        <div
+                            style="
+                                border: 2px dotted black;
+                                padding: 24px;
+                                width: 70%;
+                                text-align: center;
+                            "
+                        >
+                            <center>
+                                <div
+                                    style="
+                                        border: 4px dotted black;
+                                        padding: 24px;
+
+                                        text-align: center;
+                                    "
+                                >
+                                    <a
+                                        id="billboardLink"
+                                        href="Pages/Main/index/Billboards/Pages/ozzy/index.html"
+                                    >
+                                        <div
+                                            id="billboardDiv"
+                                            style="
+                                                background-image: url(&quot;Pages/Main/index/Billboards/Images/ozzy1.PNG&quot;);
+                                                height: 500px;
+                                                border: 8px solid black;
+                                            "
+                                        ></div
+                                    ></a>
+                                </div>
+                            </center>
+                        </div>
+                    </center>
+                    <br /><br /><br />
+
+                    <br />
+
+                    <p class="talkBox">
+                        <img src="Pages/Main/index/talking_head.gif" /> <br />
+                        Hello, I am FarawayDrip30. I like to make games.
+                    </p>
+                    <br />
+                    <p class="talkBox">
+                        <img src="Pages/Main/index/talking_head.gif" /> <br />
+                        Hello, I am FarawayDrip30. I like to make games.
+                    </p>
+                    <br />
+                    <p class="talkBox">
+                        <img src="Pages/Main/index/talking_head.gif" /> <br />
+                        Hello, I am FarawayDrip30. I like to make games.
+                    </p>
+                    <br />
+                </div>
+            </div>
         </center>
     </body>
 </html>
