@@ -19,7 +19,7 @@ class GamePanel {
   	this.defHeight = 576;
   	this.defScale = 3;
 
-  	this.FPS = 60;
+  	this.FPS = 70;
 
   	this.gameThread;
 
@@ -79,7 +79,7 @@ class GamePanel {
 
 	runStart() {
 		this.drawInterval = 1000/this.FPS;
-		this.nextDrawTime = new Date().getMilliseconds() + this.drawInterval;
+		this.nextDrawTime = Date.now() + this.drawInterval;
 
 		GP_run(this);
 	}
@@ -102,20 +102,30 @@ class GamePanel {
 
 
 function GP_run(gp){
- 	gp.currentState.update();
-  g_mouseH.moving = false;
-  //console.log(gp.keyH.startPressed);
 
- 	gp.paintComponent(gp.g2);
 
- 	let remainingTime = gp.nextDrawTime - new Date().getMilliseconds();
+ 	let remainingTime = gp.nextDrawTime - Date.now();
+  //console.log(remainingTime);
  	//setTimeout(function(){requestAnimationFrame()}, remainingTime);
  	//remainingTime = remainingTime / 1000000;
 
  	if(remainingTime < 0) {
- 		remainingTime = 0;
-     gp.nextDrawTime = new Date().getMilliseconds() + gp.drawInterval;
+    gp.nextDrawTime = Date.now() + gp.drawInterval;
+    // If we run slow make up for the frame times
+    while(remainingTime < 0){
+      remainingTime = 0;
+
+      console.log("UPDATE:");
+      gp.currentState.update();
+      g_mouseH.moving = false;
+      //console.log(gp.keyH.startPressed);
+
+      remainingTime += gp.drawInterval;
+    }
+
+
+    gp.paintComponent(gp.g2);
  	}
 
   requestAnimationFrame(function(){GP_run(gp)});
-	}
+}
