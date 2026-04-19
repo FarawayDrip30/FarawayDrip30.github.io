@@ -1,0 +1,52 @@
+<rss version="2.0">
+    <channel>
+        <title>FarawayDrip30 Site News</title>
+        <link>https://FarawayDrip30.github.io</link>
+        <description>All the freaking cool changes on my site, man.</description>
+        <language>en-uk</language>
+
+        <ttl>60</ttl>
+
+        <item>
+            <title>New Website Design!</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:04.02.2026:23.08</guid>
+            <pubDate>Fri, 4th February 2026 23:08:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Today I felt rather unhappy with my website, so I redid it all again! Completely new! It'll take some time for it to have all the stuff I want it to have but I fuck with it so far. <br> Don't worry if you missed the old site design, like all the others, it is archived and accessible! I might have to go back and update the images for all my old RSS posts though... ugh..................... ( it is rather weird to type out onamatopeia. it's like when someone's trying to seek out attention so they type "sigh..." in the chat or some bollocks. )</p>]]></description>
+        </item>
+        <item>
+            <title>New Site (not) Christmas Update</title>
+            <link
+            >https://FarawayDrip30.github.io/Pages/Main/Games/Games/LessTrainsPlease/index.html</link>
+            <guid isPermaLink="false">farawaydrip30:07.01.2026:22.30</guid>
+            <pubDate>Wed, 7th January 2026 22:30:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Got a new site update out for (not) christmas!! (but instead January 7th) Because the old one was messy as hell. The news page now reads from the RSS feed instead of me manually having to do it...... It's lit. Shame the eye's gone though. I'll be trying to return the cool level of the site in the coming times though.... merry (not) christmas (but January 7th)....</p>]]></description>
+        </item>
+        <item>
+            <title>RSS Feed Added</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:11.10.2025:19.54</guid>
+            <pubDate>Sat, 11th October 2025 19:55:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news.</p><p><img src="https://farawaydrip30.github.io/Pages/OldSites/Void/Assets/Images/Misc/Add_the_RSS_Feed.png" alt="" /></p>]]></description>
+        </item>
+        <item>
+            <title>New Neocities Web Portal</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:12.05.2025:00.00</guid>
+            <pubDate>Tue, 13th May 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>Made a neocities portal to this site: <a href="https://farawaydrip30.neocities.org/">https://farawaydrip30.neocities.org/</a></p></p>]]></description>
+        </item>
+        <item>
+            <title>New Website Launched</title>
+            <link>https://FarawayDrip30.github.io</link>
+            <guid isPermaLink="false">farawaydrip30:10.05.2025:00.00</guid>
+            <pubDate>Sat, 10th May 2025 00:00:00 +0000</pubDate>
+            <description
+            ><![CDATA[<p>New website is LAUNCHED!</p>]]></description>
+        </item>
+    </channel>
+</rss>
