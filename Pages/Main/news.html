@@ -30,7 +30,7 @@
     <div id="news_div"></div>
     <script>
         // Get File
-        fetch("../../../rss.xml").then((data) => {
+        fetch("../../rss/all.xml").then((data) => {
             data.text().then((text) => {
                 //console.log(text);
                 let news_div = document.getElementById("news_div");
