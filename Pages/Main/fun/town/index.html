@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Town</title>
+
+        <style>
+            body{
+                width: 8000px;
+                height: 8000px;
+
+                background-color: black;
+                color: white;
+            }
+
+            .obj{
+                position: absolute;
+            }
+        </style>
+
+        <script>
+            var points = 0;
+            var elements_spawned = 0;
+
+            const bg_colours = [
+                "red",
+                "blue",
+                "aqua",
+                "green",
+                "orange",
+                "yellow",
+                "purple",
+                "white",
+                "black",
+                "pink"
+            ];
+
+            const road_length_max = 500;
+
+            class Spawnable{
+                constructor(_path, _chance, _tries){
+                    this.path = "assets/" + _path;
+                    if(!this.path.includes('.')) { this.path += ".png"; }
+                    this.chance = _chance;
+                    this.tries = _tries;
+
+                    this.randomise_x = true;
+                    this.randomise_y = true;
+                }
+
+                get_element(){
+                    let img = document.createElement('img');
+                    img.src = this.path;
+                    return img;
+                }
+            }
+
+            class SpawnableRoad extends Spawnable {
+                get_element(){
+                    let div = document.createElement('div');
+                    div.style.backgroundImage = "url(\""+this.path+"\")";
+                    if(Math.random() < 0.5){
+                        div.style.width = (32 + Math.random() * road_length_max).toString() + "px";
+                        div.style.height = "32px";
+                    }
+                    else{
+                        div.style.height = (32 + Math.random() * road_length_max).toString() + "px";
+                        div.style.width = "32px";
+                    }
+                    return div;
+                }
+            }
+
+            class SpawnableLink extends Spawnable{
+                constructor(_path, _chance, _tries, _link){
+                    super(_path, _chance, _tries);
+                    this.link = _link;
+                }
+
+                get_element(){
+                    let anchor = document.createElement('a');
+                    anchor.href = this.link;
+                    let img = document.createElement('img');
+                    img.src = this.path;
+                    anchor.appendChild(img);
+                    return anchor;
+                }
+            }
+
+            class SpawnableChest extends Spawnable{
+                constructor(_path, _chance, _tries, _onclick){
+                    super(_path, _chance, _tries);
+                    this.onclick = _onclick;
+                }
+
+                get_element(){
+                    let anchor = document.createElement('a');
+                    anchor.id = "chest_" + elements_spawned;
+                    anchor.onclick = function(){ open_chest(anchor.id); }
+                    let img = document.createElement('img');
+                    img.src = this.path;
+                    anchor.appendChild(img);
+                    return anchor;
+                }
+            }
+
+            class SpawnableMarqueeLink extends SpawnableLink{
+                constructor(_path, _chance, _tries, _link){
+                    super(_path, _chance, _tries, _link);
+
+                    this.rand_pos = false;
+                }
+
+                get_element(){
+                    let marquee = document.createElement('marquee');
+                    marquee.style.width = "8000px";
+                    marquee.style.height = "fit-content";
+                    marquee.direction = "right";
+                    marquee.scrollAmount = Math.floor(Math.random() * 20);
+                    let anchor = document.createElement('a');
+                    anchor.href = this.link;
+                    let img = document.createElement('img');
+                    img.src = this.path;
+                    anchor.appendChild(img);
+                    marquee.appendChild(anchor);
+                    return marquee;
+                }
+            }
+
+            function open_chest(chest_id){
+                let chest_element = document.getElementById(chest_id)
+                chest_element.hidden = true;
+                let random_points = Math.floor(Math.random() * 21 + 10);
+                points += random_points;
+                alert("+" + random_points + " PNTS! \n" + points + " PNTS Total!");
+            }
+
+            var spawnables = [
+                new SpawnableRoad("road1", 0.9, 1000),
+                new Spawnable("house1", 0.9, 500),
+                new Spawnable("house_upside_down", 0.2, 50),
+                new Spawnable("house_flines", 0.5, 100),
+                new SpawnableLink("house_flines2", 0.5, 2, "https://raflines.com.br"),
+                new SpawnableLink("house_wtat", 0.5, 6, "https://jerbemas-funky-town.github.io/wtat/"),
+                new SpawnableLink("musicwizard.gif", 0.5, 2, "../musicwizard/index.html"),
+                new SpawnableLink("lil_bayes", 0.1, 1, "https://flines.itch.io/lil-bayes"),
+                new SpawnableChest("chest", 0.5, 10, open_chest),
+                //new SpawnableMarqueeLink("polkadotman.gif", 0.2, 4, "https://flines.itch.io/11-in-1"),
+                new Spawnable("scarecrow_faraway", 0.2, 1),
+            ];
+
+            window.onload = function(){
+                // Remove loading text
+                document.getElementById("text_loading_town").hidden = true;
+
+                // Set background colour
+                document.body.style.backgroundColor = bg_colours[Math.floor(Math.random() * bg_colours.length)];
+
+                // Place spawnables
+                for(let s = 0; s < spawnables.length; s++){
+                    for(let t = 0; t < spawnables[s].tries; t++){
+                        if(Math.random() < spawnables[s].chance){
+                            let div = document.createElement('div');
+                            div.className = "obj";
+                            if(spawnables[s].randomise_x){ div.style.left = (Math.random() * 8000).toString() + "px"; } else{ div.style.left = 0}
+                            if(spawnables[s].randomise_y){ div.style.top = (Math.random() * 8000).toString() + "px"; } else{ div.style.top = 0}
+                            div.appendChild(spawnables[s].get_element());
+                            document.body.appendChild(div);
+                            
+                            elements_spawned++;
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2 id="text_loading_town">loading town...</h2>
+    </body>
+</html>
