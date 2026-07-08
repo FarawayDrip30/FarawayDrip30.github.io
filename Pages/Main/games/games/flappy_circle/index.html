@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flappy Circle</title>
+
+        <style>
+            body{
+                background: url("ball_background.png");
+            }
+
+            hr{
+                width: 700px;
+                max-width: 90%;
+                /*border-left: 0px;
+                border-right: 0px;
+                border-bottom: 0px;
+                border-top: 1px solid black;*/
+                border: 2px solid black;
+                border-radius: 2px;
+            }
+
+            #main_div{
+                width: 800px;
+                border-radius: 10px;
+                padding: 16px;
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div id="main_div">
+                <h1>Flappy Circle</h1>
+
+                <script src="../../../../OldSites/Void/Assets/Scripts/ruffle/ruffle.js"></script>
+
+                <br><hr>
+                <h2>v1</h2>
+
+                <div id="container1"></div>
+                <script>
+                    window.RufflePlayer = window.RufflePlayer || {};
+                    window.addEventListener("load", (event) => {
+                        const ruffle = window.RufflePlayer.newest();
+                        const player = ruffle.createPlayer();
+                        const container = document.getElementById("container1");
+                        container.appendChild(player);
+                        player.load("../../../../OldSites/Assets/Games/Flappy Circle.swf");
+                    });
+                </script>
+                <a href="../../../../OldSites/Assets/Games/Flappy Circle.swf">Download SWF</a><br>
+
+                <br><hr>
+
+                <h2>v2</h2>
+
+                <div id="container2"></div>
+                <script>
+                    window.RufflePlayer = window.RufflePlayer || {};
+                    window.addEventListener("load", (event) => {
+                        const ruffle = window.RufflePlayer.newest();
+                        const player = ruffle.createPlayer();
+                        const container = document.getElementById("container2");
+                        container.appendChild(player);
+                        player.load("../../../../OldSites/Assets/Games/Flappy Circle v2.swf");
+                    });
+                </script>
+                <a href="../../../../OldSites/Assets/Games/Flappy Circle v2.swf">Download SWF</a><br>
+
+                <br><hr>
+
+                <p>Flappy Circle was a game I made in flash to learn the program. I did it while not paying attention in computer science I think. I put it in the shared drive and a lot of other kids used to play it in lessons with computers. Despite this, my social cred did not increase, and people realised they could put other, better flash games in the shared drive.
+                    <br>There are a couple of reasons why I made a second version. Firstly is because it took too long to set your desired speed and the default speed was too slow. Secondly is that I drew a smug face that was only supposed to appear when you entered your speed as '69' but when you fullscreened the game you could see it off to the side so I had to move it.
+                    <br>The game's first public release was on my website on July 7, 2021.
+                </p>
+            </div>
+        </center>
+    </body>
+</html>
