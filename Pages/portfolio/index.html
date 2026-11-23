@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="The Portfolio... Of Jack Harris...">
+		<meta name="author" content = "Jack Harris">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>
+			Jack Harris' Portfolio
+		</title>
+
+		<style>
+			h1, h2, h3, p, a {
+				font-family: nunito;
+			}
+			h1 { 
+				font-weight: 900; 
+				font-size: 0;
+				margin: 0px;
+				padding: 0px;
+			}
+			h2 {
+				font-weight: 700;
+				font-size: 2vw;
+				margin: 0px;
+			}
+			a {
+				color: blue;
+			}
+
+			
+
+			h1 a{
+				font-size: 5vw;
+				display: inline-block; /* so transform: translate() works */
+				animation-name: float;
+				animation-duration: 2.5s;
+				animation-iteration-count: infinite;
+				animation-timing-function: cubic-bezier(0.5, 0.1, 0.5, 0.9);
+
+				color: black;
+			}
+
+			
+			.section_line {
+				border: 2px solid black;
+				border-radius: 5px;
+				width: 100px;
+			}
+
+			.project_div {
+				display: flex;
+				justify-content: center;
+			}
+
+			.project {
+				border: 2px solid black;
+				border-radius: 5px;
+				padding: 16px;
+				margin: 12px;
+
+				text-align: center;
+				align-items: center;
+				display: flex;
+				flex-basis: 0;
+				flex-grow: 1;
+				flex-direction: column;
+			}
+
+			.highlight{
+				
+			}
+			.highlight img, .highlight video{
+				width: 90%;
+			}
+
+			.other{
+				padding: 0 0 12px 0;
+			}
+			.other .content {
+				display: flex;
+				flex-direction: row;
+				margin: 12px;
+				align-items: center;
+			}
+			.other .content .description {
+				height: 100%;
+			}
+			.other .content p {
+				padding: 0 48px 0 48px;
+			}
+			.other hr {
+				width: 100%;
+				border: 1px solid black;
+				border-radius: 0px;
+			}
+			.other h3 {
+				margin: 12px 0 0 0;
+			}
+			.other .thumb{ 
+			}
+
+			.description a{
+				color: lightseagreen;
+			}
+			
+
+			.middle_column{
+				width: 75%;
+				min-width: 600px;
+				padding: 0px;
+			}
+
+			.links p { 
+				margin: 0px; 
+				margin-top: 16px;
+			}
+
+			.skills {
+				align-self: flex-end;
+				margin-top: auto; /* sets position to bottom of flex container */
+				text-align: center;
+
+				color: red;
+				font-weight: 600;
+				width: 100%;
+				line-height: 36px;
+			}
+			.skills a {
+				border: 1px solid #dddddd;
+				border-radius: 5px;
+
+				color: red;
+
+				white-space: nowrap;
+				padding: 3px;
+				margin: 3px;
+			}
+
+			@keyframes float {
+				0% {
+					transform: translate(0px, 0px);
+				}
+				50% {
+					transform: translate(0px, 30px);
+				}
+				100% {
+					transform: translate(0px, 0px);
+				}
+			}
+
+			@font-face {
+				font-family: nunito;
+				src: url("res/Nunito-VariableFont_wght.ttf");
+			}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1>
+				<a style="animation-delay: -0s">J</a>
+				<a style="animation-delay: -0.1s">a</a>
+				<a style="animation-delay: -0.2s">c</a>
+				<a style="animation-delay: -0.3s">k</a>
+				<a style="opacity: 0">.</a>
+				<a style="animation-delay: -0.5s">H</a>
+				<a style="animation-delay: -0.6s">a</a>
+				<a style="animation-delay: -0.7s">r</a>
+				<a style="animation-delay: -0.8s">r</a>
+				<a style="animation-delay: -0.9s">i</a>
+				<a style="animation-delay: -1s">s</a>
+				<a style="animation-delay: -1.1s">'</a>
+				<a style="opacity: 0">.</a>
+				<a style="animation-delay: -1.3s">P</a>
+				<a style="animation-delay: -1.4s">o</a>
+				<a style="animation-delay: -1.5s">r</a>
+				<a style="animation-delay: -1.6s">t</a>
+				<a style="animation-delay: -1.7s">f</a>
+				<a style="animation-delay: -1.8s">o</a>
+				<a style="animation-delay: -1.9s">l</a>
+				<a style="animation-delay: -2s">i</a>
+				<a style="animation-delay: -2.1s">o</a>
+			</h1><br><br>
+
+			<div class="middle_column">
+				<p>Hello!! I'm Jack Harris, and I've been programming videogames since I was 8 years old in 2015, using Hopscotch. When I was 13 in 2020, I started using Unity, and since then have been making games in whatever I can get my hands on, but mainly keep coming back to Godot, Flash and C.</p>
+				<p>I adore making games. I've regularly entered game jams for several years and semi-regularly finish making games normally to prove it. I'm also fascinated by network programming.</p>
+				<p>You can browse a selection of my stuff below:</p>
+				<div id="highlights" class="middle_column">
+					<br>
+					<h2>Highlights</h2>
+					<hr class="section_line">
+					<br><br>
+					<div class="project_div">
+						<div class="project highlight">
+							<h3>Less Trains, Please...?</h3>
+							<video autoplay loop muted>
+								<source src="res/vid/ltp_thumbgif.mp4" type="video/mp4" />
+								Your browser doesn't support the video tag... 
+							</video>
+							<div class="links">
+								<p><a href="https://flines.itch.io/lesstrainsplease">itch.io</a> • <a href="https://www.newgrounds.com/portal/view/1004711">Newgrounds</a> • <a href="https://armorgames.com/less-trains-please-game/19645">Armor Games</a> • <a href="https://github.com/FarawayDrip30/LessTrainsPlease">Github</a></p>
+							</div>
+							<p class="description">
+								Less Trains, Please...? is a puzzle game I made with my friend <a href="https://raflines.com.br/">flines</a> in several months and then managed to sell a non-exclusive license for the game to <a href="https://armorgames.com/less-trains-please-game/19645">Armor Games</a>. The game is about placing obstacles in front of trains to divert their paths and switching train speeds to pick up passengers, avoid people tied to the tracks, and get to the end. It also contains a level editor that allows the user to save and load levels using strings for easy sharing.
+							</p>
+							<div class="skills">
+								<a>Godot</a>
+								<a>GDScript</a>
+								<a>Teamwork</a>
+							</div>
+						</div>
+
+						<div class="project highlight">
+							<h3>C++/OpenGL Graphics Project</h3>
+							<video autoplay loop muted>
+								<source src="res/vid/graphics_project_thumbgif.mp4" type="video/mp4" />
+								Your browser doesn't support the video tag... 
+							</video>
+							<div class="links">
+								<p><a href="https://github.com/FarawayDrip30/harrisj17-graphics-project">Github</a>
+							</div>
+							<p>
+								A program made for uni that contains a coastal scene written from scratch in C++ using OpenGL and GLFW. Includes .obj loading, custom scene loading, saving and object repositioning, as well as dynamic directional, point and spot lights.
+							</p>
+							<div class="skills">
+								<a>C</a>
+								<a>C++</a>
+								<a>OpenGL</a>
+								<a>GLFW</a>
+							</div>
+						</div>
+
+						<div class="project highlight">
+							<h3>Critterball Server</h3>
+							<video autoplay loop muted>
+								<source src="res/vid/critterball_thumbgif.mp4" type="video/mp4" />
+								Your browser doesn't support the video tag... 
+							</video>
+							<div class="links">
+								<p><a href="https://farawaydrip30.itch.io/critterball-server">itch.io</a> • <a href="https://github.com/FarawayDrip30/Critterball-Local-Server">Github</a></p>
+							</div>
+							<p class="description">
+								Critterball was an online game made for the virtual world <a href="https://boxcritters.com/">Box Critters</a>: when Box Critters went offline, so did Critterball. Only the client-side html and Javascript scripts were archived (as there was no way to download the server program), so I looked through the code and gameplay footage to write a new server in Node.js that would be able to connect to the client without the user having to modify it first. (Most of the game turned out to be server-side, by the way. Just so you know.)
+							</p>
+							<div class="skills">
+								<a>Javascript</a>
+								<a>Node.js</a>
+								<a>Express.js</a>
+								<a>Socket.io</a>
+								<a>Reverse Engineering</a>
+								<a>Networking</a>
+							</div>
+						</div>
+					</div>
+
+					<br><br><br>
+					<h2>Other Projects</h2>
+					<hr class="section_line">
+					<br><br>
+
+					<div class="project other">
+						<h3>WallGame</h3>
+						<hr class="full_line">
+						<div class="content">
+							
+							<div class="thumb">
+								<img src="res/img/wallgame.png">
+								<div class="links">
+									<p>
+										<a href="https://farawaydrip30.itch.io/wallgame">itch.io</a> • 
+										<a href="https://www.newgrounds.com/portal/view/1016021">Newgrounds</a> • 
+										<a href="https://github.com/FarawayDrip30/WallGameJS">Github</a>
+									</p>
+								</div>
+							</div>
+							<div class="description">
+							<p>
+								A simple arcade game with three gamemodes about dodging walls to rack up your score. It's designed to be hectic, somewhat gameplay-wise but mainly for the player's senses. Made originally in Java but ported to Javascript for its release, with integration with Newgrounds.io (the Newgrounds API) to allow for score-saving and medals.
+							</p>
+							</div>
+						</div>
+						<div class="skills">
+							<a>Javascript</a>
+							<a>Newgrounds.io</a>
+							<a>Java</a>
+						</div>
+					</div>
+
+					<div class="project other">
+						<h3>Birdpals</h3>
+						<hr class="full_line">
+						<div class="content">
+							
+							<div class="thumb">
+								<img src="res/img/birdpals.png">
+								<div class="links">
+									<p>
+										<b>Online Original Version</b>
+										<a href="https://github.com/BirdpalsTeam/ReleaseVersion">Github</a>
+									</p>
+									<p>
+										<b>Singleplayer Legacy Version</b>
+										<a href="https://farawaydrip30.itch.io/birdpals-singleplayer-legacy-version">itch.io</a>
+									</p>
+								</div>
+							</div>
+							<div class="description">
+							<p>
+								A virtual world in the style of Club Penguin that eventually came to use Pixi.js, Node.js, Socket.io and Playfab for accounts, created in a team with several other people. Players could walk around the world, visit different rooms, chat to other players, find different clothing items and wear them.
+							</p>
+							</div>
+						</div>
+						<div class="skills">
+							<a>Javascript</a>
+							<a>Node.js</a>
+							<a>Express.js</a>
+							<a>Pixi.js</a>
+							<a>Playfab</a>
+							<a>Teamwork</a>
+						</div>
+					</div>
+
+					<div class="project other">
+						<h3>Flashbang Ninja</h3>
+						<hr class="full_line">
+						<div class="content">
+							
+							<div class="thumb">
+								<img src="res/img/flashbang_ninja.png">
+								<div class="links">
+									<p>
+										<a href="https://farawaydrip30.itch.io/flashbang-ninja">itch.io</a> • 
+										<a href="https://www.newgrounds.com/portal/view/887367">Newgrounds</a> • 
+										<a href="https://github.com/FarawayDrip30/FlashbangNinja">Github</a>
+									</p>
+								</div>
+							</div>
+							<div class="description">
+							<p>
+								A Fruit Ninja clone made in Godot, except the fruit is replaced by flashbangs. 'Nuff said!
+							</p>
+							</div>
+						</div>
+						<div class="skills">
+							<a>Godot</a>
+							<a>GDScript</a>
+						</div>
+					</div>
+
+					<div class="project other">
+						<h3>Lend Me Your Power</h3>
+						<hr class="full_line">
+						<div class="content">
+							
+							<div class="thumb">
+								<img src="res/img/lend_me_your_power.png">
+								<div class="links">
+									<p>
+										<a href="https://farawaydrip30.itch.io/lend-me-your-power">itch.io</a> • 
+										<a href="https://www.newgrounds.com/portal/view/808156">Newgrounds</a>
+									</p>
+								</div>
+							</div>
+							<div class="description">
+							<p>
+								A Puzzle Platformer made in a week in Unity for Brackeys Game Jam 2021.1, complete with 13 levels about positioning yourself around several mages to have enough power to blow up all the Rabbots in a level. 
+							</p>
+							</div>
+						</div>
+						<div class="skills">
+							<a>Unity</a>
+							<a>C#</a>
+						</div>
+					</div>
+
+					<div class="project other">
+						<h3>Virtual World Archive</h3>
+						<hr class="full_line">
+						<div class="content">
+							<div class="thumb">
+								<img src="res/img/vwa.png">
+								<div class="links">
+									<p>
+										<a href="https://virtualworldarchive.netlify.app/">virtualworldarchive.netlify.app</a>
+									</p>
+								</div>
+							</div>
+							<div class="description">
+							<p>
+								A project where me and a few others find virtual world games, archive them, and then modify them to be able to be able to be played offline or to connect to a local server. This includes using whatever decompiler tools are available and finding out what software the game used originally to run (e.g. servers).
+							</p>
+							</div>
+						</div>
+						<div class="skills">
+							<a>Actionscript 2.0</a>
+							<a>Flash</a>
+							<a>JPEXS Flash Decompiler</a>
+							<a>SmartFoxServer 1 Pro</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</center>
+	</body>
+</html>
